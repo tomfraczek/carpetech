@@ -2,39 +2,54 @@
 import Head from 'next/head';
 import { useState } from 'react';
 
-export default function Quote() {
+export default function FreeQuote() {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
   const [submitted, setSubmitted] = useState(false);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log('Sending');
-
     let data = {
       name,
       email,
       message,
     };
 
-    fetch('api/contact', {
+    const response = await fetch('api/contact', {
       method: 'POST',
+      body: JSON.stringify(data),
       headers: {
-        Accept: 'application/json, text/plain, */*',
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify(data),
-    }).then((res) => {
-      console.log('Response received');
-      if (res.status === 200) {
-        console.log('Response succeeded!');
-        setSubmitted(true);
-        setName('');
-        setEmail('');
-        setMessage('');
-      }
     });
+
+    const dataa = response.json();
+    // console.log('Sending');
+
+    // let data = {
+    //   name,
+    //   email,
+    //   message,
+    // };
+
+    // fetch('api/contact', {
+    //   method: 'POST',
+    //   headers: {
+    //     Accept: 'application/json, text/plain, */*',
+    //     'Content-Type': 'application/json',
+    //   },
+    //   body: JSON.stringify(data),
+    // }).then((res) => {
+    //   console.log('Response received');
+    //   if (res.status === 200) {
+    //     console.log('Response succeeded!');
+    //     setSubmitted(true);
+    //     setName('');
+    //     setEmail('');
+    //     setMessage('');
+    //   }
+    // });
   };
 
   return (
