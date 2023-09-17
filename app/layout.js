@@ -1,8 +1,10 @@
 import StyledComponentsRegistry from './lib/registry';
-import { Roboto_Condensed } from '@next/font/google';
+import { Roboto_Condensed } from 'next/font/google';
 
 import { Footer } from '@/components/Footer';
 import { Header } from '@/components/Header';
+
+import './globals.css';
 
 export const metadata = {
   title: 'Create Next App',

@@ -4,29 +4,36 @@ import { colors } from '@/global/colors';
 export const SubheaderContainer = styled.div`
   height: 31px;
   background-color: ${colors.green};
+  display: flex;
+  align-items: center;
 `;
 
 export const Content = styled.div`
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  font-size: 14px;
 `;
 
-export const ContactContainer = styled.div`
+export const Title = styled.div`
+  color: ${colors.white};
+  /* padding: 0 15px; */
+`;
+
+export const MenuContainer = styled.div`
   display: flex;
   align-items: center;
 `;
 
-export const ContactItem = styled.div``;
-
-export const ItemTitle = styled.div``;
-
-export const PhoneNumber = styled.div``;
-
-export const MenuContainer = styled.div``;
-
-export const Menu = styled.div``;
-
 export const MenuLink = styled.div`
   color: ${colors.white};
+  padding-left: 15px;
+
+  a {
+    text-decoration: none;
+    color: ${colors.white};
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
 `;
