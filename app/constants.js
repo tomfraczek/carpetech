@@ -1,6 +1,6 @@
-import image1 from '/images/slider/slider1.jpeg';
-import image2 from '/images/slider/slider2.jpeg';
-import image3 from '/images/slider/slider3.jpeg';
+import image1 from '@/public/images/slider/slider1.jpeg';
+import image2 from '@/public/images/slider/slider2.jpeg';
+import image3 from '@/public/images/slider/slider3.jpeg';
 
 export const DATA = [
   {

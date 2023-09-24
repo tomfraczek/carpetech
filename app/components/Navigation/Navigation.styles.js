@@ -4,7 +4,7 @@ import styled from 'styled-components';
 export const MenuList = styled.ul`
   display: flex;
   align-items: flex-start;
-  justify-content: space-around;
+  justify-content: center;
 `;
 
 export const ListItem = styled.li`
@@ -30,6 +30,25 @@ export const ListItem = styled.li`
 
       ~ img {
         filter: invert(44%) sepia(25%) saturate(635%) hue-rotate(102deg) brightness(89%) contrast(87%);
+      }
+    }
+  }
+
+  &:last-of-type {
+    border: 2px solid ${colors.blue};
+    border-radius: 5em;
+    overflow: hidden;
+
+    a {
+      padding: 10px 20px;
+    }
+
+    &:hover {
+      background-color: ${colors.blue};
+
+      a {
+        background-color: ${colors.blue};
+        color: ${colors.white};
       }
     }
   }

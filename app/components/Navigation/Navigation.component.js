@@ -10,7 +10,7 @@ import { MenuList, ListItem, SubmenuList, SubmenuItem } from './Navigation.style
 import Image from 'next/image';
 
 export const Navigation = () => {
-  const [openMenu, setOpenMenu] = useState(6);
+  const [openMenu, setOpenMenu] = useState(null);
 
   const handleMenuHover = (index) => {
     setOpenMenu(index);

@@ -1,7 +1,10 @@
 import { colors } from '@/global/colors';
 import styled from 'styled-components';
 
-export const HeaderContainer = styled.div``;
+export const HeaderContainer = styled.div`
+  z-index: 2;
+  position: relative;
+`;
 
 export const Content = styled.div`
   display: flex;

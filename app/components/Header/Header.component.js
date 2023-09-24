@@ -2,10 +2,10 @@
 import Link from 'next/link';
 import Image from 'next/image';
 
-import { Subheader } from '@/components/Subheader';
+import { Subheader } from '@/app/components/Subheader';
 import { HeaderContainer, Content, Contact, Logo, PhoneNumber, Details } from './Header.styles';
 import { Container } from '@/global/styles';
-import { Navigation } from '@/components/Navigation';
+import { Navigation } from '@/app/components/Navigation';
 
 export const Header = () => {
   return (
@@ -28,7 +28,7 @@ export const Header = () => {
           <Contact>
             <Details>
               <Image src='/images/icons/phone.png' width={16} height={16} alt='phone-icon' />
-              <p>Milton Keynes Office::</p>
+              <p>Milton Keynes Office:</p>
             </Details>
 
             <PhoneNumber>01908 505305</PhoneNumber>
