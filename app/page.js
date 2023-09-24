@@ -6,6 +6,7 @@ import { HOMEPAGE_SLIDER_DATA } from './constants';
 
 import { Celebration } from '@/app/components/Celebration';
 import { ServicesCards } from '@/app/components/ServicesCards';
+import { CarpetCleaning } from '@/app/components/CarpetCleaning';
 
 export default function Page() {
   return (
@@ -13,6 +14,7 @@ export default function Page() {
       <Carousel data={HOMEPAGE_SLIDER_DATA} />
       <Celebration />
       <ServicesCards />
+      <CarpetCleaning />
     </>
   );
 }

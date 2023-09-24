@@ -3,6 +3,7 @@ import styled from 'styled-components';
 
 export const CardsContainer = styled.div`
   background-color: ${colors.lightGrey};
+  padding-bottom: 3em;
 `;
 
 export const Header = styled.h2`

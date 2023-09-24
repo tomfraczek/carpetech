@@ -1,7 +1,6 @@
 import Image from 'next/image';
 
-import year from '@/public/images/year.png';
-import family from '@/public/images/family.jpeg';
+import carpet from '@/public/images/carpetcleaning.jpeg';
 
 import {
   CelebrationContainer,
@@ -13,30 +12,32 @@ import {
   Paragraph,
 } from './CarpetCleaning.styles';
 
-export const Celebration = () => {
+export const CarpetCleaning = () => {
   return (
+    // FLEX-DIRECTION: ROW-REVERSE
     <CelebrationContainer>
       <ContentLeft>
-        <LogoContainer>
-          <Image src={year} alt='year logo' width={228} height={176} />
-        </LogoContainer>
-        <Header>Chem-Dry Milton Keynes - Professional Carpet Cleaners</Header>
-        <Subheader>Proudly serving the local area for over 24 years</Subheader>
+        <Header>Hygienic Carpet Cleaning</Header>
         <Paragraph>
-          We have been cleaning carpets, upholstery, curtains and leather around Milton Keynes since 1998, with over
-          7,000 local satisﬁed customers.
+          We use a unique patented carbonating carpet cleaner process. Whilst detergents and soaps can leave behind a
+          residue, resulting in dull fibres and a carpet that gets dirty again more quickly, we use the power of
+          carbonated bubbles for deep down, detergent-free cleaning. This process offers effective and gentle cleaning
+          which treats your fabrics and carpets with the utmost care and does not leave any sticky residue behind.
         </Paragraph>
         <Paragraph>
-          We have a mission to deliver the greatest range of carpet and upholstery and fire and floor restoration
-          services. We offer our customers a one-stop solution for all of their cleaning requirements.
+          Our process can penetrate deeply into the fibres, so even tough, deep stains and ground-in dirt can be removed
+          without difficulty. Your carpets won’t harbour dirty water, taking days to dry out, and will not be
+          susceptible to the growth of mould and bacteria. The result is that your carpets and upholstery will stay
+          cleaner for longer, looking as good as new.
         </Paragraph>
+        <Header>Less Water, Less Drying</Header>
         <Paragraph>
-          We are your local experts to call when you need an advanced cleaning services. You can rely on a cleaning
-          service carried out by qualified and dedicated expert carpet cleaners.
+          As we only need to use a small amount of water in our process, your Milton Keynes carpets are guaranteed to be
+          dry in just a few short hours.
         </Paragraph>
       </ContentLeft>
       <ContentRight>
-        <Image src={family} alt='family logo' width={768} height={512} />
+        <Image src={carpet} alt='family logo' width={768} height={512} />
       </ContentRight>
     </CelebrationContainer>
   );

@@ -2,7 +2,7 @@
 import { useState } from 'react';
 import Link from 'next/link';
 
-import { MENU } from '@/components/Navigation/constants';
+import { MENU } from '@/app/components/Navigation/constants';
 import AnbgleDown from '@/public/images/icons/angleDown.svg';
 import Home from '@/public/images/icons/home.svg';
 

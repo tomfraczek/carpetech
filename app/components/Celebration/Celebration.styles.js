@@ -5,15 +5,10 @@ export const CelebrationContainer = styled.div`
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-between;
-  margin-left: -34px;
-  padding-left: 0px;
-  padding-right: 0px;
-  border-left: 0px;
-  border-right: 0px;
 `;
 
 export const ContentLeft = styled.div`
-  padding: 5% 6%;
+  padding: 5% 3%;
   width: 67%;
 `;
 
