@@ -1,9 +1,16 @@
 import { colors } from '@/global/colors';
 import styled from 'styled-components';
 
+export const NavContainer = styled.div`
+  position: sticky;
+  top: 0;
+  background-color: ${colors.white};
+  z-index: 2;
+`;
+
 export const MenuList = styled.ul`
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: center;
 `;
 
@@ -23,6 +30,7 @@ export const ListItem = styled.li`
     font-weight: 700;
     font-size: 18px;
     display: block;
+    transition: all 0.2s ease;
 
     &:hover {
       background-color: ${colors.hoverWhite};

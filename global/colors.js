@@ -5,6 +5,7 @@ export const colors = {
   blue: '#15528B',
   hoverWhite: '#eaedf0',
   purple: '#96529C',
-  lightpurple: '#b763bf',
+  lightPurple: '#b763bf',
   grey: '#555555',
+  lightGrey: '#eaedf0',
 };

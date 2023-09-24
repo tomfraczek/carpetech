@@ -6,7 +6,7 @@ import { MENU } from '@/components/Navigation/constants';
 import AnbgleDown from '@/public/images/icons/angleDown.svg';
 import Home from '@/public/images/icons/home.svg';
 
-import { MenuList, ListItem, SubmenuList, SubmenuItem } from './Navigation.styles';
+import { MenuList, ListItem, SubmenuList, SubmenuItem, NavContainer } from './Navigation.styles';
 import Image from 'next/image';
 
 export const Navigation = () => {
@@ -21,7 +21,7 @@ export const Navigation = () => {
   };
 
   return (
-    <div className='menu'>
+    <NavContainer>
       <MenuList>
         {MENU.map((item, index) => (
           <ListItem key={index} onMouseEnter={() => handleMenuHover(index)} onMouseLeave={handleMenuLeave}>
@@ -41,6 +41,6 @@ export const Navigation = () => {
           </ListItem>
         ))}
       </MenuList>
-    </div>
+    </NavContainer>
   );
 };

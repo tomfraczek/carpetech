@@ -1,9 +1,9 @@
 import StyledComponentsRegistry from './lib/registry';
 import { Roboto_Condensed } from 'next/font/google';
-import { register } from 'swiper/element/bundle';
+import { Navigation } from '@/app/components/Navigation';
 
-import { Footer } from '@/components/Footer';
-import { Header } from '@/components/Header';
+import { Footer } from '@/app/components/Footer';
+import { Header } from '@/app/components/Header';
 
 import './globals.css';
 
@@ -23,8 +23,9 @@ export default function RootLayout({ children }) {
     <html lang='en'>
       <body style={{ margin: 0 }} className={robotoCondensed.className}>
         <Header />
+        <Navigation />
         <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
-        <Footer />
+        {/* <Footer /> */}
       </body>
     </html>
   );

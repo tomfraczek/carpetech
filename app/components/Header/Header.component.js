@@ -5,7 +5,6 @@ import Image from 'next/image';
 import { Subheader } from '@/app/components/Subheader';
 import { HeaderContainer, Content, Contact, Logo, PhoneNumber, Details } from './Header.styles';
 import { Container } from '@/global/styles';
-import { Navigation } from '@/app/components/Navigation';
 
 export const Header = () => {
   return (
@@ -34,7 +33,6 @@ export const Header = () => {
             <PhoneNumber>01908 505305</PhoneNumber>
           </Contact>
         </Content>
-        <Navigation />
       </Container>
     </HeaderContainer>
   );

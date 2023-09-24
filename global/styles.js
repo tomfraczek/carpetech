@@ -18,6 +18,6 @@ export const Container = styled.div`
   }
 
   ${media.laptop} {
-    width: 1370px;
+    width: 1170px;
   }
 `;

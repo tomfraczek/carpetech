@@ -11,7 +11,7 @@ import {
   Header,
   Subheader,
   Paragraph,
-} from './Celebration.styles';
+} from './CarpetCleaning.styles';
 
 export const Celebration = () => {
   return (
