@@ -29,26 +29,12 @@ export const ContentRight = styled.div`
   }
 `;
 
-export const LogoContainer = styled.div`
-  float: right;
-  margin: 5px 0 20px 20px;
-`;
-
 export const Header = styled.h1`
   font-weight: bold;
   color: ${colors.blue};
   font-size: 36px;
   margin: 0.67em 0;
   margin-bottom: 10.5px;
-  letter-spacing: -0.5px;
-  line-height: 1.1;
-`;
-
-export const Subheader = styled.h2`
-  font-weight: 100;
-  font-size: 26px;
-  margin: 0 0 1em;
-  color: ${colors.green};
   letter-spacing: -0.5px;
   line-height: 1.1;
 `;

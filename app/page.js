@@ -7,6 +7,7 @@ import { HOMEPAGE_SLIDER_DATA } from './constants';
 import { Celebration } from '@/app/components/Celebration';
 import { ServicesCards } from '@/app/components/ServicesCards';
 import { CarpetCleaning } from '@/app/components/CarpetCleaning';
+import { ChemDryBar } from '@/app/components/ChemDryBar';
 
 export default function Page() {
   return (
@@ -15,6 +16,7 @@ export default function Page() {
       <Celebration />
       <ServicesCards />
       <CarpetCleaning />
+      <ChemDryBar />
     </>
   );
 }

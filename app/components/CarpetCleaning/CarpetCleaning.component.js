@@ -2,15 +2,7 @@ import Image from 'next/image';
 
 import carpet from '@/public/images/carpetcleaning.jpeg';
 
-import {
-  CelebrationContainer,
-  ContentLeft,
-  ContentRight,
-  LogoContainer,
-  Header,
-  Subheader,
-  Paragraph,
-} from './CarpetCleaning.styles';
+import { CelebrationContainer, ContentLeft, ContentRight, Header, Paragraph } from './CarpetCleaning.styles';
 
 export const CarpetCleaning = () => {
   return (
