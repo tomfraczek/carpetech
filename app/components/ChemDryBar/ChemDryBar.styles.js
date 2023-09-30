@@ -1,6 +1,11 @@
 import { colors } from '@/global/colors';
 import styled from 'styled-components';
 
+export const BarLink = styled.a`
+  z-index: 1;
+  position: relative;
+`;
+
 export const ChemDryBarContainer = styled.div`
   background-color: ${colors.blue};
   height: 180px;
@@ -13,7 +18,11 @@ export const Content = styled.div`
   flex-direction: column;
 `;
 
-export const Logo = styled.div``;
+export const Logo = styled.div`
+  img {
+    transition: all 0.4s ease;
+  }
+`;
 
 export const Header = styled.div`
   text-shadow: 0 0.07em 0.1em rgb(0, 0, 0, 0.3);

@@ -5,6 +5,7 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import { Navigation, Autoplay } from 'swiper/modules';
+
 import Image from 'next/image';
 import { CarouselContainer, Header, Description, Mask, PhoneNumber, CtaContainer, Content } from './Carousel.styles';
 import Link from 'next/link';

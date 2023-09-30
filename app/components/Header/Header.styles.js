@@ -2,7 +2,7 @@ import { colors } from '@/global/colors';
 import styled from 'styled-components';
 
 export const HeaderContainer = styled.div`
-  z-index: 2;
+  z-index: 20;
   position: relative;
 `;
 

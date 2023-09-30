@@ -8,4 +8,6 @@ export const colors = {
   lightPurple: '#b763bf',
   grey: '#555555',
   lightGrey: '#eaedf0',
+  midGrey: '#dadee7',
+  gold: '#FFB900',
 };

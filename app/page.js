@@ -1,6 +1,4 @@
 'use client';
-import Image from 'next/image';
-
 import { Carousel } from '@/app/components/Carousel';
 import { HOMEPAGE_SLIDER_DATA } from './constants';
 
