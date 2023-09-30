@@ -7,6 +7,8 @@ export const colors = {
   purple: '#96529C',
   lightPurple: '#b763bf',
   grey: '#555555',
+  inputGrey: '#333',
+  dropzoneBorder: '#ccc',
   lightGrey: '#eaedf0',
   midGrey: '#dadee7',
   gold: '#FFB900',

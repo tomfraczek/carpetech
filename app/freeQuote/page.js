@@ -16,7 +16,7 @@ export default function FreeQuote() {
       message,
     };
 
-    const response = await fetch('api/contact', {
+    const response = await fetch('api/sendFreeQuote', {
       method: 'POST',
       body: JSON.stringify(data),
       headers: {

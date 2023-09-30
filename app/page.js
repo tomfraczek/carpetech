@@ -7,6 +7,7 @@ import { ServicesCards } from '@/app/components/ServicesCards';
 import { CarpetCleaning } from '@/app/components/CarpetCleaning';
 import { ChemDryBar } from '@/app/components/ChemDryBar';
 import { Reputation } from '@/app/components/Reputation';
+import { QuickQuote } from '@/app/components/QuickQoute';
 
 export default function Page() {
   return (
@@ -17,6 +18,7 @@ export default function Page() {
       <CarpetCleaning />
       <ChemDryBar />
       <Reputation />
+      <QuickQuote />
     </>
   );
 }
