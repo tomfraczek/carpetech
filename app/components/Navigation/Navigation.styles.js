@@ -5,7 +5,7 @@ export const NavContainer = styled.div`
   position: sticky;
   top: 0;
   background-color: ${colors.white};
-  z-index: 2;
+  z-index: 2222;
 `;
 
 export const MenuList = styled.ul`

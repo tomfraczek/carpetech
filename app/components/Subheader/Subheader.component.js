@@ -5,6 +5,11 @@ import Link from 'next/link';
 import { Container } from '@/global/styles';
 import { SubheaderContainer, Content, Title, MenuContainer, MenuLink } from './Subheader.styles';
 
+import google from '@/public/images/icons/google.svg';
+import youtube from '@/public/images/icons/youtube.svg';
+import x from '@/public/images/icons/x.svg';
+import facebook from '@/public/images/icons/facebook.svg';
+
 export const Subheader = () => {
   return (
     <SubheaderContainer>
@@ -23,22 +28,22 @@ export const Subheader = () => {
             </MenuLink>
             <MenuLink>
               <Link href='https://goo.gl/maps/yzgNuBGEQivZaX5s7'>
-                <Image src='/images/icons/google.png' width={15} height={14} alt='google-icon' />
+                <Image src={google} width={15} height={14} alt='google-icon' />
               </Link>
             </MenuLink>
             <MenuLink>
               <Link href='https://www.facebook.com/people/Chem-Dry-Milton-Keynes/100063698627760/'>
-                <Image src='/images/icons/facebook.png' width={15} height={14} alt='facebook-icon' />
+                <Image src={facebook} width={15} height={14} alt='facebook-icon' />
               </Link>
             </MenuLink>
             <MenuLink>
               <Link href='https://twitter.com/Chem_DryMK'>
-                <Image src='/images/icons/x.png' width={15} height={14} alt='x-icon' />
+                <Image src={x} width={15} height={14} alt='x-icon' />
               </Link>
             </MenuLink>
             <MenuLink>
               <Link href='https://www.youtube.com/user/ukchemdry'>
-                <Image src='/images/icons/youtube.png' width={15} height={14} alt='youtube-icon' />
+                <Image src={youtube} width={15} height={14} alt='youtube-icon' />
               </Link>
             </MenuLink>
           </MenuContainer>

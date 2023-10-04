@@ -31,6 +31,7 @@ export const MenuLink = styled.div`
   a {
     text-decoration: none;
     color: ${colors.white};
+    display: flex;
 
     &:hover {
       opacity: 0.7;
