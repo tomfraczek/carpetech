@@ -19,7 +19,7 @@ export const Carousel = ({ data }) => {
         modules={[Autoplay, Navigation]}
         style={{ height: '100%', '--swiper-pagination-color': '#fff', '--swiper-navigation-color': '#fff' }}
         autoplay={{
-          delay: 2500,
+          delay: 4000,
           disableOnInteraction: false,
         }}
         loop={true}

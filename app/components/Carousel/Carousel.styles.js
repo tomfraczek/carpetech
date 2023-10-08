@@ -1,12 +1,17 @@
+import { device } from '@/global/breakpoints';
 import { colors } from '@/global/colors';
 import styled from 'styled-components';
 
 export const CarouselContainer = styled.div`
-  height: 700px;
+  height: 300px;
   width: 100%;
   z-index: 1;
   border-bottom: 10px solid ${colors.purple};
   position: relative;
+
+  @media ${device.tablet} {
+    height: 700px;
+  }
 `;
 
 export const Header = styled.h6`

@@ -1,8 +1,8 @@
 'use client';
 import { Carousel } from '@/app/components/Carousel';
-import { HOMEPAGE_SLIDER_DATA } from './constants';
+import { HOMEPAGE_CELEBRATION_SECTION, HOMEPAGE_SLIDER_DATA } from '@/app/constants';
 
-import { Celebration } from '@/app/components/Celebration';
+import { ContentWithImage } from '@/app/components/ContentWithImage';
 import { ServicesCards } from '@/app/components/ServicesCards';
 import { CarpetCleaning } from '@/app/components/CarpetCleaning';
 import { ChemDryBar } from '@/app/components/ChemDryBar';
@@ -13,7 +13,7 @@ export default function Page() {
   return (
     <>
       <Carousel data={HOMEPAGE_SLIDER_DATA} />
-      <Celebration />
+      <ContentWithImage data={HOMEPAGE_CELEBRATION_SECTION} />
       <ServicesCards />
       <CarpetCleaning />
       <ChemDryBar />

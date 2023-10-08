@@ -1,3 +1,4 @@
+import { device } from '@/global/breakpoints';
 import { colors } from '@/global/colors';
 import styled from 'styled-components';
 
@@ -9,13 +10,21 @@ export const HeaderContainer = styled.div`
 export const Content = styled.div`
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   padding: 10px 0;
+
+  @media ${device.tablet} {
+    justify-content: space-between;
+  }
 `;
 
 export const Contact = styled.div`
-  display: flex;
-  flex-direction: column;
+  display: none;
+
+  @media ${device.tablet} {
+    display: flex;
+    flex-direction: column;
+  }
 
   img {
     margin-right: 3px;
