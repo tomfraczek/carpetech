@@ -3,6 +3,7 @@ import image2 from '@/public/images/carpet-slider/image2.jpeg';
 import image3 from '@/public/images/carpet-slider/image3.jpeg';
 import imageSection1 from '@/public/images/carpet-cleaning/image1.jpeg';
 import imageSection2 from '@/public/images/carpet-cleaning/image2.jpeg';
+import imageSection3 from '@/public/images/carpet-cleaning/image3.jpeg';
 import iconSection from '@/public/images/carpet-cleaning/icon.png';
 
 export const CARPERT_PAGE_SLIDER_DATA = [
@@ -78,5 +79,18 @@ export const CARPETPAGE_PROFESIONAL_CLEANERS_SECTION = [
       'Targets only pet urine odour and any associated stains',
       'Capable of restoring even severely damaged carpeted areas',
     ],
+  },
+];
+
+export const CARPETPAGE_CLEAN_CARPETS_SECTION = [
+  {
+    header: 'Hygienically Clean Carpets',
+    paragraphs: [
+      'The effectiveness of our process lies in our carbonated solution. Whilst detergents and soaps can leave behind a residue resulting in dull fibres and a carpet that can get dirty again more quickly, we use the power of carbonated bubbles for deep down, detergent free, carpet cleaning.',
+      'We can penetrate deeply into the carpet fibres, so even tough, deep stains and ground in dirt can be removed without difficulty. That way, your carpets stay much cleaner for much longer.',
+      'Plus, your carpets will not harbour dirty water and will not be susceptible to the growth of mould and bacteria.',
+      'We also provide commercial carpet cleaning services for commerce and industry.',
+    ],
+    image: imageSection3,
   },
 ];

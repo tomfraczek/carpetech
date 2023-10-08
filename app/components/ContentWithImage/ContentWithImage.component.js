@@ -13,8 +13,9 @@ import {
 } from './ContentWithImage.styles';
 import { Fragment } from 'react';
 import AnbgleDown from '@/public/images/icons/angleDown.svg';
+import { ReviewCards } from '@/app/components/ReviewCards';
 
-export const ContentWithImage = ({ data, revert }) => {
+export const ContentWithImage = ({ data, revert, reviews }) => {
   const isReversed = revert || false;
   return (
     <Fragment>
@@ -45,8 +46,8 @@ export const ContentWithImage = ({ data, revert }) => {
               )}
             </Fragment>
           ))}
+          {reviews && <ReviewCards />}
         </ContentLeft>
-        {/* Render ContentRight here if needed */}
         {data.map(
           ({ image }, index) =>
             image && (

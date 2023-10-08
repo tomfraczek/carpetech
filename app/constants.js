@@ -3,6 +3,7 @@ import image2 from '@/public/images/home-slider/slider2.jpeg';
 import image3 from '@/public/images/home-slider/slider3.jpeg';
 import year from '@/public/images/year.png';
 import family from '@/public/images/family.jpeg';
+import pet from '@/public/images/pet.jpeg';
 
 export const HOMEPAGE_SLIDER_DATA = [
   {
@@ -93,5 +94,18 @@ export const HOMEPAGE_CELEBRATION_SECTION = [
       'We are your local experts to call when you need an advanced cleaning services. You can rely on a cleaning service carried out by qualified and dedicated expert carpet cleaners.',
     ],
     image: family,
+  },
+];
+
+export const HOMEPAGE_REPUTATION_SECTION = [
+  {
+    header: 'Our Reputation',
+    subheader: 'Chem-Dry Milton Keynes has built a sterling reputation for providing outstanding cleaning services.',
+    paragraphs: [
+      'Our loyal customers in the Milton Keynes area come back to us time & time again, with much of our business gained through word-of-mouth or repeat business.',
+      'We commit ourselves to the requirements and high expectations of our customers. The secret of our success lies with our complete dedication and attention to detail.',
+      'All our technicians are DBS/CRB checked. Some of our products are Green & Clean certified, accredited to the Carpet and Rug Institute. We are also accredited with ISO 9001:2000.',
+    ],
+    image: pet,
   },
 ];
