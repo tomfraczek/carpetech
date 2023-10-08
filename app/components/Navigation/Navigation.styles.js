@@ -1,11 +1,17 @@
+import { device } from '@/global/breakpoints';
 import { colors } from '@/global/colors';
 import styled from 'styled-components';
 
 export const NavContainer = styled.div`
+  display: none;
   position: sticky;
   top: 0;
   background-color: ${colors.white};
   z-index: 2222;
+
+  @media ${device.tablet} {
+    display: block;
+  }
 `;
 
 export const MenuList = styled.ul`

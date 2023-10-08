@@ -14,7 +14,8 @@ import {
   FooterSection,
   Header,
   FooterContent,
-  ContactContainer,
+  ContactEmailContainer,
+  ContactPhoneContainer,
   PhoneNumber,
   EmailAddress,
   WhiteText,
@@ -28,7 +29,6 @@ import google from '@/public/images/icons/google.svg';
 import youtube from '@/public/images/icons/youtube.svg';
 import x from '@/public/images/icons/x.svg';
 import facebook from '@/public/images/icons/facebook.svg';
-import { renderStars } from '../ReviewCard/ReviewCard.component';
 
 export const Footer = () => {
   return (
@@ -46,19 +46,19 @@ export const Footer = () => {
 
           <FooterSection>
             <Header>Get in Touch</Header>
-            <ContactContainer>
+            <ContactPhoneContainer>
               <Image src={phoneIcon} alt='phone icon' />
               <PhoneNumber>
                 <Link href={`tel:01908505305`}>01908 505305</Link>
               </PhoneNumber>
-            </ContactContainer>
+            </ContactPhoneContainer>
 
-            <ContactContainer>
+            <ContactEmailContainer>
               <Image width={17} src={envelope} alt='phone icon' />
               <EmailAddress>
                 <Link href={`mailto:jonathan@chemdrymiltonkeynes.co.uk`}>jonathan@chemdrymiltonkeynes.co.uk</Link>
               </EmailAddress>
-            </ContactContainer>
+            </ContactEmailContainer>
 
             <RgisteredContainer>
               <WhiteText>Registered company in England</WhiteText>

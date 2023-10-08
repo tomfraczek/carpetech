@@ -1,3 +1,4 @@
+import { device } from '@/global/breakpoints';
 import { colors } from '@/global/colors';
 import styled from 'styled-components';
 
@@ -11,10 +12,14 @@ export const FooterSection = styled.div`
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
-  width: 33.3333%;
+  width: 100%;
   margin-bottom: 30px;
   padding-right: 15px;
   padding-left: 15px;
+
+  @media ${device.tablet} {
+    width: 33.3333%;
+  }
 
   > a {
     color: ${colors.lightPurple};
@@ -25,7 +30,13 @@ export const FooterSection = styled.div`
     margin: 0;
     font-size: 18px;
     padding: 0 0 5px;
+    width: 100%;
+    text-align: center;
 
+    @media ${device.tablet} {
+      width: auto;
+      text-align: left;
+    }
     img {
       transform: rotate(-90deg);
       filter: invert(50%) sepia(12%) saturate(2052%) hue-rotate(247deg) brightness(95%) contrast(95%);
@@ -44,23 +55,52 @@ export const FooterSection = styled.div`
 export const Header = styled.h6`
   font-size: 1.5em;
   padding-bottom: 5px;
-  margin-top: 0;
-  margin-bottom: 15px;
   font-weight: bold;
   letter-spacing: -0.5px;
   line-height: 1.1;
   color: ${colors.white};
+  margin: auto;
+
+  margin-top: 15px;
+  margin-bottom: 15px;
+
+  @media ${device.tablet} {
+    margin: 0 0 15px 0;
+  }
 `;
 
 export const FooterContent = styled.div`
   display: flex;
   align-items: baseline;
-  /* justify-content: ; */
+  flex-direction: column;
+
+  @media ${device.tablet} {
+    flex-direction: row;
+  }
 `;
 
-export const ContactContainer = styled.div`
+export const ContactPhoneContainer = styled.div`
   display: flex;
   align-items: center;
+  margin: auto;
+
+  margin-top: 21px;
+  margin-bottom: 10.5px;
+
+  @media ${device.tablet} {
+    margin: 21px 0 10.5px 0;
+  }
+`;
+
+export const ContactEmailContainer = styled.div`
+  display: flex;
+  align-items: center;
+  margin: auto;
+  margin-bottom: 10.5px;
+
+  @media ${device.tablet} {
+    margin: 0 0 10.5px;
+  }
 `;
 
 export const PhoneNumber = styled.div`
@@ -81,6 +121,7 @@ export const PhoneNumber = styled.div`
 `;
 
 export const EmailAddress = styled.div`
+  margin: 0 0 10.5px;
   a {
     margin-left: 7px;
     color: ${colors.lightPurple};
@@ -94,15 +135,24 @@ export const EmailAddress = styled.div`
 
 export const WhiteText = styled.p`
   color: ${colors.white};
+  margin: auto;
 `;
 
 export const RgisteredContainer = styled.div`
-  margin: 10.5px 0;
+  margin: 10.5px auto;
+
+  @media ${device.tablet} {
+    margin: 10.5px 0;
+  }
 `;
 
 export const SocialMediaContainer = styled.div`
-  margin: 10.5px 0;
   display: flex;
+  margin: 10.5px auto;
+
+  @media ${device.tablet} {
+    margin: 10.5px 0;
+  }
 
   & > a {
     display: flex;

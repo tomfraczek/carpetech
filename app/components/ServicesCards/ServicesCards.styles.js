@@ -1,3 +1,4 @@
+import { device } from '@/global/breakpoints';
 import { colors } from '@/global/colors';
 import styled from 'styled-components';
 
@@ -36,6 +37,11 @@ export const Cards = styled.div`
   flex-wrap: wrap;
 
   a {
+    width: calc(50% - 10px);
+
+    @media ${device.tablet} {
+      width: calc(25% - 10px);
+    }
     &:hover {
       & img {
         opacity: 0.8;

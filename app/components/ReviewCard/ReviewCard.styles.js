@@ -43,6 +43,7 @@ export const Rating = styled.div`
     height: 24px;
   }
 `;
+
 export const QuoteIcon = styled.img`
   margin-left: auto;
 `;

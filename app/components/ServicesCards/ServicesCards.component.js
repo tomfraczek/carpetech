@@ -23,7 +23,7 @@ export const ServicesCards = () => {
 
         <Cards>
           {SERVICES_DATA.map(({ image, title, category, url }) => (
-            <Link key={title} href={url} style={{ width: 'calc(25% - 10px)' }}>
+            <Link key={title} href={url}>
               <Card>
                 <ImageContainer>
                   <Image width={150} height={150} src={image} alt='service icon' />

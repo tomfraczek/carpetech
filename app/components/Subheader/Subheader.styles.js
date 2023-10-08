@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { colors } from '@/global/colors';
+import { device } from '@/global/breakpoints';
 
 export const SubheaderContainer = styled.div`
   height: 31px;
@@ -15,8 +16,12 @@ export const Content = styled.div`
 `;
 
 export const Title = styled.div`
+  display: none;
   color: ${colors.white};
-  /* padding: 0 15px; */
+
+  @media ${device.tablet} {
+    display: block;
+  }
 `;
 
 export const MenuContainer = styled.div`

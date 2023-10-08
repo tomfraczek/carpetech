@@ -1,12 +1,18 @@
+import { device } from '@/global/breakpoints';
 import { colors } from '@/global/colors';
 import styled from 'styled-components';
 
 export const Form = styled.form`
   grid-column-gap: 2%;
   grid-row-gap: 16px;
-  display: grid;
   grid-template-columns: repeat(12, 1fr);
   width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  @media ${device.tablet} {
+    display: grid;
+  }
 
   input,
   select,

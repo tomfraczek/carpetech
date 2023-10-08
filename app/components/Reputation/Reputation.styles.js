@@ -1,3 +1,4 @@
+import { device } from '@/global/breakpoints';
 import { colors } from '@/global/colors';
 import styled from 'styled-components';
 
@@ -5,26 +6,50 @@ export const CelebrationContainer = styled.div`
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-between;
+  flex-direction: column;
+
+  @media ${device.tablet} {
+    flex-direction: row;
+  }
 `;
 
 export const ContentLeft = styled.div`
   padding: 5% 3%;
-  width: 67%;
+  width: 100%;
+
+  @media ${device.tablet} {
+    width: 67%;
+  }
 `;
 
 export const ContentRight = styled.div`
-  width: 33%;
+  width: 100%;
   text-align: center;
   position: relative;
 
+  @media ${device.tablet} {
+    width: 33%;
+  }
+
   img {
-    position: absolute;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
     object-position: center;
+
+    @media ${device.tablet} {
+      position: absolute;
+    }
+  }
+`;
+
+export const LogoContainer = styled.div`
+  text-align: center;
+  @media ${device.tablet} {
+    float: right;
+    margin: 5px 0 20px 20px;
   }
 `;
 

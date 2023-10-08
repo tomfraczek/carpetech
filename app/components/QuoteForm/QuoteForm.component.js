@@ -117,7 +117,7 @@ export const QuoteForm = () => {
         <Controller
           name='interests'
           control={control}
-          defaultValue={[]}
+          defaultValue={''}
           render={({ field }) => (
             <select {...field}>
               <option value='option0'>Area of Interest (Please Select)</option>
