@@ -1,6 +1,8 @@
-import image1 from '@/public/images/slider/slider1.jpeg';
-import image2 from '@/public/images/slider/slider2.jpeg';
-import image3 from '@/public/images/slider/slider3.jpeg';
+import image1 from '@/public/images/home-slider/slider1.jpeg';
+import image2 from '@/public/images/home-slider/slider2.jpeg';
+import image3 from '@/public/images/home-slider/slider3.jpeg';
+import year from '@/public/images/year.png';
+import family from '@/public/images/family.jpeg';
 
 export const HOMEPAGE_SLIDER_DATA = [
   {
@@ -77,5 +79,19 @@ export const SERVICES_DATA = [
     title: 'Comercial',
     category: 'Cleaning',
     url: 'https://www.chemdrymiltonkeynes.co.uk/carpet-cleaning/',
+  },
+];
+
+export const HOMEPAGE_CELEBRATION_SECTION = [
+  {
+    icon: year,
+    header: 'Chem-Dry Milton Keynes - Professional Carpet Cleaners',
+    subheader: 'Proudly serving the local area for over 24 years',
+    paragraphs: [
+      'We have been cleaning carpets, upholstery, curtains and leather around Milton Keynes since 1998, with over 7,000 local satisﬁed customers.',
+      'We have a mission to deliver the greatest range of carpet and upholstery and fire and floor restoration services. We offer our customers a one-stop solution for all of their cleaning requirements.',
+      'We are your local experts to call when you need an advanced cleaning services. You can rely on a cleaning service carried out by qualified and dedicated expert carpet cleaners.',
+    ],
+    image: family,
   },
 ];

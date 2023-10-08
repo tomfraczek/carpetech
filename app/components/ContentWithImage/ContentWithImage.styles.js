@@ -2,14 +2,14 @@ import { device } from '@/global/breakpoints';
 import { colors } from '@/global/colors';
 import styled from 'styled-components';
 
-export const CelebrationContainer = styled.div`
+export const ContentWithImageContainer = styled.div`
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-between;
   flex-direction: column;
 
   @media ${device.tablet} {
-    flex-direction: row;
+    flex-direction: ${(props) => (props.$reverse ? 'row-reverse' : 'row')};
   }
 `;
 
@@ -49,7 +49,12 @@ export const LogoContainer = styled.div`
   text-align: center;
   @media ${device.tablet} {
     float: right;
-    margin: 5px 0 20px 20px;
+    /* margin: 5px 0 20px 20px; */
+  }
+
+  img {
+    max-height: 150px;
+    width: auto;
   }
 `;
 
