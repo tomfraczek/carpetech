@@ -31,8 +31,9 @@ export const Logo = styled.div`
   width: 100px;
   height: 100px;
 
-  @media ${device.laptop} {
-    width: auto;
+  @media ${device.tablet} {
+    width: 210px;
+    height: 210px;
   }
   img {
     width: 100%;

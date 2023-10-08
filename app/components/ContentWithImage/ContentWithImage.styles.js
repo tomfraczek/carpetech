@@ -86,3 +86,31 @@ export const Paragraph = styled.p`
   line-height: 1.5;
   font-size: 17px;
 `;
+
+export const FactHeader = styled.h3`
+  color: ${colors.green};
+  font-weight: bold;
+  letter-spacing: -0.5px;
+  font-size: 24px;
+  margin-top: 21px;
+  margin-bottom: 10.5px;
+  line-height: 1.1;
+`;
+
+export const FactsList = styled.ul`
+  columns: 270px 2;
+`;
+
+export const FactItem = styled.li`
+  display: flex;
+  margin: 0 0 0.8em 1.5em;
+  line-height: 1.3;
+  break-inside: avoid;
+
+  img {
+    transform: rotate(-90deg);
+    filter: invert(50%) sepia(12%) saturate(2052%) hue-rotate(247deg) brightness(95%) contrast(95%);
+    width: 15px;
+    margin-right: 5px;
+  }
+`;

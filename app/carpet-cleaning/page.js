@@ -1,13 +1,20 @@
 'use client';
 import { Carousel } from '@/app/components/Carousel';
-import { CARPERT_PAGE_SLIDER_DATA, CARPETPAGE_PROFESIONAL_CLEANING_SECTION } from '@/app/carpet-cleaning/constants';
+import {
+  CARPERT_PAGE_SLIDER_DATA,
+  CARPETPAGE_PROFESIONAL_CLEANERS_SECTION,
+  CARPETPAGE_PROFESIONAL_CLEANING_SECTION,
+} from '@/app/carpet-cleaning/constants';
 import { ContentWithImage } from '@/app/components/ContentWithImage';
+import { ChemDryBar } from '@/app/components/ChemDryBar';
 
 export default function Page() {
   return (
     <>
       <Carousel data={CARPERT_PAGE_SLIDER_DATA} />
       <ContentWithImage data={CARPETPAGE_PROFESIONAL_CLEANING_SECTION} />
+      <ChemDryBar />
+      <ContentWithImage data={CARPETPAGE_PROFESIONAL_CLEANERS_SECTION} revert />
     </>
   );
 }
