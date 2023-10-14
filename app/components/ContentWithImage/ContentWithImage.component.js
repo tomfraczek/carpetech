@@ -10,6 +10,7 @@ import {
   FactHeader,
   FactsList,
   FactItem,
+  SectionHeader,
 } from './ContentWithImage.styles';
 import { Fragment } from 'react';
 import AnbgleDown from '@/public/images/icons/angleDown.svg';
@@ -21,13 +22,14 @@ export const ContentWithImage = ({ data, revert, reviews }) => {
     <Fragment>
       <ContentWithImageContainer $reverse={isReversed}>
         <ContentLeft>
-          {data.map(({ icon, header, subheader, paragraphs, facts }, index) => (
+          {data.map(({ icon, header, sectionHeader, subheader, paragraphs, facts }, index) => (
             <Fragment key={index}>
               {icon && (
                 <LogoContainer>
                   <Image src={icon} alt='year logo' />
                 </LogoContainer>
               )}
+              {sectionHeader && <SectionHeader>{sectionHeader}</SectionHeader>}
               {header && <Header>{header}</Header>}
               {subheader && <Subheader>{subheader}</Subheader>}
               {paragraphs && paragraphs.map((paragraph, i) => <Paragraph key={i}>{paragraph}</Paragraph>)}

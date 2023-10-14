@@ -27,7 +27,7 @@ export const CARPERT_PAGE_SLIDER_DATA = [
 export const CARPETPAGE_PROFESIONAL_CLEANING_SECTION = [
   {
     icon: iconSection,
-    header: 'Professional Carpet Cleaning in Milton Keynes',
+    sectionHeader: 'Professional Carpet Cleaning in Milton Keynes',
     paragraphs: [
       'Chem-Dry Milton Keynes are the experts to call when you need your carpet or household fabrics cleaning.',
       'We’re dedicated to ensuring that carpets are cleaned to the highest standards, and that they stay cleaner for longer.',
