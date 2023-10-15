@@ -125,3 +125,26 @@ export const FactItem = styled.li`
     margin-right: 5px;
   }
 `;
+
+export const ListItem = styled.div`
+  display: flex;
+  align-items: baseline;
+  text-rendering: optimizeLegibility;
+  font-feature-settings: 'kern';
+  font-kerning: normal;
+  margin: 0 0 10.5px;
+  color: ${colors.grey};
+  line-height: 1.5;
+  font-size: 17px;
+
+  img {
+    margin-right: 8px;
+    filter: invert(50%) sepia(12%) saturate(2052%) hue-rotate(247deg) brightness(95%) contrast(95%);
+    transform: rotate(-90deg);
+    position: relative;
+    top: 3px;
+  }
+`;
+export const List = styled.div`
+  margin-bottom: 35px;
+`;
