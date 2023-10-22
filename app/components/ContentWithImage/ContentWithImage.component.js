@@ -77,6 +77,7 @@ export const ContentWithImage = ({ data, revert, reviews, grey, small }) => {
                         </LogoContainer>
                       );
                     } else if (key === 'infiniteLoop') {
+                      // eslint-disable-next-line react/jsx-key
                       return <InfiniteLoopCarousel data={item[key]} />;
                     }
                   }

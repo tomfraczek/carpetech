@@ -2,10 +2,10 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-import { Navigation, Autoplay } from 'swiper/modules';
+import { Autoplay } from 'swiper/modules';
 import { CarouselCaontainer, Title } from './InfiniteLoopCarousel.styles';
 import Image from 'next/image';
-import { Container } from '@/global/styles';
+import { Fragment } from 'react';
 
 export const InfiniteLoopCarousel = ({ data }) => {
   const { title, clients } = data;
@@ -16,19 +16,20 @@ export const InfiniteLoopCarousel = ({ data }) => {
         navigation={false}
         modules={[Autoplay]}
         style={{ height: '100%', width: '100%' }}
-        slidesPerView={1.5}
+        slidesPerView={2.3}
         speed={3000}
         autoplay={{
           delay: 0,
           disableOnInteraction: false,
         }}
         loop={true}
-        // className='mySwiper'
       >
         {clients.map(({ src }, i) => (
-          <SwiperSlide key={i}>
-            <Image src={src} width={400} height={200} alt='slide image' style={{ zIndex: '0' }} />
-          </SwiperSlide>
+          <Fragment key={i}>
+            <SwiperSlide key={i}>
+              <Image src={src} width={300} height={150} alt='slide image' style={{ zIndex: '0' }} />
+            </SwiperSlide>
+          </Fragment>
         ))}
       </Swiper>
     </CarouselCaontainer>
