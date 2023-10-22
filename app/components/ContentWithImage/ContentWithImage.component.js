@@ -18,21 +18,17 @@ import { Fragment } from 'react';
 import AnbgleDown from '@/public/images/icons/angleDown.svg';
 import { ReviewCards } from '@/app/components/ReviewCards';
 
-export const ContentWithImage = ({ data, revert, reviews }) => {
+export const ContentWithImage = ({ data, revert, reviews, grey, small }) => {
   const isReversed = revert || false;
 
-  // Funkcja do określenia kolejności wyświetlania właściwości w oparciu o obiekt danych
   const getPropertyOrder = (item) => {
     const propertyOrder = Object.keys(item);
-    // Możesz dostosować kolejność, aby spełniała Twoje potrzeby.
-    // Na przykład, aby wykluczyć nieoczekiwane właściwości lub ustawić priorytety.
     return propertyOrder;
   };
-
   return (
     <Fragment>
-      <ContentWithImageContainer $reverse={isReversed}>
-        <ContentLeft>
+      <ContentWithImageContainer $reverse={isReversed} $grey={grey}>
+        <ContentLeft $small={small}>
           {data.map((item, index) => {
             const orderedKeys = getPropertyOrder(item);
 
@@ -91,7 +87,7 @@ export const ContentWithImage = ({ data, revert, reviews }) => {
         {data.map(
           (item, index) =>
             item.image && (
-              <ContentRight key={index}>
+              <ContentRight key={index} $small={small}>
                 <Image src={item.image} alt='family logo' width={768} height={512} />
               </ContentRight>
             )

@@ -7,6 +7,7 @@ export const ContentWithImageContainer = styled.div`
   flex-wrap: nowrap;
   justify-content: space-between;
   flex-direction: column;
+  background-color: ${(props) => (props.$grey ? colors.vlightGrey : colors.white)};
 
   @media ${device.tablet} {
     flex-direction: ${(props) => (props.$reverse ? 'row-reverse' : 'row')};
@@ -18,7 +19,7 @@ export const ContentLeft = styled.div`
   width: 100%;
 
   @media ${device.tablet} {
-    width: 67%;
+    width: ${(props) => (props.$small ? '80%' : '67%')};
   }
 `;
 
@@ -28,7 +29,7 @@ export const ContentRight = styled.div`
   position: relative;
 
   @media ${device.tablet} {
-    width: 33%;
+    width: ${(props) => (props.$small ? '20%' : '33%')};
   }
 
   img {

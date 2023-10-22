@@ -13,5 +13,6 @@ export const colors = {
   dropzoneBorder: '#ccc',
   lightGrey: '#eaedf0',
   midGrey: '#dadee7',
+  vlightGrey: '#f6f7f9',
   gold: '#FFB900',
 };
