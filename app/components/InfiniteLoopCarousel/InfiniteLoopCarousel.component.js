@@ -17,7 +17,7 @@ export const InfiniteLoopCarousel = ({ data }) => {
         modules={[Autoplay]}
         style={{ height: '100%', width: '100%' }}
         slidesPerView={2.3}
-        speed={3000}
+        speed={5000}
         autoplay={{
           delay: 0,
           disableOnInteraction: false,
