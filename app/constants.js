@@ -34,6 +34,10 @@ import Comercial from '@/public/images/services/8.png';
 
 export const SERVICES_DATA = [
   {
+    header: 'Our Professional Cleaning Services:',
+    subheader: 'For the Milton Keynes area',
+  },
+  {
     image: Carpet,
     title: 'Carpet',
     category: 'Cleaning',

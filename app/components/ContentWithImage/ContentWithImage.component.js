@@ -20,53 +20,79 @@ import { ReviewCards } from '@/app/components/ReviewCards';
 
 export const ContentWithImage = ({ data, revert, reviews }) => {
   const isReversed = revert || false;
+
+  // Funkcja do określenia kolejności wyświetlania właściwości w oparciu o obiekt danych
+  const getPropertyOrder = (item) => {
+    const propertyOrder = Object.keys(item);
+    // Możesz dostosować kolejność, aby spełniała Twoje potrzeby.
+    // Na przykład, aby wykluczyć nieoczekiwane właściwości lub ustawić priorytety.
+    return propertyOrder;
+  };
+
   return (
     <Fragment>
       <ContentWithImageContainer $reverse={isReversed}>
         <ContentLeft>
-          {data.map(({ icon, header, sectionHeader, subheader, paragraphs, facts, list }, index) => (
-            <Fragment key={index}>
-              {icon && (
-                <LogoContainer>
-                  <Image src={icon} alt='year logo' />
-                </LogoContainer>
-              )}
-              {sectionHeader && <SectionHeader>{sectionHeader}</SectionHeader>}
-              {header && <Header>{header}</Header>}
-              {subheader && <Subheader>{subheader}</Subheader>}
-              {paragraphs && paragraphs.map((paragraph, i) => <Paragraph key={i}>{paragraph}</Paragraph>)}
-              {facts && (
-                <>
-                  <FactHeader>Key Facts:</FactHeader>
-                  <FactsList>
-                    {facts.map((fact, index) => (
-                      <FactItem key={index}>
-                        <Image src={AnbgleDown} width={20} alt='angle right icon' />
-                        {fact}
-                      </FactItem>
-                    ))}
-                  </FactsList>
-                </>
-              )}
-              {list && (
-                <List>
-                  {list.map((element, i) => (
-                    <ListItem key={i}>
-                      <Image src={AnbgleDown} width={20} alt='angle right icon' />
-                      {element}
-                    </ListItem>
-                  ))}
-                </List>
-              )}
-            </Fragment>
-          ))}
+          {data.map((item, index) => {
+            const orderedKeys = getPropertyOrder(item);
+
+            return (
+              <Fragment key={index}>
+                {orderedKeys.map((key) => {
+                  if (item[key]) {
+                    if (key === 'sectionHeader') {
+                      return <SectionHeader key={key}>{item[key]}</SectionHeader>;
+                    } else if (key === 'header') {
+                      return <Header key={key}>{item[key]}</Header>;
+                    } else if (key === 'subheader') {
+                      return <Subheader key={key}>{item[key]}</Subheader>;
+                    } else if (key === 'paragraphs') {
+                      return item[key].map((paragraph, i) => <Paragraph key={i}>{paragraph}</Paragraph>);
+                    } else if (key === 'facts') {
+                      return (
+                        <Fragment key={key}>
+                          <FactHeader>Key Facts:</FactHeader>
+                          <FactsList>
+                            {item[key].map((fact, i) => (
+                              <FactItem key={i}>
+                                <Image src={AnbgleDown} width={20} alt='angle right icon' />
+                                {fact}
+                              </FactItem>
+                            ))}
+                          </FactsList>
+                        </Fragment>
+                      );
+                    } else if (key === 'list') {
+                      return (
+                        <List key={key}>
+                          {item[key].map((element, i) => (
+                            <ListItem key={i}>
+                              <Image src={AnbgleDown} width={20} alt='angle right icon' />
+                              {element}
+                            </ListItem>
+                          ))}
+                        </List>
+                      );
+                    } else if (key === 'icon') {
+                      return (
+                        <LogoContainer key={key}>
+                          <Image src={item[key]} alt='year logo' />
+                        </LogoContainer>
+                      );
+                    }
+                  }
+                  return null;
+                })}
+              </Fragment>
+            );
+          })}
           {reviews && <ReviewCards />}
         </ContentLeft>
         {data.map(
-          ({ image }, index) =>
-            image && (
+          (item, index) =>
+            item.image && (
               <ContentRight key={index}>
-                <Image src={image} alt='family logo' width={768} height={512} />
+                <Image src={item.image} alt='family logo' width={768} height={512} />
               </ContentRight>
             )
         )}

@@ -1,6 +1,11 @@
 'use client';
 import { Carousel } from '@/app/components/Carousel';
-import { HOMEPAGE_CELEBRATION_SECTION, HOMEPAGE_REPUTATION_SECTION, HOMEPAGE_SLIDER_DATA } from '@/app/constants';
+import {
+  HOMEPAGE_CELEBRATION_SECTION,
+  HOMEPAGE_REPUTATION_SECTION,
+  HOMEPAGE_SLIDER_DATA,
+  SERVICES_DATA,
+} from '@/app/constants';
 
 import { ContentWithImage } from '@/app/components/ContentWithImage';
 import { ServicesCards } from '@/app/components/ServicesCards';
@@ -13,7 +18,7 @@ export default function Page() {
     <>
       <Carousel data={HOMEPAGE_SLIDER_DATA} />
       <ContentWithImage data={HOMEPAGE_CELEBRATION_SECTION} />
-      <ServicesCards />
+      <ServicesCards data={SERVICES_DATA} />
       <CarpetCleaning />
       <ChemDryBar />
       <ContentWithImage data={HOMEPAGE_REPUTATION_SECTION} reviews />

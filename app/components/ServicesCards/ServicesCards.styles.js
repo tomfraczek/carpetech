@@ -17,6 +17,7 @@ export const Header = styled.h2`
   text-align: center;
   padding-top: 51px;
   font-weight: bold;
+  width: 100%;
 `;
 
 export const Subheader = styled.h2`
@@ -28,6 +29,7 @@ export const Subheader = styled.h2`
   text-align: center;
   line-height: 1.1;
   padding-bottom: 0.5em;
+  width: 100%;
 `;
 
 export const Cards = styled.div`
