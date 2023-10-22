@@ -22,7 +22,6 @@ export const ChemDryBarContainer = styled.div`
 export const Content = styled.div`
   display: flex;
   flex-direction: column;
-
   margin: 0 auto 0 0;
   text-align: left;
   text-transform: none;
@@ -66,8 +65,8 @@ export const Number = styled.div`
   color: ${colors.white};
   line-height: 1;
 
-  @media ${device.laptop} {
-    /* font-size: 72px; */
+  @media ${device.tablet} {
+    font-size: 72px;
   }
 `;
 
