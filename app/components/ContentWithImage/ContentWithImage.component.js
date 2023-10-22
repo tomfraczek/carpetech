@@ -17,6 +17,7 @@ import {
 import { Fragment } from 'react';
 import AnbgleDown from '@/public/images/icons/angleDown.svg';
 import { ReviewCards } from '@/app/components/ReviewCards';
+import { InfiniteLoopCarousel } from '@/app/components/InfiniteLoopCarousel';
 
 export const ContentWithImage = ({ data, revert, reviews, grey, small }) => {
   const isReversed = revert || false;
@@ -75,6 +76,8 @@ export const ContentWithImage = ({ data, revert, reviews, grey, small }) => {
                           <Image src={item[key]} alt='year logo' />
                         </LogoContainer>
                       );
+                    } else if (key === 'infiniteLoop') {
+                      return <InfiniteLoopCarousel data={item[key]} />;
                     }
                   }
                   return null;

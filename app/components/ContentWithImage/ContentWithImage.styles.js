@@ -50,7 +50,6 @@ export const LogoContainer = styled.div`
   text-align: center;
   @media ${device.tablet} {
     float: right;
-    /* margin: 5px 0 20px 20px; */
   }
 
   img {
@@ -87,6 +86,7 @@ export const Subheader = styled.h2`
   color: ${colors.green};
   letter-spacing: -0.5px;
   line-height: 1.1;
+  font-weight: 100;
 `;
 
 export const Paragraph = styled.p`

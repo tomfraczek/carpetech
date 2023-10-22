@@ -15,7 +15,6 @@ export const PAGE_SECTION_ONE = [
       'All of our products are guaranteed to do their job and will leave no residues on your fabrics.',
     ],
     image: image1,
-    small: true,
   },
 ];
 
@@ -28,8 +27,6 @@ export const PAGE_SECTION_TWO = [
       'Grease and Oil Remover is 100% evaporative and residue free.',
     ],
     image: image2,
-    small: true,
-    grey: true,
   },
 ];
 
@@ -42,7 +39,6 @@ export const PAGE_SECTION_THREE = [
       'Each of our Chem-Dry Carpet Deodorisers contain concentrated fragrances which means that one product can last up to five times longer than the equivalent powder product. Due to our products being in liquid form, no dusty powders are released that could attract dirt or irritate anybody in the vicinity.',
     ],
     image: image3,
-    small: true,
   },
 ];
 
@@ -54,8 +50,6 @@ export const PAGE_SECTION_FOUR = [
       'The Chem-Dry Dust Mite Anti-Allergen formula is completely natural and contains no harsh or harmful chemicals. This product is suitable for bedding, mattresses and any other home furnishings that are effective. Our products are completely safe for use around the home.',
     ],
     image: image4,
-    small: true,
-    grey: true,
   },
 ];
 
@@ -68,7 +62,6 @@ export const PAGE_SECTION_FIVE = [
       'We only supply our customers with the most advanced and effective stain protection products that, importantly, don’t damage your materials.',
     ],
     image: image5,
-    small: true,
   },
 ];
 
@@ -81,8 +74,6 @@ export const PAGE_SECTION_SIX = [
       'The Carpet Rake helps you to achieve brighter and cleaner carpets in between professional Chem-Dry cleans.',
     ],
     image: image6,
-    small: true,
-    grey: true,
   },
 ];
 

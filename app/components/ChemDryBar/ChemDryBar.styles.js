@@ -5,6 +5,7 @@ import styled from 'styled-components';
 export const BarLink = styled.a`
   z-index: 1;
   position: relative;
+  z-index: 10;
 `;
 
 export const ChemDryBarContainer = styled.div`
@@ -13,7 +14,7 @@ export const ChemDryBarContainer = styled.div`
   display: flex;
   align-items: center;
 
-  @media ${device.laptop} {
+  @media ${device.tablet} {
     height: 180px;
   }
 `;
