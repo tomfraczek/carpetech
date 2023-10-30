@@ -24,7 +24,7 @@ export const Subheader = () => {
               <Link href='/testimonials'>Reviews</Link>
             </MenuLink>
             <MenuLink>
-              <Link href='/contact'>Contact Us</Link>
+              <Link href='/contact-us'>Contact Us</Link>
             </MenuLink>
             <MenuLink>
               <Link href='https://goo.gl/maps/yzgNuBGEQivZaX5s7'>
