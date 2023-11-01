@@ -15,12 +15,10 @@ export async function POST(request) {
       secure: true,
     });
 
-    console.log(name);
     const mailOption = {
       from: process.env.NODEMAILER_EMAIL,
       to: 'tomaszfr90@gmail.com',
       subject: 'EMAIL SENT FROM YOUR WEBSITE',
-      attachments: file,
       html: `
         <h3>Hello Michael</h3>
     <p>You have received a new contact form submission with the following details:</p>
@@ -32,7 +30,6 @@ export async function POST(request) {
         <li>Interests: ${interests}</li>
         <li>Message: ${message}</li>
     </ul>
-    <p>Attached File: [Attachment - You can access it in the email client]</p>
         `,
     };
 

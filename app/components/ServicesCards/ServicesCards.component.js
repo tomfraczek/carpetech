@@ -1,3 +1,4 @@
+import { Fragment } from 'react';
 import { Container } from '@/global/styles';
 import {
   CardsContainer,
@@ -18,8 +19,8 @@ export const ServicesCards = ({ data }) => {
     <CardsContainer>
       <Container>
         <Cards>
-          {data.map(({ image, title, category, url, header, subheader }) => (
-            <>
+          {data.map(({ image, title, category, url, header, subheader }, i) => (
+            <Fragment key={i}>
               {header && <Header>{header}</Header>}
               {subheader && <Subheader>{subheader}</Subheader>}
               {url && (
@@ -35,7 +36,7 @@ export const ServicesCards = ({ data }) => {
                   </Card>
                 </Link>
               )}
-            </>
+            </Fragment>
           ))}
         </Cards>
       </Container>

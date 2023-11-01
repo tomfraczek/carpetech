@@ -73,25 +73,6 @@ export const SubmitContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-
-  button {
-    font-size: clamp(17px, 1.8vw, 26px);
-    color: ${colors.white};
-    background: rgba(0, 0, 0, 0.2);
-    border-radius: 5em;
-    border: 2px solid;
-    text-align: center;
-    line-height: 1.2;
-    padding: 0.4em 1.5em;
-    transition: all 0.2s ease;
-    position: relative;
-    cursor: pointer;
-
-    &:hover {
-      background-color: ${colors.blue};
-      border-color: ${colors.blue};
-    }
-  }
 `;
 
 export const DropzoneContainer = styled.div`
@@ -136,4 +117,28 @@ export const ThumbInner = styled.div`
   width: 80px;
   height: auto;
   position: relative;
+`;
+
+export const SubmitButton = styled.button`
+  background-color: ${colors.blue};
+  font-size: clamp(17px, 1.8vw, 26px);
+  color: ${colors.white};
+  border-radius: 5em;
+  border: 2px solid ${colors.blue};
+  text-align: center;
+  line-height: 1.2;
+  padding: 0.4em 1.5em;
+  transition: all 0.2s ease;
+  position: relative;
+  cursor: pointer;
+
+  &:hover {
+    background-color: ${colors.green};
+    border-color: ${colors.green};
+  }
+
+  &:disabled,
+  &[disabled] {
+    background-color: ${colors.green};
+  }
 `;
