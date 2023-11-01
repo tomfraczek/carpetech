@@ -15,7 +15,7 @@ export const QuickQuote = () => {
         <QuoteForm />
       </Container>
       <BackgroundOverlay />
-      <Image src={backgroundImg} alt='' />
+      <Image src={backgroundImg} alt='background quote' />
     </QuickQuoteContainer>
   );
 };
