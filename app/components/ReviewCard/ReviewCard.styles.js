@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 export const ReviewCardContainer = styled.div`
   position: relative;
-  width: 480px;
+  width: 100%;
   margin-right: 20px;
   display: block;
   height: auto;
