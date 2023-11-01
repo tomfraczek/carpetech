@@ -5,7 +5,7 @@ import { Heading, QuickQuoteContainer, Description, BackgroundOverlay } from './
 
 import { QuoteForm } from '@/app/components/QuoteForm';
 
-import background from '@/public/images/contacthome.jpeg';
+import background from '@/public/images/carpetcleaning.jpeg';
 
 export const QuickQuote = () => {
   return (
