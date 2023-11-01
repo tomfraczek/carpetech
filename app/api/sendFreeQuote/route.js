@@ -3,7 +3,7 @@ import nodemailer from 'nodemailer';
 
 export async function POST(request) {
   try {
-    const { subject, message } = await request.json();
+    const { email, file, interests, message, name, phone, postcode } = await request.json();
 
     const transporter = nodemailer.createTransport({
       port: 465,
@@ -15,14 +15,24 @@ export async function POST(request) {
       secure: true,
     });
 
+    console.log(name);
     const mailOption = {
       from: process.env.NODEMAILER_EMAIL,
       to: 'tomaszfr90@gmail.com',
-      subject: 'Send Email Tutorial',
+      subject: 'EMAIL SENT FROM YOUR WEBSITE',
+      attachments: file,
       html: `
-        <h3>Hello Augustine</h3>
-        <li> title: ${subject}</li>
-        <li> message: ${message}</li> 
+        <h3>Hello Michael</h3>
+    <p>You have received a new contact form submission with the following details:</p>
+    <ul>
+        <li>Name: ${name}</li>
+        <li>Email: ${email}</li>
+        <li>Phone: ${phone}</li>
+        <li>Postcode: ${postcode}</li>
+        <li>Interests: ${interests}</li>
+        <li>Message: ${message}</li>
+    </ul>
+    <p>Attached File: [Attachment - You can access it in the email client]</p>
         `,
     };
 
@@ -33,12 +43,3 @@ export async function POST(request) {
     return NextResponse.json({ message: 'Failed to Send Email' }, { status: 500 });
   }
 }
-// const transporter = nodemailer.createTransport({
-//   port: 465,
-//   host: 'smtp.gmail.com',
-//   auth: {
-//     user: process.env.NODEMAILER_EMAIL,
-//     pass: process.env.NODEMAILER_PW,
-//   },
-//   secure: true,
-// });

@@ -4,6 +4,20 @@ import styled from 'styled-components';
 export const AddressContainer = styled.div`
   display: flex;
   flex-direction: column;
+  padding: 3em 0;
+  width: 50%;
+  position: relative;
+
+  img {
+    width: 100%;
+    z-index: 0;
+    height: auto;
+  }
+`;
+
+export const AddressDetailsContainer = styled.div`
+  display: flex;
+  flex-direction: column;
 `;
 
 export const Title = styled.h2`

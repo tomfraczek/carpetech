@@ -138,7 +138,7 @@ export const QuoteForm = () => {
         />
       </FormMessage>
 
-      <FormCaptcha>
+      {/* <FormCaptcha>
         <Controller
           name='recaptcha'
           control={control}
@@ -152,7 +152,7 @@ export const QuoteForm = () => {
           )}
         />
         {errors.recaptcha && <p>{errors.recaptcha.message}</p>}
-      </FormCaptcha>
+      </FormCaptcha> */}
 
       <StyledDropzone />
 
