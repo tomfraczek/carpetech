@@ -5,6 +5,8 @@ import { Heading, QuickQuoteContainer, Description, BackgroundOverlay } from './
 
 import { QuoteForm } from '@/app/components/QuoteForm';
 
+import background from '@/public/images/contacthome.jpeg';
+
 export const QuickQuote = () => {
   return (
     <QuickQuoteContainer>
@@ -14,7 +16,7 @@ export const QuickQuote = () => {
         <QuoteForm />
       </Container>
       <BackgroundOverlay />
-      <Image src='/images/contacthome.jpeg' alt='background quote' fill />
+      <Image src={background} alt='background quote' fill />
     </QuickQuoteContainer>
   );
 };
