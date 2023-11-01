@@ -20,7 +20,7 @@ export const renderStars = (number) => {
 
 export const ReviewCard = ({ review, author, location, rating }) => {
   return (
-    <SwiperSlide>
+    <SwiperSlide style={{ padding: '0 15px' }}>
       <ReviewCardContainer>
         <Paragraph>{review}</Paragraph>
         <Author>{author}</Author>
