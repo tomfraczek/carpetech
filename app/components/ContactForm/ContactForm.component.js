@@ -1,8 +1,5 @@
 import { useState, useRef } from 'react';
 import { useForm, Controller } from 'react-hook-form';
-import Dropzone from 'react-dropzone';
-
-import { StyledDropzone } from '@/app/components/Dropzone';
 
 import {
   Form,

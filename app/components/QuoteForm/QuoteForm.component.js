@@ -1,9 +1,5 @@
 import { useState } from 'react';
 import { useForm, Controller } from 'react-hook-form';
-import axios from 'axios';
-import ReCAPTCHA from 'react-google-recaptcha';
-
-import { StyledDropzone } from '@/app/components/Dropzone';
 
 import {
   Form,
@@ -137,25 +133,6 @@ export const QuoteForm = () => {
           render={({ field }) => <textarea placeholder='Ask Us a Question' {...field} rows='4' />}
         />
       </FormMessage>
-
-      {/* <FormCaptcha>
-        <Controller
-          name='recaptcha'
-          control={control}
-          defaultValue=''
-          rules={{ required: 'Please complete the reCAPTCHA challenge.' }}
-          render={({ field }) => (
-            <>
-              <ReCAPTCHA sitekey='YOUR_RECAPTCHA_SITE_KEY' onChange={(value) => field.onChange(value)} />
-              <input type='hidden' {...field} />
-            </>
-          )}
-        />
-        {errors.recaptcha && <p>{errors.recaptcha.message}</p>}
-      </FormCaptcha> */}
-
-      <StyledDropzone />
-
       <SubmitContainer>
         <button type='submit'>Submit</button>
       </SubmitContainer>
