@@ -21,11 +21,14 @@ const robotoCondensed = Roboto_Condensed({
 export default function RootLayout({ children }) {
   return (
     <html lang='en'>
+      <head></head>
       <body style={{ margin: 0 }} className={robotoCondensed.className}>
-        <Header />
-        <Navigation />
-        <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
-        <Footer />
+        <StyledComponentsRegistry>
+          <Header />
+          <Navigation />
+          {children}
+          <Footer />
+        </StyledComponentsRegistry>
       </body>
     </html>
   );

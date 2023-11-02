@@ -36,7 +36,7 @@ export const Carousel = ({ data }) => {
                 </Link>
               </CtaContainer>
             </Content>
-            <Image src={img.src} priority layout='fill' objectFit='cover' alt={header} style={{ zIndex: '0' }} />
+            <Image src={img.src} priority fill alt={header} style={{ zIndex: '0' }} />
             <Mask />
           </SwiperSlide>
         ))}
