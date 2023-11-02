@@ -21,7 +21,7 @@ export const Header = () => {
           </Contact>
 
           <Logo>
-            <Image src='/images/logo.png' width={250} height={112} alt='' />
+            <Image src='/images/carpetLogo.png' width={320} height={70.5} alt='' />
           </Logo>
 
           <Contact>

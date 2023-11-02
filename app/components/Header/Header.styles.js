@@ -11,7 +11,7 @@ export const Content = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 10px 0;
+  padding: 50px 0;
 
   @media ${device.tablet} {
     justify-content: space-between;
