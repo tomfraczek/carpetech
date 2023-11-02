@@ -1,8 +1,8 @@
 export const colors = {
   green: '#8AC926', //'#8AC926','#1982C4',
-  darkGreen: '#1982C4',
+  darkGreen: '#376652',
   white: '#fff',
-  blue: '#15528B',
+  blue: '#1982C4',
   darkBlue: '#0d243a',
   hoverWhite: '#eaedf0',
   purple: '#96529C',
