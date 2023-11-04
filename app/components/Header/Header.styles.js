@@ -4,7 +4,11 @@ import styled from 'styled-components';
 
 export const HeaderContainer = styled.div`
   z-index: 20;
-  position: relative;
+  position: ${(props) => (props.isOpen ? 'sticky' : 'relative')};
+  top: 0;
+  right: 0;
+  left: 0;
+  background-color: ${colors.white};
 `;
 
 export const Content = styled.div`
