@@ -11,10 +11,11 @@ export const Content = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 50px 0;
+  padding: 100px 0;
 
   @media ${device.tablet} {
     justify-content: space-between;
+    padding: 50px 0;
   }
 `;
 
@@ -36,7 +37,12 @@ export const Contact = styled.div`
   }
 `;
 
-export const Logo = styled.div``;
+export const Logo = styled.div`
+  display: none;
+  @media ${device.tablet} {
+    display: block;
+  }
+`;
 
 export const PhoneNumber = styled.div`
   color: ${colors.green};

@@ -2,6 +2,7 @@
 import Image from 'next/image';
 
 import { Subheader } from '@/app/components/Subheader';
+import { HamburgerMenu } from '../HamburgerMenu';
 import { HeaderContainer, Content, Contact, Logo, PhoneNumber, Details } from './Header.styles';
 import { Container } from '@/global/styles';
 import phone from '@/public/images/icons/phone.png';
@@ -12,6 +13,7 @@ export const Header = () => {
       <Subheader />
       <Container>
         <Content>
+          <HamburgerMenu />
           <Contact>
             <Details>
               <Image src={phone} width={16} height={16} alt='phone-icon' />

@@ -100,3 +100,22 @@ export const SubmenuItem = styled.li`
     display: block;
   }
 `;
+
+export const ContactButton = styled.li`
+  border: 2px solid ${colors.blue};
+  border-radius: 5em;
+  overflow: hidden;
+
+  a {
+    padding: 10px 20px;
+  }
+
+  &:hover {
+    background-color: ${colors.blue};
+
+    a {
+      background-color: ${colors.blue};
+      color: ${colors.white};
+    }
+  }
+`;

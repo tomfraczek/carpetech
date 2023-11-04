@@ -11,8 +11,12 @@ export const SubheaderContainer = styled.div`
 
 export const Content = styled.div`
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   font-size: 14px;
+
+  @media ${device.tablet} {
+    justify-content: space-between;
+  }
 `;
 
 export const Title = styled.div`

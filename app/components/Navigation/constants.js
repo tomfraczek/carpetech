@@ -19,20 +19,24 @@ export const MENU = [
     title: 'Leather',
     dropdown: false,
     url: '/leather-cleaning',
+    hidden: true,
   },
   {
     title: 'Rugs',
     dropdown: false,
     url: '/rug-cleaning',
+    hidden: true,
   },
   {
     title: 'Tiles & Grout',
     dropdown: false,
     url: '/tile-grout-cleaning',
+    hidden: true,
   },
   {
     title: 'Domestic Services',
     url: '/domestic-services',
+    hidden: true,
     dropdown: [
       {
         title: 'Rental Property Cleaning',
@@ -67,6 +71,7 @@ export const MENU = [
   {
     title: 'Commercial',
     url: '/commercial-cleaning',
+    hidden: true,
     dropdown: [
       {
         title: 'Carpet & Floor Cleaning',
@@ -77,9 +82,5 @@ export const MENU = [
         url: '/commercial-upholstery-cleaning',
       },
     ],
-  },
-  {
-    title: 'Free Quote',
-    url: '/contact-us',
   },
 ];
