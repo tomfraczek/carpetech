@@ -25,7 +25,7 @@ export default function RootLayout({ children }) {
       <body style={{ margin: 0 }} className={robotoCondensed.className}>
         <StyledComponentsRegistry>
           <Header />
-          <Navigation />
+          {/* <Navigation /> */}
           {children}
           <Footer />
         </StyledComponentsRegistry>

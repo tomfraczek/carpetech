@@ -7,6 +7,11 @@ export const SubheaderContainer = styled.div`
   background-color: ${colors.green};
   display: flex;
   align-items: center;
+  display: none;
+
+  @media ${device.tablet} {
+    display: block;
+  }
 `;
 
 export const Content = styled.div`
@@ -20,12 +25,9 @@ export const Content = styled.div`
 `;
 
 export const Title = styled.div`
-  display: none;
   color: ${colors.white};
-
-  @media ${device.tablet} {
-    display: block;
-  }
+  margin: auto;
+  font-size: 17px;
 `;
 
 export const MenuContainer = styled.div`

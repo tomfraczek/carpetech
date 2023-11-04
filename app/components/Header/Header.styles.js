@@ -11,11 +11,12 @@ export const Content = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 100px 0;
+  padding: 30px 0;
 
   @media ${device.tablet} {
     justify-content: space-between;
-    padding: 50px 0;
+    padding-bottom: 50px;
+    padding-top: 0;
   }
 `;
 

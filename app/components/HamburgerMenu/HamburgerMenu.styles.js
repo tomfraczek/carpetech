@@ -3,11 +3,11 @@ import { colors } from '@/global/colors';
 import styled from 'styled-components';
 
 export const HamburgerContainer = styled.div`
-  position: absolute;
+  /* position: absolute;
   top: 31px;
   right: 0;
   left: 0;
-  bottom: 0;
+  bottom: 0; */
 
   display: flex;
   align-items: center;
@@ -21,7 +21,7 @@ export const HamburgerContainer = styled.div`
 export const HamburgerButton = styled.div`
   position: absolute;
   right: 20px;
-  top: 0;
+  top: 20px;
   z-index: 10;
 `;
 

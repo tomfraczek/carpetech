@@ -37,6 +37,7 @@ export const ListItem = styled.li`
     font-size: 18px;
     display: block;
     transition: all 0.2s ease;
+    letter-spacing: 1.1px;
 
     &:hover {
       background-color: ${colors.hoverWhite};

@@ -1,11 +1,5 @@
 export const MENU = [
   {
-    title: 'Home',
-    dropdown: false,
-    icon: true,
-    url: '/',
-  },
-  {
     title: 'Carpets',
     dropdown: false,
     url: '/carpet-cleaning',

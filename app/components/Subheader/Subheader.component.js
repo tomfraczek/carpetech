@@ -15,8 +15,8 @@ export const Subheader = () => {
     <SubheaderContainer>
       <Container>
         <Content>
-          <Title>Chem-Dry Professional Cleaning</Title>
-          <MenuContainer>
+          <Title>CARPETECH - PROFESSIONAL CLEANING</Title>
+          {/* <MenuContainer>
             <MenuLink>
               <Link href='/about'>About Us</Link>
             </MenuLink>
@@ -46,7 +46,7 @@ export const Subheader = () => {
                 <Image src={youtube} width={15} height={14} alt='youtube-icon' />
               </Link>
             </MenuLink>
-          </MenuContainer>
+          </MenuContainer> */}
         </Content>
       </Container>
     </SubheaderContainer>

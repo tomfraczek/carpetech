@@ -23,35 +23,33 @@ export const Navigation = () => {
 
   return (
     <NavContainer>
-      <Container>
-        <MenuList>
-          {MENU.map(({ url, icon, title, dropdown, hidden }, index) => (
-            <ListItem
-              key={index}
-              onMouseEnter={() => handleMenuHover(index)}
-              onMouseLeave={handleMenuLeave}
-              style={{ display: hidden && 'none' }}
-            >
-              <Link href={url} style={icon && { display: 'flex', alignItems: 'center', height: '57px' }}>
-                {icon ? <Image src={Home} width={20} height={20} alt='home icon' /> : title}
-              </Link>
-              {dropdown && <Image src={AnbgleDown} width={20} alt='angle down icon' />}
-              {dropdown && openMenu === index && (
-                <SubmenuList>
-                  {item.dropdown.map((subItem, subIndex) => (
-                    <SubmenuItem key={subIndex}>
-                      <Link href={subItem.url}>{subItem.title}</Link>
-                    </SubmenuItem>
-                  ))}
-                </SubmenuList>
-              )}
-            </ListItem>
-          ))}
-          <ListItem>
-            <Link href='/contact-us'>Free Quote</Link>
+      <MenuList>
+        {MENU.map(({ url, icon, title, dropdown, hidden }, index) => (
+          <ListItem
+            key={index}
+            onMouseEnter={() => handleMenuHover(index)}
+            onMouseLeave={handleMenuLeave}
+            style={{ display: hidden && 'none' }}
+          >
+            <Link href={url} style={icon && { display: 'flex', alignItems: 'center', height: '57px' }}>
+              {icon ? <Image src={Home} width={20} height={20} alt='home icon' /> : title}
+            </Link>
+            {dropdown && <Image src={AnbgleDown} width={20} alt='angle down icon' />}
+            {dropdown && openMenu === index && (
+              <SubmenuList>
+                {item.dropdown.map((subItem, subIndex) => (
+                  <SubmenuItem key={subIndex}>
+                    <Link href={subItem.url}>{subItem.title}</Link>
+                  </SubmenuItem>
+                ))}
+              </SubmenuList>
+            )}
           </ListItem>
-        </MenuList>
-      </Container>
+        ))}
+        <ListItem>
+          <Link href='/contact-us'>Free Quote</Link>
+        </ListItem>
+      </MenuList>
     </NavContainer>
   );
 };
