@@ -8,6 +8,7 @@ export const MenuContainer = styled.div`
   justify-content: ${(props) => (props.mobile ? 'center' : 'flex-end')};
   padding-bottom: 21px;
   padding-top: 15px;
+  flex-direction: column;
 
   @media ${device.tablet} {
     display: ${(props) => (props.mobile ? 'none' : 'flex')};
@@ -27,4 +28,11 @@ export const MenuLink = styled.div`
       opacity: 0.7;
     }
   }
+`;
+
+export const MiniMenu = styled.div`
+  display: flex;
+`;
+export const MiniSocial = styled.div`
+  display: flex;
 `;
