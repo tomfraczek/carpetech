@@ -12,6 +12,7 @@ export const MenuContainer = styled.div`
 
   @media ${device.tablet} {
     display: ${(props) => (props.mobile ? 'none' : 'flex')};
+    flex-direction: row;
   }
 `;
 

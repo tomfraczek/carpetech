@@ -3,14 +3,14 @@ import { colors } from '@/global/colors';
 import { device } from '@/global/breakpoints';
 
 export const SubheaderContainer = styled.div`
-  height: 31px;
+  height: 40px;
   background-color: ${colors.green};
   display: flex;
   align-items: center;
   display: none;
 
   @media ${device.tablet} {
-    display: block;
+    display: flex;
   }
 `;
 
