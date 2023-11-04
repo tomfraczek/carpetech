@@ -43,7 +43,9 @@ export const HamburgerMenu = ({ setIsOpen }) => {
       </HamburgerButton>
 
       <Logo>
-        <Image src='/images/carpetLogo.png' width={320} height={70.5} alt='' />
+        <Link href='/'>
+          <Image src='/images/carpetLogo.png' width={320} height={70.5} alt='' />
+        </Link>
       </Logo>
 
       <MobileMenuContainer style={{ transform: open ? 'translateX(0)' : 'translateX(100%)' }}>
