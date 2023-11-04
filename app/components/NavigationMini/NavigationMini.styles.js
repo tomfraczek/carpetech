@@ -6,7 +6,7 @@ export const MenuContainer = styled.div`
   display: ${(props) => (props.mobile ? 'flex' : 'none')};
   align-items: center;
   justify-content: ${(props) => (props.mobile ? 'center' : 'flex-end')};
-  padding-bottom: 21px;
+  padding-bottom: 11px;
   padding-top: 15px;
   flex-direction: column;
 
