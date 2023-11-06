@@ -147,6 +147,7 @@ export const MobileListItem = styled.li`
     border: 2px solid ${colors.blue};
     border-radius: 5em;
     overflow: hidden;
+    margin: 50px;
 
     a {
       padding: 10px 20px;

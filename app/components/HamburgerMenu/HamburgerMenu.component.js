@@ -31,20 +31,25 @@ export const HamburgerMenu = ({ setIsOpen }) => {
   const handleMenuLeave = () => {
     setOpenMenu(null);
   };
+
+  const closeMenu = () => {
+    setOpen(false);
+    setIsOpen(false);
+  };
+
+  const toggleMenu = () => {
+    setOpen(!open);
+    setIsOpen(!open);
+  };
   return (
     <HamburgerContainer>
       <HamburgerButton>
-        <Hamburger
-          onToggle={(toggled) => {
-            setOpen(toggled);
-            setIsOpen(toggled);
-          }}
-        />
+        <Hamburger toggled={open} toggle={toggleMenu} />
       </HamburgerButton>
 
       <Logo>
         <Link href='/'>
-          <Image src='/images/carpetLogo.png' width={320} height={70.5} alt='' />
+          <Image src='/images/carpetLogo.png' width={320} height={70.5} alt='' onClick={closeMenu} />
         </Link>
       </Logo>
 
@@ -57,7 +62,11 @@ export const HamburgerMenu = ({ setIsOpen }) => {
               onMouseLeave={handleMenuLeave}
               style={{ display: hidden && 'none' }}
             >
-              <Link href={url} style={icon && { display: 'flex', alignItems: 'center', height: '57px' }}>
+              <Link
+                href={url}
+                style={icon && { display: 'flex', alignItems: 'center', height: '57px' }}
+                onClick={closeMenu}
+              >
                 {icon ? <Image src={Home} width={20} height={20} alt='home icon' /> : title}
               </Link>
               {dropdown && <Image src={AnbgleDown} width={20} alt='angle down icon' />}
@@ -72,8 +81,11 @@ export const HamburgerMenu = ({ setIsOpen }) => {
               )}
             </MobileListItem>
           ))}
+          <MobileListItem>
+            <Link href='/contact-us'>Free Quote</Link>
+          </MobileListItem>
         </MobileMenuList>
-        <NavigationMini mobile />
+        <NavigationMini mobile setOpen={toggleMenu} />
       </MobileMenuContainer>
     </HamburgerContainer>
   );

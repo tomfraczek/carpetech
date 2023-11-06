@@ -3,7 +3,7 @@ import Image from 'next/image';
 import { Container } from '@/global/styles';
 import { Heading, QuickQuoteContainer, Description, BackgroundOverlay } from './QuickQuote.styles';
 
-import { QuoteForm } from '@/app/components/QuoteForm';
+import { ContactForm } from '../ContactForm';
 
 import background from '@/public/images/carpetcleaning.jpeg';
 
@@ -13,7 +13,7 @@ export const QuickQuote = () => {
       <Container>
         <Heading>Get a Quick Quote</Heading>
         <Description>Fill out the form below to get a price for your cleaning requirements</Description>
-        <QuoteForm />
+        <ContactForm />
       </Container>
       <BackgroundOverlay />
       <Image src={background} alt='background quote' fill />

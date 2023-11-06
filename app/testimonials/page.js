@@ -5,6 +5,7 @@ import { REVIEW_DATA } from '../components/ReviewCards/constants';
 import { TextBar } from '../components/TextBar';
 import { CONTENT_BAR } from './constants';
 import { Container } from '@/global/styles';
+import { device } from '@/global/breakpoints';
 
 const ReviewContainer = styled.div`
   padding-top: 50px;
@@ -15,7 +16,11 @@ const ReviewContainer = styled.div`
   width: 100%;
 
   & > div {
-    width: 48.5%;
+    width: 100%;
+
+    @media ${device.tablet} {
+      width: 48.5%;
+    }
 
     & > div {
       margin: auto;

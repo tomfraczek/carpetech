@@ -5,6 +5,8 @@ export const ThankYouContainer = styled.div`
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  background: #ffffff9c;
+  border-radius: 15px;
 `;
 
 export const Title = styled.h3`

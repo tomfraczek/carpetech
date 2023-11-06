@@ -39,6 +39,7 @@ export const ContentRight = styled.div`
     height: 100%;
     object-fit: cover;
     object-position: center;
+    vertical-align: middle;
 
     @media ${device.tablet} {
       position: absolute;

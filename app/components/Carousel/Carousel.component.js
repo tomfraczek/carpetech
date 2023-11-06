@@ -14,7 +14,7 @@ export const Carousel = ({ data }) => {
   return (
     <CarouselContainer>
       <Swiper
-        navigation={true}
+        navigation={false}
         modules={[Autoplay, Navigation]}
         style={{ height: '100%', '--swiper-pagination-color': '#fff', '--swiper-navigation-color': '#fff' }}
         autoplay={{

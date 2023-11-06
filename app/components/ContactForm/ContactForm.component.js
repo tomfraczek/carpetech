@@ -84,16 +84,7 @@ export const ContactForm = () => {
               control={control}
               defaultValue=''
               //   rules={{ required: 'Phone number is required' }}
-              render={({ field }) => (
-                <input
-                  {...field}
-                  type='tel'
-                  placeholder='Phone'
-                  // value={phoneNumber}
-                  // onChange={handlePhoneChange}
-                  maxLength={12}
-                />
-              )}
+              render={({ field }) => <input {...field} type='tel' placeholder='Phone' maxLength={12} />}
             />
 
             {errors.phone && <p>{errors.phone.message}</p>}

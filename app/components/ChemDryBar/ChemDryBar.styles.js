@@ -28,10 +28,12 @@ export const Content = styled.div`
 `;
 
 export const Logo = styled.div`
+  position: absolute;
+  right: 5px;
   width: 100px;
   height: 100px;
 
-  @media ${device.tablet} {
+  @media ${device.mobile} {
     width: 210px;
     height: 210px;
   }
@@ -39,6 +41,7 @@ export const Logo = styled.div`
     width: 100%;
     height: 100%;
     transition: all 0.4s ease;
+    vertical-align: middle;
   }
 `;
 
