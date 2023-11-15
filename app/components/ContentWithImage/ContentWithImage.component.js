@@ -1,3 +1,4 @@
+'use client';
 import Image from 'next/image';
 import {
   ContentWithImageContainer,
@@ -26,9 +27,10 @@ export const ContentWithImage = ({ data, revert, reviews, grey, small }) => {
     const propertyOrder = Object.keys(item);
     return propertyOrder;
   };
+  console.log(data);
   return (
     <Fragment>
-      <ContentWithImageContainer $reverse={isReversed} $grey={grey}>
+      {/* <ContentWithImageContainer $reverse={isReversed} $grey={grey}>
         <ContentLeft $small={small}>
           {data.map((item, index) => {
             const orderedKeys = getPropertyOrder(item);
@@ -96,7 +98,7 @@ export const ContentWithImage = ({ data, revert, reviews, grey, small }) => {
               </ContentRight>
             )
         )}
-      </ContentWithImageContainer>
+      </ContentWithImageContainer> */}
     </Fragment>
   );
 };

@@ -1,3 +1,4 @@
+'use client';
 import { Fragment } from 'react';
 import { Container } from '@/global/styles';
 import {

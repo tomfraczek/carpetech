@@ -5,7 +5,7 @@ import { device } from '@/global/breakpoints';
 export const MenuContainer = styled.div`
   display: ${(props) => (props.mobile ? 'flex' : 'none')};
   align-items: center;
-  justify-content: ${(props) => (props.mobile ? 'center' : 'flex-end')};
+  justify-content: ${(props) => (props.mobile === true ? 'center' : 'flex-end')};
   padding-bottom: 11px;
   padding-top: 15px;
   flex-direction: column;

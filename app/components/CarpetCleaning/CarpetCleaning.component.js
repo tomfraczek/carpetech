@@ -1,3 +1,4 @@
+'use client';
 import Image from 'next/image';
 
 import carpet from '@/public/images/carpetcleaning.jpeg';
