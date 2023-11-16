@@ -4,7 +4,7 @@ import styled from 'styled-components';
 
 export const HeaderContainer = styled.div`
   z-index: 20;
-  position: ${(props) => (props.isOpen ? 'sticky' : 'relative')};
+  position: ${({ sticky }) => (sticky ? 'sticky' : 'relative')};
   top: 0;
   right: 0;
   left: 0;
