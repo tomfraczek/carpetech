@@ -1,12 +1,10 @@
 'use client';
-import Head from 'next/head';
 import { useState } from 'react';
 
 export default function FreeQuote() {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
-  const [submitted, setSubmitted] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();

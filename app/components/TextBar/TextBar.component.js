@@ -1,6 +1,5 @@
 'use client';
 
-import React, { useState } from 'react';
 import { BarContainer, BarTitle, BarParagraph } from './TextBar.styles';
 import { Container } from '@/global/styles';
 

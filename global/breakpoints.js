@@ -1,4 +1,4 @@
-const getWindowWidth = () => window.innerWidth;
+const getWindowWidth = () => (typeof window !== 'undefined' ? window.innerWidth : 0);
 
 export const breakpoints = {
   mobile: '780px',
