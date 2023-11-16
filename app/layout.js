@@ -1,6 +1,7 @@
 import StyledComponentsRegistry from './lib/registry';
 import { Roboto_Condensed } from 'next/font/google';
 import { getAllPages } from '@/lib/api';
+import { Navigation } from '@/app/components/Navigation';
 
 import { Footer } from '@/app/components/Footer';
 import { Header } from '@/app/components/Header';
@@ -31,6 +32,7 @@ export default async function RootLayout({ children }) {
       <body style={{ margin: 0 }} className={robotoCondensed.className}>
         <StyledComponentsRegistry>
           <Header menu={menuItems} />
+          {/* <Navigation /> */}
           {children}
           <Footer />
         </StyledComponentsRegistry>
