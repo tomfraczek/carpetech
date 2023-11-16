@@ -30,7 +30,7 @@ export const Navigation = ({ menu }) => {
             onMouseLeave={handleMenuLeave}
             // style={{ display: hidden && 'none' }}
           >
-            <Link href={slug}>{title}</Link>
+            <Link href={`/service/${slug}`}>{title}</Link>
             {/* {dropdown && <Image src={AnbgleDown} width={20} alt='angle down icon' />}
             {dropdown && openMenu === index && (
               <SubmenuList>

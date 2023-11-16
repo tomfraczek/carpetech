@@ -38,7 +38,6 @@ export default async function Page({ params }) {
 
   return (
     <>
-      tomeczek
       <Carousel data={CARPERT_PAGE_SLIDER_DATA} />
       {topSection && <ContentWithImage {...topSection} />}
       {fullWidthBar && <ChemDryBar {...fullWidthBar} />}
