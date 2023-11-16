@@ -6,7 +6,7 @@ import { MenuContainer, MenuLink, MiniMenu, MiniSocial } from './NavigationMini.
 
 export const NavigationMini = ({ mobile = false, setIsOpen }) => {
   return (
-    <MenuContainer mobile={mobile}>
+    <MenuContainer $mobile={mobile.toString()}>
       <MiniMenu>
         {MINI_MENU.map(({ title, url }) => (
           <MenuLink key={title}>

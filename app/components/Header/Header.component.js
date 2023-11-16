@@ -2,7 +2,6 @@
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { getAllPages } from '@/lib/api';
 
 import { Subheader } from '@/app/components/Subheader';
 import { HamburgerMenu } from '../HamburgerMenu';
@@ -23,7 +22,7 @@ export const Header = ({ menu }) => {
   }, [isOpen]);
 
   return (
-    <HeaderContainer isOpen={isOpen}>
+    <HeaderContainer $sticky={isOpen.toString()}>
       <Subheader />
       <Container>
         <NavigationMini setIsOpen={setIsOpen} />

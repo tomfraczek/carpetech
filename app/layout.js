@@ -25,6 +25,8 @@ export default async function RootLayout({ children }) {
     slug,
   }));
 
+  console.log(menuItems);
+
   return (
     <html lang='en'>
       <head></head>
