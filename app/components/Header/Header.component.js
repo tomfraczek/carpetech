@@ -26,7 +26,7 @@ export const Header = ({ menu }) => {
     <HeaderContainer isOpen={isOpen}>
       <Subheader />
       <Container>
-        {/* <NavigationMini /> */}
+        <NavigationMini />
         <Content>
           <HamburgerMenu menu={menu} setIsOpen={setIsOpen} />
           <Logo>
