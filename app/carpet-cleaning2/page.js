@@ -4,7 +4,7 @@ import {
   CARPETPAGE_PROFESIONAL_CLEANERS_SECTION,
   CARPETPAGE_PROFESIONAL_CLEANING_SECTION,
   CARPETPAGE_CLEAN_CARPETS_SECTION,
-} from '@/app/carpet-cleaning/constants';
+} from '@/app/carpet-cleaning2/constants';
 import { Carousel } from '@/app/components/Carousel';
 import { ContentWithImage } from '@/app/components/ContentWithImage';
 import { ChemDryBar } from '@/app/components/ChemDryBar';
