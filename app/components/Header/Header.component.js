@@ -34,7 +34,7 @@ export const Header = ({ menu }) => {
       <Subheader />
       <Container>
         <NavigationMini />
-        <Content>
+        {/* <Content>
           <HamburgerMenu menu={menu} setIsOpen={setIsOpen} />
           <Logo>
             <Link href='/'>
@@ -42,7 +42,7 @@ export const Header = ({ menu }) => {
             </Link>
           </Logo>
           <Navigation menu={menu} />
-        </Content>
+        </Content> */}
       </Container>
     </HeaderContainer>
   );
