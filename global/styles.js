@@ -12,6 +12,7 @@ export const Container = styled.div`
   margin: 0 auto;
   padding: 0 15px;
   box-sizing: border-box;
+  position: relative;
 
   ${media.tablet} {
     width: 970px;

@@ -10,7 +10,7 @@ import Home from '@/public/images/icons/home.svg';
 import { MenuList, ListItem, SubmenuList, SubmenuItem, NavContainer, ContactButton } from './Navigation.styles';
 import { Container } from '@/global/styles';
 
-export const Navigation = () => {
+export const Navigation = ({ menu }) => {
   const [openMenu, setOpenMenu] = useState(null);
 
   const handleMenuHover = (index) => {
@@ -20,21 +20,18 @@ export const Navigation = () => {
   const handleMenuLeave = () => {
     setOpenMenu(null);
   };
-
   return (
     <NavContainer>
       <MenuList>
-        {MENU.map(({ url, icon, title, dropdown, hidden }, index) => (
+        {menu.map(({ title, slug }, index) => (
           <ListItem
             key={index}
             onMouseEnter={() => handleMenuHover(index)}
             onMouseLeave={handleMenuLeave}
-            style={{ display: hidden && 'none' }}
+            // style={{ display: hidden && 'none' }}
           >
-            <Link href={url} style={icon && { display: 'flex', alignItems: 'center', height: '57px' }}>
-              {icon ? <Image src={Home} width={20} height={20} alt='home icon' /> : title}
-            </Link>
-            {dropdown && <Image src={AnbgleDown} width={20} alt='angle down icon' />}
+            <Link href={slug}>{title}</Link>
+            {/* {dropdown && <Image src={AnbgleDown} width={20} alt='angle down icon' />}
             {dropdown && openMenu === index && (
               <SubmenuList>
                 {item.dropdown.map((subItem, subIndex) => (
@@ -43,7 +40,7 @@ export const Navigation = () => {
                   </SubmenuItem>
                 ))}
               </SubmenuList>
-            )}
+            )} */}
           </ListItem>
         ))}
         <ListItem>

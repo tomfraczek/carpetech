@@ -19,7 +19,7 @@ import Home from '@/public/images/icons/home.svg';
 import AnbgleDown from '@/public/images/icons/angleDown.svg';
 import { NavigationMini } from '../NavigationMini';
 
-export const HamburgerMenu = ({ setIsOpen }) => {
+export const HamburgerMenu = ({ setIsOpen, menu }) => {
   const [open, setOpen] = useState(false);
 
   const [openMenu, setOpenMenu] = useState(null);
@@ -55,21 +55,12 @@ export const HamburgerMenu = ({ setIsOpen }) => {
 
       <MobileMenuContainer style={{ transform: open ? 'translateX(0)' : 'translateX(100%)' }}>
         <MobileMenuList>
-          {MENU.map(({ url, icon, title, dropdown, hidden }, index) => (
-            <MobileListItem
-              key={index}
-              onMouseEnter={() => handleMenuHover(index)}
-              onMouseLeave={handleMenuLeave}
-              style={{ display: hidden && 'none' }}
-            >
-              <Link
-                href={url}
-                style={icon && { display: 'flex', alignItems: 'center', height: '57px' }}
-                onClick={closeMenu}
-              >
-                {icon ? <Image src={Home} width={20} height={20} alt='home icon' /> : title}
+          {menu.map(({ title, slug }, index) => (
+            <MobileListItem key={index} onMouseEnter={() => handleMenuHover(index)} onMouseLeave={handleMenuLeave}>
+              <Link href={slug} onClick={closeMenu}>
+                {title}
               </Link>
-              {dropdown && <Image src={AnbgleDown} width={20} alt='angle down icon' />}
+              {/* {dropdown && <Image src={AnbgleDown} width={20} alt='angle down icon' />}
               {dropdown && openMenu === index && (
                 <SubmenuList>
                   {item.dropdown.map((subItem, subIndex) => (
@@ -78,7 +69,7 @@ export const HamburgerMenu = ({ setIsOpen }) => {
                     </SubmenuItem>
                   ))}
                 </SubmenuList>
-              )}
+              )} */}
             </MobileListItem>
           ))}
           <MobileListItem>

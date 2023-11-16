@@ -19,20 +19,28 @@ import { Fragment } from 'react';
 import AnbgleDown from '@/public/images/icons/angleDown.svg';
 import { ReviewCards } from '@/app/components/ReviewCards';
 import { InfiniteLoopCarousel } from '@/app/components/InfiniteLoopCarousel';
+import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 
-export const ContentWithImage = ({ data, revert, reviews, grey, small }) => {
-  const isReversed = revert || false;
+export const ContentWithImage = ({
+  addReviewCards,
+  content,
+  icon,
+  image,
+  imagePosition,
+  sectionTitle,
+  backgroundColour,
+}) => {
+  // const getPropertyOrder = (item) => {
+  //   const propertyOrder = Object.keys(item);
+  //   return propertyOrder;
+  // };
 
-  const getPropertyOrder = (item) => {
-    const propertyOrder = Object.keys(item);
-    return propertyOrder;
-  };
-  console.log(data);
   return (
     <Fragment>
-      {/* <ContentWithImageContainer $reverse={isReversed} $grey={grey}>
-        <ContentLeft $small={small}>
-          {data.map((item, index) => {
+      <ContentWithImageContainer $reverse={imagePosition} $background={backgroundColour?.value}>
+        <ContentLeft>
+          <>{content && documentToReactComponents(content.json)}</>
+          {/* {data.map((item, index) => {
             const orderedKeys = getPropertyOrder(item);
 
             return (
@@ -87,18 +95,18 @@ export const ContentWithImage = ({ data, revert, reviews, grey, small }) => {
                 })}
               </Fragment>
             );
-          })}
-          {reviews && <ReviewCards />}
+          })} */}
+          {icon && (
+            <LogoContainer>
+              <Image src={icon.url} alt={icon.title} width={icon.width} height={icon.height} />
+            </LogoContainer>
+          )}
+          {addReviewCards && <ReviewCards />}
         </ContentLeft>
-        {data.map(
-          (item, index) =>
-            item.image && (
-              <ContentRight key={index} $small={small}>
-                <Image src={item.image} alt='family logo' width={768} height={512} />
-              </ContentRight>
-            )
-        )}
-      </ContentWithImageContainer> */}
+        <ContentRight>
+          {image && <Image src={image.url} alt={image.title} width={image.width} height={image.height} />}
+        </ContentRight>
+      </ContentWithImageContainer>
     </Fragment>
   );
 };

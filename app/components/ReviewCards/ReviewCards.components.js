@@ -12,22 +12,25 @@ import { Autoplay } from 'swiper/modules';
 
 import { isMobile } from '@/global/breakpoints';
 
-export const ReviewCards = () => (
-  <>
-    <Header>Read Some Reviews from our Satisfied Customers:</Header>
-    <Swiper
-      modules={[Autoplay]}
-      slidesPerView={isMobile ? 1 : 2}
-      style={{ height: '100%', '--swiper-pagination-color': '#fff', '--swiper-navigation-color': 'red' }}
-      autoplay={{
-        delay: 2500,
-        disableOnInteraction: false,
-      }}
-      loop={true}
-    >
-      {REVIEW_DATA.map((review) => (
-        <ReviewCard key={review.author} {...review} />
-      ))}
-    </Swiper>
-  </>
-);
+export const ReviewCards = () => {
+  const mobile = isMobile();
+  return (
+    <>
+      <Header>Read Some Reviews from our Satisfied Customers:</Header>
+      <Swiper
+        modules={[Autoplay]}
+        slidesPerView={mobile ? 1 : 2}
+        style={{ height: '100%', '--swiper-pagination-color': '#fff', '--swiper-navigation-color': 'red' }}
+        autoplay={{
+          delay: 2500,
+          disableOnInteraction: false,
+        }}
+        loop={true}
+      >
+        {REVIEW_DATA.map((review) => (
+          <ReviewCard key={review.author} {...review} />
+        ))}
+      </Swiper>
+    </>
+  );
+};

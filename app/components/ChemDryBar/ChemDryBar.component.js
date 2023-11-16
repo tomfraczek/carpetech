@@ -9,7 +9,7 @@ import Image from 'next/image';
 import { Container } from '@/global/styles';
 import { colors } from '@/global/colors';
 
-export const ChemDryBar = () => {
+export const ChemDryBar = ({ category, image, title, url }) => {
   const [isHovered, setIsHovered] = useState(false);
 
   const handleMouseEnter = () => {
@@ -19,9 +19,9 @@ export const ChemDryBar = () => {
   const handleMouseLeave = () => {
     setIsHovered(false);
   };
-
+  console.log(url);
   return (
-    <BarLink as={Link} href='google.com'>
+    <BarLink as={Link} href={url}>
       <ChemDryBarContainer
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
@@ -33,20 +33,22 @@ export const ChemDryBar = () => {
         <Container>
           <ContentWrapper>
             <Content>
-              <Header>Chem-Dry Will Clean, Protect & Restore</Header>
-              <Number>01908 505305</Number>
+              <Header>{category}</Header>
+              <Number>{title}</Number>
             </Content>
-            <Logo>
-              <Image
-                style={{
-                  transform: isHovered ? 'rotate(-15deg)' : 'rotate(0deg)',
-                }}
-                src={Chembar}
-                width={210}
-                height={210}
-                alt='Rug Cleaning Company Milton Keynes'
-              />
-            </Logo>
+            {image && (
+              <Logo>
+                <Image
+                  style={{
+                    transform: isHovered ? 'rotate(-15deg)' : 'rotate(0deg)',
+                  }}
+                  src={image.url}
+                  width={image.width}
+                  height={image.height}
+                  alt={image.title}
+                />
+              </Logo>
+            )}
           </ContentWrapper>
         </Container>
       </ChemDryBarContainer>

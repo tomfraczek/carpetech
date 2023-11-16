@@ -7,7 +7,7 @@ export const ContentWithImageContainer = styled.div`
   flex-wrap: nowrap;
   justify-content: space-between;
   flex-direction: column;
-  background-color: ${(props) => (props.$grey ? colors.vlightGrey : colors.white)};
+  background-color: ${(props) => props.$background};
 
   @media ${device.tablet} {
     flex-direction: ${(props) => (props.$reverse ? 'row-reverse' : 'row')};
@@ -17,9 +17,54 @@ export const ContentWithImageContainer = styled.div`
 export const ContentLeft = styled.div`
   padding: 5% 3%;
   width: 100%;
+  position: relative;
 
   @media ${device.tablet} {
     width: ${(props) => (props.$small ? '80%' : '67%')};
+  }
+
+  h1 {
+    margin-top: 0;
+    font-size: 36px;
+    font-weight: bold;
+    color: ${colors.blue};
+    margin: 0.67em 0;
+    margin-bottom: 10.5px;
+    letter-spacing: -0.5px;
+    line-height: 1.1;
+    margin-right: 220px;
+  }
+
+  h2 {
+    font-weight: bold;
+    color: ${colors.blue};
+    font-size: clamp(28px, 2vw, 36px);
+    margin: 0.67em 0;
+    margin-bottom: 10.5px;
+    letter-spacing: -0.5px;
+    line-height: 1.1;
+    margin-right: 220px;
+  }
+
+  h3 {
+    font-weight: 100;
+    font-size: 26px;
+    margin: 0 0 1em;
+    color: ${colors.green};
+    letter-spacing: -0.5px;
+    line-height: 1.1;
+    font-weight: 100;
+    margin-right: 220px;
+  }
+
+  p {
+    text-rendering: optimizeLegibility;
+    font-feature-settings: 'kern';
+    font-kerning: normal;
+    margin: 0 0 10.5px;
+    color: ${colors.grey};
+    line-height: 1.5;
+    font-size: 17px;
   }
 `;
 
@@ -49,6 +94,9 @@ export const ContentRight = styled.div`
 
 export const LogoContainer = styled.div`
   text-align: center;
+  position: absolute;
+  top: 50px;
+  right: 50px;
   @media ${device.tablet} {
     float: right;
   }
@@ -59,46 +107,46 @@ export const LogoContainer = styled.div`
   }
 `;
 
-export const SectionHeader = styled.h1`
-  margin-top: 0;
-  font-size: 36px;
-  font-weight: bold;
-  color: ${colors.blue};
-  margin: 0.67em 0;
-  margin-bottom: 10.5px;
-  letter-spacing: -0.5px;
-  line-height: 1.1;
-`;
+// export const SectionHeader = styled.h1`
+//   margin-top: 0;
+//   font-size: 36px;
+//   font-weight: bold;
+//   color: ${colors.blue};
+//   margin: 0.67em 0;
+//   margin-bottom: 10.5px;
+//   letter-spacing: -0.5px;
+//   line-height: 1.1;
+// `;
 
-export const Header = styled.h2`
-  font-weight: bold;
-  color: ${colors.blue};
-  font-size: clamp(28px, 2vw, 36px);
-  margin: 0.67em 0;
-  margin-bottom: 10.5px;
-  letter-spacing: -0.5px;
-  line-height: 1.1;
-`;
+// export const Header = styled.h2`
+//   font-weight: bold;
+//   color: ${colors.blue};
+//   font-size: clamp(28px, 2vw, 36px);
+//   margin: 0.67em 0;
+//   margin-bottom: 10.5px;
+//   letter-spacing: -0.5px;
+//   line-height: 1.1;
+// `;
 
-export const Subheader = styled.h2`
-  font-weight: 100;
-  font-size: 26px;
-  margin: 0 0 1em;
-  color: ${colors.green};
-  letter-spacing: -0.5px;
-  line-height: 1.1;
-  font-weight: 100;
-`;
+// export const Subheader = styled.h2`
+//   font-weight: 100;
+//   font-size: 26px;
+//   margin: 0 0 1em;
+//   color: ${colors.green};
+//   letter-spacing: -0.5px;
+//   line-height: 1.1;
+//   font-weight: 100;
+// `;
 
-export const Paragraph = styled.p`
-  text-rendering: optimizeLegibility;
-  font-feature-settings: 'kern';
-  font-kerning: normal;
-  margin: 0 0 10.5px;
-  color: ${colors.grey};
-  line-height: 1.5;
-  font-size: 17px;
-`;
+// export const Paragraph = styled.p`
+//   text-rendering: optimizeLegibility;
+//   font-feature-settings: 'kern';
+//   font-kerning: normal;
+//   margin: 0 0 10.5px;
+//   color: ${colors.grey};
+//   line-height: 1.5;
+//   font-size: 17px;
+// `;
 
 export const FactHeader = styled.h3`
   color: ${colors.green};
