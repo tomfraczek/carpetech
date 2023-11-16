@@ -1,13 +1,29 @@
 // 'use client';
 import { draftMode } from 'next/headers';
 
-import { getAllPages, getPage } from '@/lib/api';
-
-import { CARPERT_PAGE_SLIDER_DATA } from '@/app/carpet-cleaning2/constants';
+import { getPage } from '@/lib/api';
 
 import { Carousel } from '@/app/components/Carousel';
 import { ContentWithImage } from '@/app/components/ContentWithImage';
 import { ChemDryBar } from '@/app/components/ChemDryBar';
+
+const CARPERT_PAGE_SLIDER_DATA = [
+  {
+    header: 'Chem-Dry Milton Keynes',
+    description: 'We Clean Carpets, Upholstery, Curtains & Leather',
+    img: image1,
+  },
+  {
+    header: 'Chem-Dry Milton Keynes',
+    description: 'Carpet & Upholstery Cleaning Experts',
+    img: image2,
+  },
+  {
+    header: 'Chem-Dry Milton Keynes',
+    description: 'Hygienic Cleaning of Carpets & Furnishings',
+    img: image3,
+  },
+];
 
 export default async function Page({ params }) {
   const { isEnabled } = draftMode();
