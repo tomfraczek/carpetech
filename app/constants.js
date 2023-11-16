@@ -41,49 +41,41 @@ export const SERVICES_DATA = [
     image: Carpet,
     title: 'Carpet',
     category: 'Cleaning',
-    url: './carpet-cleaning/',
   },
   {
     image: Upholstery,
     title: 'Upholstery',
     category: 'Cleaning',
-    url: './carpet-cleaning/',
   },
   {
     image: Leather,
     title: 'Leather',
     category: 'Cleaning',
-    url: './carpet-cleaning/',
   },
   {
     image: Rug,
     title: 'Rug',
     category: 'Cleaning',
-    url: './carpet-cleaning/',
   },
   {
     image: Tile,
     title: 'Tile & Grout',
     category: 'Cleaning',
-    url: './carpet-cleaning/',
   },
   {
     image: Stain,
     title: 'Stain',
     category: 'Removal',
-    url: './carpet-cleaning/',
   },
   {
     image: Fire,
     title: 'Fire & Flood',
     category: 'Restoration',
-    url: './carpet-cleaning/',
   },
   {
     image: Comercial,
     title: 'Comercial',
     category: 'Cleaning',
-    url: './carpet-cleaning/',
   },
 ];
 

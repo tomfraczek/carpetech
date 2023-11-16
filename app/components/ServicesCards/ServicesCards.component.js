@@ -19,15 +19,15 @@ export const ServicesCards = ({ data }) => (
   <CardsContainer>
     <Container>
       <Cards>
-        {data.map(({ image, title, category, url, header, subheader }, i) => (
+        {data.map(({ image, title, category, header, subheader }, i) => (
           <Fragment key={i}>
             {header && <Header>{header}</Header>}
             {subheader && <Subheader>{subheader}</Subheader>}
-            {url && (
-              <Link key={title} href={url}>
+            {title && (
+              <Link key={title} href={'/'}>
                 <Card>
                   <ImageContainer>
-                    <Image width={150} height={150} src={image} alt='service icon' />
+                    <Image width={150} height={150} src={image} alt='service' />
                   </ImageContainer>
                   <Content>
                     <Title>{title}</Title>
