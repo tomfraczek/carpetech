@@ -1,7 +1,6 @@
 import StyledComponentsRegistry from './lib/registry';
 import { Roboto_Condensed } from 'next/font/google';
 import { getAllPages } from '@/lib/api';
-import { Navigation } from '@/app/components/Navigation';
 
 import { Footer } from '@/app/components/Footer';
 import { Header } from '@/app/components/Header';
@@ -20,19 +19,18 @@ const robotoCondensed = Roboto_Condensed({
 });
 
 export default async function RootLayout({ children }) {
-  // const allPages = await getAllPages(false);
-  // const menuItems = allPages.map(({ title, slug }) => ({
-  //   title,
-  //   slug,
-  // }));
+  const allPages = await getAllPages(false);
+  const menuItems = allPages.map(({ title, slug }) => ({
+    title,
+    slug,
+  }));
 
   return (
     <html lang='en'>
       <head></head>
       <body style={{ margin: 0 }} className={robotoCondensed.className}>
         <StyledComponentsRegistry>
-          {/* <Header menu={menuItems} /> */}
-          {/* <Navigation /> */}
+          <Header menu={menuItems} />
           {children}
           <Footer />
         </StyledComponentsRegistry>

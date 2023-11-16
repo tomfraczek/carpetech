@@ -11,13 +11,6 @@ import { Container } from '@/global/styles';
 import { Navigation } from '../Navigation';
 import { NavigationMini } from '../NavigationMini';
 
-// const getPages = async () => {
-//   const allPages = await getAllPages(false);
-//   const menuItems = allPages.map((page) => page.title);
-//   console.log(menuItems);
-//   return menuItems;
-// };
-
 export const Header = ({ menu }) => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -33,8 +26,8 @@ export const Header = ({ menu }) => {
     <HeaderContainer isOpen={isOpen}>
       <Subheader />
       <Container>
-        <NavigationMini />
-        {/* <Content>
+        {/* <NavigationMini /> */}
+        <Content>
           <HamburgerMenu menu={menu} setIsOpen={setIsOpen} />
           <Logo>
             <Link href='/'>
@@ -42,7 +35,7 @@ export const Header = ({ menu }) => {
             </Link>
           </Logo>
           <Navigation menu={menu} />
-        </Content> */}
+        </Content>
       </Container>
     </HeaderContainer>
   );
