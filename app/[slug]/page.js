@@ -7,6 +7,10 @@ import { Carousel } from '@/app/components/Carousel';
 import { ContentWithImage } from '@/app/components/ContentWithImage';
 import { ChemDryBar } from '@/app/components/ChemDryBar';
 
+import image1 from '@/public/images/carpet-slider/image1.jpeg';
+import image2 from '@/public/images/carpet-slider/image2.jpeg';
+import image3 from '@/public/images/carpet-slider/image3.jpeg';
+
 const CARPERT_PAGE_SLIDER_DATA = [
   {
     header: 'Chem-Dry Milton Keynes',
