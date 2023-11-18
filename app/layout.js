@@ -18,13 +18,7 @@ const robotoCondensed = Roboto_Condensed({
   preload: false,
 });
 
-export default async function RootLayout({ children }) {
-  // const allPages = await getAllPages(false);
-  // const menuItems = allPages.map(({ title, slug }) => ({
-  //   title,
-  //   slug,
-  // }));
-
+export default function RootLayout({ children }) {
   return (
     <html lang='en'>
       <head></head>

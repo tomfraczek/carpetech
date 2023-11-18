@@ -17,17 +17,21 @@ import { QuickQuote } from '@/app/components/QuickQoute';
 
 export default async function Page() {
   const { isEnabled } = draftMode();
-  // const homepage = await getHomepage(isEnabled);
-  // const { topSection, middleSection, bottomSection, fullWidthBar } = homepage;
+  const homepage = await getHomepage(isEnabled);
+  const { topSection, middleSection, bottomSection, fullWidthBar } = homepage;
   return (
     <>
-      <Carousel data={HOMEPAGE_SLIDER_DATA} />
-      {/* <ContentWithImage {...topSection} /> */}
-      <ServicesCards data={SERVICES_DATA} />
-      {/* <ContentWithImage {...middleSection} />
-      <ChemDryBar {...fullWidthBar} />
-      <ContentWithImage {...bottomSection} /> */}
-      <QuickQuote />
+      {homepage && (
+        <>
+          <Carousel data={HOMEPAGE_SLIDER_DATA} />
+          <ContentWithImage {...topSection} />
+          <ServicesCards data={SERVICES_DATA} />
+          <ContentWithImage {...middleSection} />
+          <ChemDryBar {...fullWidthBar} />
+          <ContentWithImage {...bottomSection} />
+          <QuickQuote />
+        </>
+      )}
     </>
   );
 }
