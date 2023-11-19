@@ -19,7 +19,6 @@ export const ChemDryBar = ({ category, image, title, url }) => {
   const handleMouseLeave = () => {
     setIsHovered(false);
   };
-  console.log(url);
   return (
     <BarLink as={Link} href={url}>
       <ChemDryBarContainer

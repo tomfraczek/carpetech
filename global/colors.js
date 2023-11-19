@@ -15,4 +15,6 @@ export const colors = {
   midGrey: '#dadee7',
   vlightGrey: '#f6f7f9',
   gold: '#FFB900',
+  transparentWhite: '#ffffff9e',
+  black: '#000',
 };

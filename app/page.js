@@ -1,6 +1,5 @@
-// 'use client';
 import { draftMode } from 'next/headers';
-import { getHomepage } from '@/lib/api';
+import { getHomepage, getServices } from '@/lib/api';
 import { Carousel } from '@/app/components/Carousel';
 import {
   HOMEPAGE_CELEBRATION_SECTION,
@@ -11,19 +10,19 @@ import {
 
 import { ContentWithImage } from '@/app/components/ContentWithImage';
 import { ServicesCards } from '@/app/components/ServicesCards';
-import { CarpetCleaning } from '@/app/components/CarpetCleaning';
 import { ChemDryBar } from '@/app/components/ChemDryBar';
 import { QuickQuote } from '@/app/components/QuickQoute';
 
 export default async function Page() {
   const { isEnabled } = draftMode();
   const homepage = await getHomepage(isEnabled);
+  const services = await getServices(isEnabled);
   const { topSection, middleSection, bottomSection, fullWidthBar } = homepage;
   return (
     <>
       <Carousel data={HOMEPAGE_SLIDER_DATA} />
       <ContentWithImage {...topSection} />
-      <ServicesCards data={SERVICES_DATA} />
+      <ServicesCards items={services} />
       <ContentWithImage {...middleSection} />
       <ChemDryBar {...fullWidthBar} />
       <ContentWithImage {...bottomSection} />

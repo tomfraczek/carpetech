@@ -30,63 +30,44 @@ export const Subheader = styled.h2`
   line-height: 1.1;
   padding-bottom: 0.5em;
   width: 100%;
+  height: auto;
 `;
 
 export const Cards = styled.div`
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  justify-content: space-evenly;
 
   a {
-    width: calc(50% - 10px);
-
-    @media ${device.tablet} {
-      width: calc(25% - 10px);
-    }
-    &:hover {
-      & img {
-        opacity: 0.8;
-      }
-
-      & h5 {
-        color: ${colors.green};
-      }
-    }
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    padding: 0 10px;
   }
 `;
 
-export const Card = styled.div`
-  margin-bottom: 7px;
-  margin-top: 7px;
-  border-radius: 15px;
-  box-shadow: 0 5px 8px -2px rgb(0, 0, 0, 0.2);
-  padding: 25px 5px 15px;
-  display: flex;
-  flex-direction: column;
-  background-color: ${colors.white};
-`;
+export const Card = styled.div``;
 
 export const ImageContainer = styled.div`
+  width: 100%;
+  overflow: hidden;
   display: flex;
-  align-items: flex-start;
   justify-content: center;
 
   img {
-    transition: all 0.2s ease;
+    vertical-align: middle;
   }
 `;
 
 export const Content = styled.div``;
 
 export const Title = styled.h5`
-  color: ${colors.blue};
+  color: ${colors.green};
   text-align: center;
   font-size: 25px;
   letter-spacing: -0.5px;
   line-height: 1.1;
   font-weight: bold;
-  padding-top: 0.4em;
+  padding: 0.4em;
 `;
 
 export const Category = styled.h5`
@@ -96,4 +77,31 @@ export const Category = styled.h5`
   letter-spacing: -0.5px;
   line-height: 1.1;
   padding-bottom: 0.4em;
+`;
+
+export const Description = styled.p``;
+
+export const ContentContainer = styled.div`
+  position: absolute;
+  padding: 20px 40px;
+  bottom: 0;
+  right: 10px;
+  left: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  transition: all 0.3s ease;
+  background-image: linear-gradient(transparent, ${colors.white});
+
+  p {
+    text-rendering: optimizeLegibility;
+    font-feature-settings: 'kern';
+    font-kerning: normal;
+    margin: 0 0 10.5px;
+    color: ${colors.grey};
+    line-height: 1.5;
+    font-size: 17px;
+    color: #fff;
+  }
 `;
