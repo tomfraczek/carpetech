@@ -21,11 +21,11 @@ export default async function Page() {
   return (
     <>
       <Carousel data={HOMEPAGE_SLIDER_DATA} />
-      <ContentWithImage {...topSection} />
-      <ServicesCards items={services} />
-      <ContentWithImage {...middleSection} />
-      <ChemDryBar {...fullWidthBar} />
-      <ContentWithImage {...bottomSection} />
+      {topSection && <ContentWithImage {...topSection} />}
+      {services && <ServicesCards items={services} />}
+      {middleSection && <ContentWithImage {...middleSection} />}
+      {fullWidthBar && <ChemDryBar {...fullWidthBar} />}
+      {bottomSection && <ContentWithImage {...bottomSection} />}
       <QuickQuote />
     </>
   );
