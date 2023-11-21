@@ -31,9 +31,7 @@ const CARPERT_PAGE_SLIDER_DATA = [
 
 export default async function Page({ params }) {
   const { isEnabled } = draftMode();
-  // const { topSection, middleSection, bottomSection, fullWidthBar, title } = await getPage(params.slug, isEnabled);
   const content = await getPage(params.slug, isEnabled);
-
   const { topSection, middleSection, bottomSection, fullWidthBar } = content[0];
 
   return (
