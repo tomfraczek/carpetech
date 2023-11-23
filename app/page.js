@@ -16,13 +16,13 @@ import { QuickQuote } from '@/app/components/QuickQoute';
 export default async function Page() {
   const { isEnabled } = draftMode();
   const homepage = await getHomepage(isEnabled);
-  // const services = await getServices(isEnabled);
+  const services = await getServices(isEnabled);
   const { topSection, middleSection, bottomSection, fullWidthBar } = homepage;
   return (
     <>
       <Carousel data={HOMEPAGE_SLIDER_DATA} />
       {topSection && <ContentWithImage {...topSection} />}
-      {/* {services && <ServicesCards items={services} />} */}
+      {services && <ServicesCards items={services} />}
       {middleSection && <ContentWithImage {...middleSection} />}
       {fullWidthBar && <ChemDryBar {...fullWidthBar} />}
       {bottomSection && <ContentWithImage {...bottomSection} />}

@@ -19,18 +19,18 @@ const robotoCondensed = Roboto_Condensed({
 });
 
 export default async function RootLayout({ children }) {
-  // const services = await getServices(false);
-  // const menuItems = services.map(({ title, slug }) => ({
-  //   title,
-  //   slug,
-  // }));
+  const services = await getServices(false);
+  const menuItems = services.map(({ title, slug }) => ({
+    title,
+    slug,
+  }));
 
   return (
     <html lang='en'>
       <head></head>
       <body style={{ margin: 0 }} className={robotoCondensed.className}>
         <StyledComponentsRegistry>
-          {/* <Header menu={menuItems} /> */}
+          <Header menu={menuItems} />
           {children}
           <Footer />
         </StyledComponentsRegistry>
