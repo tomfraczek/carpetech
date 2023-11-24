@@ -10,9 +10,9 @@ import { CarouselContainer, Header, Description, Mask, PhoneNumber, CtaContainer
 import Link from 'next/link';
 import phoneIcon from '@/public/images/icons/phonewhite.png';
 
-export const Carousel = ({ data }) => {
+export const Carousel = ({ data, border }) => {
   return (
-    <CarouselContainer>
+    <CarouselContainer $border={border}>
       <Swiper
         navigation={false}
         modules={[Autoplay, Navigation]}
@@ -24,19 +24,19 @@ export const Carousel = ({ data }) => {
         loop={true}
         className='mySwiper'
       >
-        {data.map(({ img, header, description }, i) => (
+        {data.map(({ image, subtitle, title, ctaCopy, ctaUrl }, i) => (
           <SwiperSlide key={i} style={{ display: 'flex', alignItems: 'center' }}>
             <Content>
-              <Header>{header}</Header>
-              <Description>{description}</Description>
+              <Header>{subtitle}</Header>
+              <Description>{title}</Description>
               <CtaContainer>
-                <Link href='google.com'>
+                <Link href={ctaUrl}>
                   <Image src={phoneIcon} width={24} height={24} alt='phone-icon' />
-                  Call <PhoneNumber>01908 505305</PhoneNumber> for a quote
+                  {ctaCopy}
                 </Link>
               </CtaContainer>
             </Content>
-            <Image src={img.src} priority fill alt={header} style={{ zIndex: '0' }} />
+            <Image src={image.url} priority fill alt={image.title} style={{ zIndex: '0' }} />
             <Mask />
           </SwiperSlide>
         ))}

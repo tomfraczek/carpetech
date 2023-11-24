@@ -6,7 +6,7 @@ export const CarouselContainer = styled.div`
   height: 300px;
   width: 100%;
   z-index: 1;
-  border-bottom: 10px solid ${colors.purple};
+  border-bottom: ${(props) => `10px solid ${props.$border}`};
   position: relative;
 
   @media ${device.tablet} {

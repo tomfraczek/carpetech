@@ -17,11 +17,11 @@ export default async function Page() {
   const { isEnabled } = draftMode();
   const homepage = await getHomepage(isEnabled);
   const services = await getServices(isEnabled);
-  const { topSection, middleSection, bottomSection, fullWidthBar } = homepage;
+  const { topSection, middleSection, bottomSection, fullWidthBar, heroCollection, heroBorderColour } = homepage;
 
   return (
     <>
-      <Carousel data={HOMEPAGE_SLIDER_DATA} />
+      <Carousel data={heroCollection.items} border={heroBorderColour} />
       {topSection && <ContentWithImage {...topSection} />}
       {services && <ServicesCards items={services} />}
       {middleSection && <ContentWithImage {...middleSection} />}

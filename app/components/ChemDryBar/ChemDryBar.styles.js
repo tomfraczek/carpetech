@@ -72,6 +72,7 @@ export const Number = styled.div`
 
   @media ${device.tablet} {
     font-size: 72px;
+    margin-top: 0;
   }
 `;
 
