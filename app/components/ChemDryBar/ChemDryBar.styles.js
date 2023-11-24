@@ -10,7 +10,7 @@ export const BarLink = styled.a`
 
 export const ChemDryBarContainer = styled.div`
   background-color: ${colors.blue};
-  height: 80px;
+  height: 160px;
   display: flex;
   align-items: center;
 
@@ -47,15 +47,16 @@ export const Logo = styled.div`
 
 export const Header = styled.p`
   text-shadow: 0 0.07em 0.1em rgb(0, 0, 0, 0.3);
-  font-size: clamp(14px, 3vw, 36px);
+  font-size: 29px;
   text-rendering: optimizeLegibility;
   font-feature-settings: 'kern';
   font-kerning: normal;
   color: ${colors.white};
   line-height: 1;
+  margin-right: 100px;
 
   @media ${device.laptop} {
-    /* font-size: 36px; */
+    font-size: 36px;
   }
 `;
 
@@ -63,10 +64,11 @@ export const Number = styled.div`
   text-rendering: optimizeLegibility;
   font-feature-settings: 'kern';
   font-kerning: normal;
-  font-size: clamp(14px, 3vw, 36px);
+  font-size: 40px;
   font-weight: bold;
   color: ${colors.white};
   line-height: 1;
+  margin-top: 20px;
 
   @media ${device.tablet} {
     font-size: 72px;
