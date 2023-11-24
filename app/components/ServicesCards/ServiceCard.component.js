@@ -18,7 +18,7 @@ export const ServicesCard = ({ title, slug, thumbnail, length }) => {
         <ImageContainer>
           <Image src={thumbnail.url} alt={thumbnail.title} width={thumbnail.width} height={thumbnail.height} />
         </ImageContainer>
-        <ContentContainer style={{ transform: hover ? 'translateY(0)' : 'translateY(100%)' }}>
+        <ContentContainer $hover={hover}>
           <Title>{title}</Title>
         </ContentContainer>
       </Card>

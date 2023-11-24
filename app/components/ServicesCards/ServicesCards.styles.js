@@ -36,6 +36,11 @@ export const Subheader = styled.h2`
 export const Cards = styled.div`
   display: flex;
   justify-content: space-evenly;
+  flex-direction: column;
+
+  @media ${device.tablet} {
+    flex-direction: row;
+  }
 
   a {
     position: relative;
@@ -52,6 +57,14 @@ export const ImageContainer = styled.div`
   overflow: hidden;
   display: flex;
   justify-content: center;
+  align-items: center;
+  height: 200px;
+  margin-bottom: 20px;
+
+  @media ${device.tablet} {
+    height: auto;
+    margin-bottom: 0;
+  }
 
   img {
     vertical-align: middle;
@@ -93,6 +106,10 @@ export const ContentContainer = styled.div`
   flex-direction: column;
   transition: all 0.3s ease;
   background-image: linear-gradient(transparent, ${colors.white});
+  transform: translateY(-20px);
+  @media ${device.laptop} {
+    transform: ${(props) => (props.$hover ? 'translateY(0)' : 'translateY(100%)')};
+  }
 
   p {
     text-rendering: optimizeLegibility;

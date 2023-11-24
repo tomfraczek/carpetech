@@ -24,7 +24,6 @@ export const ContentLeft = styled.div`
   }
 
   h1 {
-    margin-top: 0;
     font-size: 36px;
     font-weight: bold;
     color: ${colors.blue};
@@ -32,7 +31,9 @@ export const ContentLeft = styled.div`
     margin-bottom: 10.5px;
     letter-spacing: -0.5px;
     line-height: 1.1;
-    margin-right: 220px;
+    @media ${device.tablet} {
+      margin-right: 220px;
+    }
   }
 
   h2 {
@@ -43,7 +44,9 @@ export const ContentLeft = styled.div`
     margin-bottom: 10.5px;
     letter-spacing: -0.5px;
     line-height: 1.1;
-    margin-right: 220px;
+    @media ${device.tablet} {
+      margin-right: 220px;
+    }
   }
 
   h3 {
@@ -54,7 +57,9 @@ export const ContentLeft = styled.div`
     letter-spacing: -0.5px;
     line-height: 1.1;
     font-weight: 100;
-    margin-right: 220px;
+    @media ${device.tablet} {
+      margin-right: 220px;
+    }
   }
 
   p {
@@ -94,11 +99,12 @@ export const ContentRight = styled.div`
 
 export const LogoContainer = styled.div`
   text-align: center;
-  position: absolute;
-  top: 50px;
-  right: 50px;
+
   @media ${device.tablet} {
     float: right;
+    position: absolute;
+    top: 50px;
+    right: 50px;
   }
 
   img {

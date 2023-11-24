@@ -18,6 +18,7 @@ export default async function Page() {
   const homepage = await getHomepage(isEnabled);
   const services = await getServices(isEnabled);
   const { topSection, middleSection, bottomSection, fullWidthBar } = homepage;
+
   return (
     <>
       <Carousel data={HOMEPAGE_SLIDER_DATA} />
