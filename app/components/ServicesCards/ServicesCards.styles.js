@@ -112,8 +112,8 @@ export const ContentContainer = styled.div`
   position: absolute;
   padding: 20px 40px;
   bottom: 0;
-  right: 0;
-  left: 0;
+  right: 10px;
+  left: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
