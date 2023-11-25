@@ -3,7 +3,6 @@ import { Container } from '@/global/styles';
 import { SubheaderContainer, Content, Title } from './Subheader.styles';
 
 export const Subheader = ({ text, backgroundColour }) => {
-  console.log(backgroundColour);
   return (
     <SubheaderContainer $background={backgroundColour}>
       <Container>
