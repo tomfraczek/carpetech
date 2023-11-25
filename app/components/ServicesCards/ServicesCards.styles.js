@@ -47,18 +47,15 @@ export const Cards = styled.div`
     position: relative;
     overflow: hidden;
     text-align: center;
-    padding: 0 10px;
   }
 `;
 
 export const ServiceCardContainer = styled(Link)`
   width: 100%;
-  margin: 0 10px;
-  padding: 0 10px;
 
   @media ${device.tablet} {
     width: ${(props) => `calc(100% / ${props.$length})`};
-    /* height: 100px; */
+    margin: 0 10px;
   }
 `;
 
@@ -82,6 +79,8 @@ export const ImageContainer = styled.div`
 
   img {
     vertical-align: middle;
+    width: 100%;
+    height: 100%;
   }
 `;
 
@@ -112,8 +111,8 @@ export const ContentContainer = styled.div`
   position: absolute;
   padding: 20px 40px;
   bottom: 0;
-  right: 10px;
-  left: 10px;
+  right: 0;
+  left: 0;
   display: flex;
   align-items: center;
   justify-content: center;

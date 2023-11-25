@@ -14,7 +14,6 @@ export const ServicesCard = ({ title, slug, thumbnail, length }) => {
       onMouseLeave={() => setHover(false)}
       $length={length}
       $height={thumbnail.height}
-      // style={{ width: `calc((100% / ${length}) - 2%)`, height: '700px' }}
     >
       <Card>
         <ImageContainer>
