@@ -51,7 +51,16 @@ export const Cards = styled.div`
   }
 `;
 
-export const ServiceCardContainer = styled(Link)``;
+export const ServiceCardContainer = styled(Link)`
+  width: 100%;
+  margin: 0 10px;
+  padding: 0 10px;
+
+  @media ${device.tablet} {
+    width: ${(props) => `calc(100% / ${props.$length})`};
+    /* height: 100px; */
+  }
+`;
 
 export const Card = styled.div`
   width: 100%;

@@ -12,13 +12,13 @@ export const ServicesCard = ({ title, slug, thumbnail, length }) => {
       href={`service/${slug}`}
       onMouseEnter={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
-      $background={length}
-      $height={thumbnail.$height}
+      $length={length}
+      $height={thumbnail.height}
       // style={{ width: `calc((100% / ${length}) - 2%)`, height: '700px' }}
     >
       <Card>
         <ImageContainer>
-          <Image src={thumbnail.url} alt={thumbnail.title} fill />
+          <Image src={thumbnail.url} alt={thumbnail.title} width={thumbnail.width} height={thumbnail.height} />
         </ImageContainer>
         <ContentContainer $hover={hover}>
           <Title>{title}</Title>
