@@ -4,7 +4,7 @@ import { device } from '@/global/breakpoints';
 
 export const SubheaderContainer = styled.div`
   height: 40px;
-  background-color: ${colors.green};
+  background-color: ${(props) => props.$background};
   display: flex;
   align-items: center;
   display: none;

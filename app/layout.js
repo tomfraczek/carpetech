@@ -1,6 +1,6 @@
 import StyledComponentsRegistry from './lib/registry';
 import { Roboto_Condensed } from 'next/font/google';
-import { getServices } from '@/lib/api';
+import { getServices, getTopBar } from '@/lib/api';
 
 import { Footer } from '@/app/components/Footer';
 import { Header } from '@/app/components/Header';
@@ -20,17 +20,17 @@ const robotoCondensed = Roboto_Condensed({
 
 export default async function RootLayout({ children }) {
   const services = await getServices(false);
+  const topBar = await getTopBar(false);
   const menuItems = services.map(({ title, slug }) => ({
     title,
     slug,
   }));
-
+  console.log(topBar);
   return (
     <html lang='en'>
-      <head></head>
       <body style={{ margin: 0 }} className={robotoCondensed.className}>
         <StyledComponentsRegistry>
-          <Header menu={menuItems} />
+          <Header menu={menuItems} header={topBar} />
           {children}
           <Footer />
         </StyledComponentsRegistry>

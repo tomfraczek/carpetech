@@ -10,7 +10,7 @@ import { Container } from '@/global/styles';
 import { Navigation } from '../Navigation';
 import { NavigationMini } from '../NavigationMini';
 
-export const Header = ({ menu }) => {
+export const Header = ({ menu, header }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
@@ -20,10 +20,9 @@ export const Header = ({ menu }) => {
       document.body.style.overflow = 'visible';
     }
   }, [isOpen]);
-
   return (
     <HeaderContainer $sticky={isOpen.toString()}>
-      <Subheader />
+      <Subheader {...header} />
       <Container>
         <NavigationMini setIsOpen={setIsOpen} />
         <Content>

@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { device } from '@/global/breakpoints';
 import { colors } from '@/global/colors';
 import styled from 'styled-components';
@@ -50,7 +51,11 @@ export const Cards = styled.div`
   }
 `;
 
-export const Card = styled.div``;
+export const ServiceCardContainer = styled(Link)``;
+
+export const Card = styled.div`
+  width: 100%;
+`;
 
 export const ImageContainer = styled.div`
   width: 100%;
@@ -98,8 +103,8 @@ export const ContentContainer = styled.div`
   position: absolute;
   padding: 20px 40px;
   bottom: 0;
-  right: 10px;
-  left: 10px;
+  right: 0;
+  left: 0;
   display: flex;
   align-items: center;
   justify-content: center;
