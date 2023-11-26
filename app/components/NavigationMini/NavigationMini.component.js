@@ -4,9 +4,10 @@ import { MINI_MENU, MINI_SOCIAL } from './constants';
 
 import { MenuContainer, MenuLink, MiniMenu, MiniSocial } from './NavigationMini.styles';
 
-export const NavigationMini = ({ mobile = false, setIsOpen }) => {
+export const NavigationMini = ({ mobile, setIsOpen }) => {
+  const isMobile = mobile ?? false;
   return (
-    <MenuContainer $mobile={mobile.toString()}>
+    <MenuContainer $mobile={isMobile}>
       <MiniMenu>
         {MINI_MENU.map(({ title, url }) => (
           <MenuLink key={title}>

@@ -32,7 +32,7 @@ export const ContentLeft = styled.div`
     letter-spacing: -0.5px;
     line-height: 1.1;
     @media ${device.tablet} {
-      margin-right: 220px;
+      margin-right: ${(props) => (props.$icon ? props.$margin : '0')};
     }
   }
 
@@ -75,11 +75,13 @@ export const ContentLeft = styled.div`
 
 export const ContentRight = styled.div`
   width: 100%;
+  height: 420px;
   text-align: center;
   position: relative;
 
   @media ${device.tablet} {
     width: ${(props) => (props.$small ? '20%' : '33%')};
+    height: auto;
   }
 
   img {

@@ -15,17 +15,19 @@ export const Content = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
   padding: 30px 0;
 
   @media ${device.tablet} {
     justify-content: space-between;
+    flex-direction: row;
     padding-bottom: 50px;
     padding-top: 0;
   }
 `;
 
 export const Contact = styled.div`
-  display: none;
+  margin: 10px 0;
 
   @media ${device.tablet} {
     display: flex;

@@ -22,7 +22,7 @@ export const HamburgerButton = styled.div`
 export const Logo = styled.div`
   display: block;
   padding: 40px 0;
-  z-index: 10;
+  z-index: 9;
 
   @media ${device.tablet} {
     display: none;
