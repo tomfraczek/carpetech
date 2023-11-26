@@ -21,7 +21,7 @@ export const Content = styled.div`
   @media ${device.tablet} {
     justify-content: space-between;
     flex-direction: row;
-    padding-bottom: 50px;
+    padding-bottom: 0;
     padding-top: 0;
   }
 `;
