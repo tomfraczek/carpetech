@@ -85,9 +85,19 @@ export const Content = styled.div`
   flex-direction: column;
   align-items: flex-start;
   padding: 0 5%;
+  position: absolute;
 
   img {
     margin-right: 10px;
     transition: all 0.2s ease;
+  }
+`;
+
+export const ImageContainer = styled.div`
+  width: 100%;
+  vertical-align: middle;
+  img {
+    width: 100%;
+    height: auto;
   }
 `;

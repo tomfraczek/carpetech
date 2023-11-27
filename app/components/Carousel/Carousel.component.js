@@ -6,7 +6,16 @@ import 'swiper/css/pagination';
 import { Navigation, Autoplay } from 'swiper/modules';
 
 import Image from 'next/image';
-import { CarouselContainer, Header, Description, Mask, PhoneNumber, CtaContainer, Content } from './Carousel.styles';
+import {
+  CarouselContainer,
+  Header,
+  Description,
+  Mask,
+  PhoneNumber,
+  CtaContainer,
+  Content,
+  ImageContainer,
+} from './Carousel.styles';
 import Link from 'next/link';
 import phoneIcon from '@/public/images/icons/phonewhite.png';
 
@@ -20,7 +29,7 @@ export const Carousel = ({ borderColour, carouselCollection }) => {
         style={{ height: '100%', '--swiper-pagination-color': '#fff', '--swiper-navigation-color': '#fff' }}
         autoplay={{
           delay: 4000,
-          disableOnInteraction: false,
+          disableOnInteraction: true,
         }}
         loop={true}
         className='mySwiper'
@@ -39,11 +48,22 @@ export const Carousel = ({ borderColour, carouselCollection }) => {
                 </CtaContainer>
               )}
             </Content>
-            <Image src={image.url} priority fill alt={image.title} style={{ zIndex: '0' }} />
-            <Mask />
+            <ImageContainer>
+              <Image
+                src={image.url}
+                priority
+                width={image.width}
+                height={image.height}
+                alt={image.title}
+                style={{ zIndex: '0' }}
+              />
+            </ImageContainer>
+            {/* <Mask /> */}
           </SwiperSlide>
         ))}
       </Swiper>
     </CarouselContainer>
   );
 };
+
+// width={image.width} height={image.height}
