@@ -34,21 +34,22 @@ export const Subheader = styled.h2`
   height: auto;
 `;
 
-export const Cards = styled.div`
-  display: flex;
-  justify-content: space-evenly;
-  flex-direction: column;
+// export const Cards = styled.div`
+//   display: flex;
+//   justify-content: space-evenly;
+//   flex-direction: column;
+//   flex-wrap: wrap;
 
-  @media ${device.tablet} {
-    flex-direction: row;
-  }
+//   @media ${device.tablet} {
+//     flex-direction: row;
+//   }
 
-  a {
-    position: relative;
-    overflow: hidden;
-    text-align: center;
-  }
-`;
+//   a {
+//     position: relative;
+//     overflow: hidden;
+//     text-align: center;
+//   }
+// `;
 
 export const ServiceCardContainer = styled(Link)`
   width: 100%;
@@ -57,10 +58,6 @@ export const ServiceCardContainer = styled(Link)`
     width: ${(props) => `calc(100% / ${props.$length})`};
     margin: 0 10px;
   }
-`;
-
-export const Card = styled.div`
-  width: 100%;
 `;
 
 export const ImageContainer = styled.div`
@@ -86,15 +83,15 @@ export const ImageContainer = styled.div`
 
 export const Content = styled.div``;
 
-export const Title = styled.h5`
-  color: ${colors.green};
-  text-align: center;
-  font-size: 25px;
-  letter-spacing: -0.5px;
-  line-height: 1.1;
-  font-weight: bold;
-  padding: 0.4em;
-`;
+// export const Title = styled.h5`
+//   color: ${colors.green};
+//   text-align: center;
+//   font-size: 25px;
+//   letter-spacing: -0.5px;
+//   line-height: 1.1;
+//   font-weight: bold;
+//   padding: 0.4em;
+// `;
 
 export const Category = styled.h5`
   color: ${colors.blue};
@@ -133,5 +130,53 @@ export const ContentContainer = styled.div`
     line-height: 1.5;
     font-size: 17px;
     color: #fff;
+  }
+`;
+/////////////////////////
+
+export const Card = styled.div`
+  background-color: #fff;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 25px;
+  width: calc(50% - 10px);
+  margin-top: 20px;
+  height: 250px;
+  img {
+    height: 100px;
+    width: auto;
+  }
+
+  @media ${device.tablet} {
+    width: calc(25% - 30px);
+  }
+  @media ${device.mobile} {
+    width: calc(25% - 30px);
+  }
+`;
+
+export const Title = styled.h3`
+  font-size: 26px;
+  margin: 0 0 1em;
+  color: #0d58ac;
+  letter-spacing: -0.5px;
+  line-height: 1.1;
+  font-weight: 300;
+  margin-top: 40px;
+  text-align: center;
+`;
+
+export const Cards = styled.div`
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  a {
+    position: relative;
+    overflow: hidden;
+    text-align: center;
   }
 `;
