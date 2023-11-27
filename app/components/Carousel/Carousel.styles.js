@@ -3,14 +3,14 @@ import { colors } from '@/global/colors';
 import styled from 'styled-components';
 
 export const CarouselContainer = styled.div`
-  height: 300px;
   width: 100%;
   z-index: 1;
   border-bottom: ${(props) => `10px solid ${props.$border}`};
   position: relative;
+  aspect-ratio: 16 / 9;
 
   @media ${device.tablet} {
-    height: 700px;
+    /* height: 700px; */
   }
 `;
 
@@ -95,7 +95,6 @@ export const Content = styled.div`
 
 export const ImageContainer = styled.div`
   width: 100%;
-  vertical-align: middle;
   img {
     width: 100%;
     height: auto;

@@ -25,17 +25,17 @@ export const Carousel = ({ borderColour, carouselCollection }) => {
     <CarouselContainer $border={borderColour}>
       <Swiper
         navigation={false}
-        modules={[Autoplay]}
+        // modules={[Autoplay]}
         style={{ height: '100%', '--swiper-pagination-color': '#fff', '--swiper-navigation-color': '#fff' }}
-        autoplay={{
-          delay: 4000,
-          disableOnInteraction: true,
-        }}
+        // autoplay={{
+        //   delay: 4000,
+        //   disableOnInteraction: true,
+        // }}
         loop={true}
         className='mySwiper'
       >
         {items.map(({ image, subtitle, title, ctaCopy, ctaUrl }, i) => (
-          <SwiperSlide key={i} style={{ display: 'flex', alignItems: 'center' }}>
+          <SwiperSlide key={i} style={{ display: 'flex', alignItems: 'center', height: 'auto' }}>
             <Content>
               {subtitle && <Header>{subtitle}</Header>}
               {title && <Description>{title}</Description>}
@@ -58,12 +58,10 @@ export const Carousel = ({ borderColour, carouselCollection }) => {
                 style={{ zIndex: '0' }}
               />
             </ImageContainer>
-            {/* <Mask /> */}
+            <Mask />
           </SwiperSlide>
         ))}
       </Swiper>
     </CarouselContainer>
   );
 };
-
-// width={image.width} height={image.height}
