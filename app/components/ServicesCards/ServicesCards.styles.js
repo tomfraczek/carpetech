@@ -134,7 +134,7 @@ export const ContentContainer = styled.div`
 `;
 /////////////////////////
 
-export const Card = styled.div`
+export const Card = styled(Link)`
   background-color: #fff;
   border-radius: 15px;
   display: flex;
@@ -144,6 +144,8 @@ export const Card = styled.div`
   width: calc(50% - 10px);
   margin-top: 20px;
   height: 250px;
+  box-shadow: 0 5px 8px -2px rgb(0, 0, 0, 0.2);
+
   img {
     height: 100px;
     width: auto;

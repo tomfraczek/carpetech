@@ -24,35 +24,35 @@ export const ServicesCards = ({ items }) => {
           ))}
         </Cards> */}
         <Cards>
-          <Card>
+          <Card href='google.com'>
             <Image src={vacuum} alt='icon' />
             <Title>Carpet Cleaning</Title>
           </Card>
-          <Card>
+          <Card href='google.com'>
             <Image src={sofa} alt='icon' />
             <Title>Upholstery Cleaning</Title>
           </Card>
-          <Card>
+          <Card href='google.com'>
             <Image src={carpet} alt='icon' />
-            <Title>Carpet Cleaning</Title>
+            <Title>Rugs Cleaning</Title>
           </Card>
-          <Card>
+          <Card href='google.com'>
             <Image src={rug} alt='icon' />
             <Title>Upholstery Cleaning</Title>
           </Card>
-          <Card>
+          <Card href='google.com'>
             <Image src={furcoat} alt='icon' />
-            <Title>Carpet Cleaning</Title>
+            <Title>Feather Cleaning</Title>
           </Card>
-          <Card>
+          <Card href='google.com'>
             <Image src={sofa} alt='icon' />
             <Title>Upholstery Cleaning</Title>
           </Card>
-          <Card>
+          <Card href='google.com'>
             <Image src={soundproof} alt='icon' />
             <Title>Carpet Cleaning</Title>
           </Card>
-          <Card>
+          <Card href='google.com'>
             <Image src={company} alt='icon' />
             <Title>Upholstery Cleaning</Title>
           </Card>

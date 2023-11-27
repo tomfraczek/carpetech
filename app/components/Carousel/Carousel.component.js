@@ -25,12 +25,12 @@ export const Carousel = ({ borderColour, carouselCollection }) => {
     <CarouselContainer $border={borderColour}>
       <Swiper
         navigation={false}
-        // modules={[Autoplay]}
+        modules={[Autoplay]}
         style={{ height: '100%', '--swiper-pagination-color': '#fff', '--swiper-navigation-color': '#fff' }}
-        // autoplay={{
-        //   delay: 4000,
-        //   disableOnInteraction: true,
-        // }}
+        autoplay={{
+          delay: 4000,
+          disableOnInteraction: true,
+        }}
         loop={true}
         className='mySwiper'
       >
