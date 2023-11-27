@@ -10,7 +10,7 @@ export const CarouselContainer = styled.div`
   aspect-ratio: 16 / 9;
 
   @media ${device.tablet} {
-    /* height: 700px; */
+    height: 700px;
   }
 `;
 
