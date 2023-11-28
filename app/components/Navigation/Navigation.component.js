@@ -1,5 +1,5 @@
 'use client';
-import { useState } from 'react';
+import { useState, Fragment } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -23,26 +23,24 @@ export const Navigation = ({ menu }) => {
   return (
     <NavContainer>
       <MenuList>
-        {menu.map(({ title, slug }, index) => (
-          <ListItem
-            key={index}
-            onMouseEnter={() => handleMenuHover(index)}
-            onMouseLeave={handleMenuLeave}
-            // style={{ display: hidden && 'none' }}
-          >
-            <Link href={`/service/${slug}`}>{title}</Link>
-            {/* {dropdown && <Image src={AnbgleDown} width={20} alt='angle down icon' />}
-            {dropdown && openMenu === index && (
+        {menu.map(({ title, slug, serviceChildrenCollection }, index) => {
+          const { items } = serviceChildrenCollection;
+          return (
+            <ListItem key={index} onMouseEnter={() => handleMenuHover(index)} onMouseLeave={handleMenuLeave}>
+              <Link href={`/service/${slug}`}>{title}</Link>
+              {items.length > 0 && <Image src={AnbgleDown} width={20} alt='angle down icon' />}
               <SubmenuList>
-                {item.dropdown.map((subItem, subIndex) => (
-                  <SubmenuItem key={subIndex}>
-                    <Link href={subItem.url}>{subItem.title}</Link>
-                  </SubmenuItem>
-                ))}
+                {items.length > 0 &&
+                  openMenu === index &&
+                  items.map(({ title, slug }) => (
+                    <SubmenuItem key={title}>
+                      <Link href={slug}>{title}</Link>
+                    </SubmenuItem>
+                  ))}
               </SubmenuList>
-            )} */}
-          </ListItem>
-        ))}
+            </ListItem>
+          );
+        })}
         <ListItem>
           <Link href='/contact-us'>Free Quote</Link>
         </ListItem>
@@ -50,3 +48,37 @@ export const Navigation = ({ menu }) => {
     </NavContainer>
   );
 };
+
+// {/* <NavContainer>
+//   <MenuList>
+//     {menu.map(({ title, slug, serviceParent }, index) => {
+//       console.log(serviceParent);
+//       return (
+//         <ListItem
+//           key={index}
+//           onMouseEnter={() => handleMenuHover(index)}
+//           onMouseLeave={handleMenuLeave}
+//           // style={{ display: `${!serviceParent && 'none'}` }}
+//         >
+//           <Link href={`/service/${slug}`}>{title}</Link>
+// {serviceParent && <Image src={AnbgleDown} width={20} alt='angle down icon' />}
+// {serviceParent && openMenu === index && (
+//   <SubmenuList>
+//     <SubmenuItem>
+//       <Link href={`/service/${slug}`}>{serviceParent.title}</Link>
+//     </SubmenuItem>
+//     {/* {item.dropdown.map((subItem, subIndex) => (
+//         <SubmenuItem key={subIndex}>
+//           <Link href={subItem.url}>{subItem.title}</Link>
+//         </SubmenuItem>
+//       ))} */}
+//   </SubmenuList>
+// )}
+//         </ListItem>
+//       );
+//     })}
+//     <ListItem>
+//       <Link href='/contact-us'>Free Quote</Link>
+//     </ListItem>
+//   </MenuList>
+// </NavContainer>; */}

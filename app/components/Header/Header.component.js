@@ -22,6 +22,16 @@ export const Header = ({ menu, header }) => {
       document.body.style.overflow = 'visible';
     }
   }, [isOpen]);
+
+  const titlesToRemove = new Set(); // A Set to store unique titles to be removed
+
+  menu.forEach(({ serviceChildrenCollection }) => {
+    const { items } = serviceChildrenCollection;
+    items.forEach(({ title }) => titlesToRemove.add(title));
+  });
+
+  const updatedMenu = menu.filter(({ title }) => !titlesToRemove.has(title));
+
   return (
     <HeaderContainer $sticky={isOpen.toString()}>
       <Subheader {...header} />
@@ -52,7 +62,7 @@ export const Header = ({ menu, header }) => {
             <PhoneNumber>01908 505305</PhoneNumber>
           </Contact>
         </Content>
-        <Navigation menu={menu} />
+        <Navigation menu={updatedMenu} />
       </Container>
     </HeaderContainer>
   );

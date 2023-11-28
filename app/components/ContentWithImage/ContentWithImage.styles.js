@@ -18,6 +18,7 @@ export const ContentLeft = styled.div`
   padding: 5% 3%;
   width: 100%;
   position: relative;
+  overflow: hidden;
 
   @media ${device.tablet} {
     width: ${(props) => (props.$small ? '80%' : '67%')};

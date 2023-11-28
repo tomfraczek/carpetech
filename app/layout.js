@@ -21,11 +21,11 @@ const robotoCondensed = Roboto_Condensed({
 export default async function RootLayout({ children }) {
   const services = await getServices(false);
   const topBar = await getTopBar(false);
-  const menuItems = services.map(({ title, slug }) => ({
+  const menuItems = services.map(({ title, slug, serviceChildrenCollection }) => ({
     title,
     slug,
+    serviceChildrenCollection,
   }));
-
   return (
     <html lang='en'>
       <body style={{ margin: 0 }} className={robotoCondensed.className}>
