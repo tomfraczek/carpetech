@@ -34,7 +34,7 @@ export const Navigation = ({ menu }) => {
                   openMenu === index &&
                   items.map(({ title, slug }) => (
                     <SubmenuItem key={title}>
-                      <Link href={slug}>{title}</Link>
+                      <Link href={`/service/${slug}`}>{title}</Link>
                     </SubmenuItem>
                   ))}
               </SubmenuList>
