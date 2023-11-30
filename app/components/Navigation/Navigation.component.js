@@ -48,37 +48,3 @@ export const Navigation = ({ menu }) => {
     </NavContainer>
   );
 };
-
-// {/* <NavContainer>
-//   <MenuList>
-//     {menu.map(({ title, slug, serviceParent }, index) => {
-//       console.log(serviceParent);
-//       return (
-//         <ListItem
-//           key={index}
-//           onMouseEnter={() => handleMenuHover(index)}
-//           onMouseLeave={handleMenuLeave}
-//           // style={{ display: `${!serviceParent && 'none'}` }}
-//         >
-//           <Link href={`/service/${slug}`}>{title}</Link>
-// {serviceParent && <Image src={AnbgleDown} width={20} alt='angle down icon' />}
-// {serviceParent && openMenu === index && (
-//   <SubmenuList>
-//     <SubmenuItem>
-//       <Link href={`/service/${slug}`}>{serviceParent.title}</Link>
-//     </SubmenuItem>
-//     {/* {item.dropdown.map((subItem, subIndex) => (
-//         <SubmenuItem key={subIndex}>
-//           <Link href={subItem.url}>{subItem.title}</Link>
-//         </SubmenuItem>
-//       ))} */}
-//   </SubmenuList>
-// )}
-//         </ListItem>
-//       );
-//     })}
-//     <ListItem>
-//       <Link href='/contact-us'>Free Quote</Link>
-//     </ListItem>
-//   </MenuList>
-// </NavContainer>; */}

@@ -19,17 +19,14 @@ import Home from '@/public/images/icons/home.svg';
 import AnbgleDown from '@/public/images/icons/angleDown.svg';
 import { NavigationMini } from '../NavigationMini';
 
+// ... (imports)
+
 export const HamburgerMenu = ({ setIsOpen, menu }) => {
   const [open, setOpen] = useState(false);
-
   const [openMenu, setOpenMenu] = useState(null);
 
-  const handleMenuHover = (index) => {
-    setOpenMenu(index);
-  };
-
-  const handleMenuLeave = () => {
-    setOpenMenu(null);
+  const handleMenuToggle = (index) => {
+    setOpenMenu(openMenu === index ? null : index);
   };
 
   const closeMenu = () => {
@@ -41,6 +38,7 @@ export const HamburgerMenu = ({ setIsOpen, menu }) => {
     setOpen(!open);
     setIsOpen(!open);
   };
+
   return (
     <HamburgerContainer>
       <HamburgerButton>
@@ -55,23 +53,33 @@ export const HamburgerMenu = ({ setIsOpen, menu }) => {
 
       <MobileMenuContainer style={{ transform: open ? 'translateX(0)' : 'translateX(100%)' }}>
         <MobileMenuList>
-          {menu.map(({ title, slug }, index) => (
-            <MobileListItem key={index} onMouseEnter={() => handleMenuHover(index)} onMouseLeave={handleMenuLeave}>
-              <Link href={slug} onClick={closeMenu}>
-                {title}
-              </Link>
-              {/* {dropdown && <Image src={AnbgleDown} width={20} alt='angle down icon' />}
-              {dropdown && openMenu === index && (
+          {menu.map(({ title, slug, serviceChildrenCollection }, index) => {
+            const { items } = serviceChildrenCollection;
+            return (
+              <MobileListItem
+                key={index}
+                onMouseEnter={() => handleMenuToggle(index)}
+                onClick={items.length > 0 ? () => handleMenuToggle(index) : closeMenu}
+                style={{ maxHeight: openMenu === index ? '500px' : '142px' }}
+              >
+                <Link href={`/service/${slug}`}>
+                  {title}
+                  {items.length > 0 && <Image src={AnbgleDown} width={20} alt='angle down icon' />}
+                </Link>
+
                 <SubmenuList>
-                  {item.dropdown.map((subItem, subIndex) => (
-                    <SubmenuItem key={subIndex}>
-                      <Link href={subItem.url}>{subItem.title}</Link>
-                    </SubmenuItem>
-                  ))}
+                  {items.length > 0 &&
+                    items.map(({ title, slug }) => (
+                      <SubmenuItem key={title}>
+                        <Link href={slug} onClick={closeMenu}>
+                          {title}
+                        </Link>
+                      </SubmenuItem>
+                    ))}
                 </SubmenuList>
-              )} */}
-            </MobileListItem>
-          ))}
+              </MobileListItem>
+            );
+          })}
           <MobileListItem>
             <Link href='/contact-us'>Free Quote</Link>
           </MobileListItem>

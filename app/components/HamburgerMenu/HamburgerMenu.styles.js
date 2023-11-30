@@ -44,7 +44,10 @@ export const MobileMenuContainer = styled.div`
   justify-content: space-between;
 `;
 
-export const MobileMenuList = styled.ul``;
+export const MobileMenuList = styled.ul`
+  overflow: scroll;
+  position: relative;
+`;
 
 export const ListItem = styled.li`
   transition: box-shadow 0.2s ease;
@@ -115,9 +118,10 @@ export const MenuList = styled.ul`
 `;
 
 export const MobileListItem = styled.li`
-  transition: box-shadow 0.2s ease;
+  transition: all 0.2s ease;
   box-shadow: inset 0 5em transparent;
   position: relative;
+  overflow: hidden;
 
   &:hover img {
     filter: invert(44%) sepia(25%) saturate(635%) hue-rotate(102deg) brightness(89%) contrast(87%);
@@ -171,28 +175,31 @@ export const MobileListItem = styled.li`
 `;
 
 export const SubmenuList = styled.ul`
-  background-color: ${colors.green};
-  position: absolute;
+  /* background-color: ${colors.green}; */
+  /* position: absolute; */
   min-width: 180px;
+  z-index: 10;
 `;
 
 export const SubmenuItem = styled.li`
-  background-color: ${colors.green};
-  border-bottom: 1px solid ${colors.darkGreen};
+  /* background-color: ${colors.green}; */
+  border-bottom: 1px solid ${colors.blue};
 
   &:first-of-type {
     box-shadow: inset 0 7px 9px -4px rgba(0, 0, 0, 0.15);
   }
 
   &:hover {
-    background-color: ${colors.darkGreen};
+    /* background-color: ${colors.darkGreen}; */
   }
 
   a {
-    color: ${colors.white};
+    color: ${colors.blue};
     font-size: 18px;
     white-space: nowrap;
-    padding: 12px 30px 12px 30px;
+    padding: 30px;
     display: block;
+    text-align: center;
+    font-weight: 900;
   }
 `;
