@@ -3,6 +3,13 @@ import Link from 'next/link';
 import { Turn as Hamburger } from 'hamburger-react';
 import Image from 'next/image';
 
+import * as React from 'react';
+import Accordion from '@mui/material/Accordion';
+import AccordionSummary from '@mui/material/AccordionSummary';
+import AccordionDetails from '@mui/material/AccordionDetails';
+import Typography from '@mui/material/Typography';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+
 import {
   HamburgerContainer,
   HamburgerButton,
@@ -12,14 +19,15 @@ import {
   SubmenuList,
   SubmenuItem,
   MobileMenuContainer,
+  ScrollContainer,
+  ScrollIndicator,
+  ScrollText,
 } from './HamburgerMenu.styles';
 import { MENU } from '../Navigation/constants';
 
 import Home from '@/public/images/icons/home.svg';
 import AnbgleDown from '@/public/images/icons/angleDown.svg';
 import { NavigationMini } from '../NavigationMini';
-
-// ... (imports)
 
 export const HamburgerMenu = ({ setIsOpen, menu }) => {
   const [open, setOpen] = useState(false);
@@ -38,7 +46,11 @@ export const HamburgerMenu = ({ setIsOpen, menu }) => {
     setOpen(!open);
     setIsOpen(!open);
   };
+  const [expanded, setExpanded] = useState('');
 
+  const handleChange = (panel) => (event, newExpanded) => {
+    setExpanded(newExpanded ? panel : false);
+  };
   return (
     <HamburgerContainer>
       <HamburgerButton>
@@ -59,24 +71,40 @@ export const HamburgerMenu = ({ setIsOpen, menu }) => {
               <MobileListItem
                 key={index}
                 onMouseEnter={() => handleMenuToggle(index)}
-                onClick={items.length > 0 ? () => handleMenuToggle(index) : closeMenu}
-                style={{ maxHeight: openMenu === index ? '500px' : '142px' }}
+                // onClick={items.length > 0 ? () => handleMenuToggle(index) : closeMenu}
+                // style={{ maxHeight: openMenu === index ? '500px' : '142px' }}
               >
-                <Link href={`/service/${slug}`}>
-                  {title}
-                  {items.length > 0 && <Image src={AnbgleDown} width={20} alt='angle down icon' />}
-                </Link>
-
-                <SubmenuList>
-                  {items.length > 0 &&
-                    items.map(({ title, slug }) => (
-                      <SubmenuItem key={title}>
-                        <Link href={slug} onClick={closeMenu}>
-                          {title}
-                        </Link>
-                      </SubmenuItem>
-                    ))}
-                </SubmenuList>
+                {items.length > 0 ? (
+                  <Accordion
+                    key={index}
+                    expanded={expanded === `panel${index}`}
+                    onChange={handleChange(`panel${index}`)}
+                  >
+                    <AccordionSummary
+                      expandIcon={<ExpandMoreIcon />}
+                      aria-controls={`panel${index}a-content`}
+                      id={`panel${index}a-header`}
+                      style={{ flexGrow: '0' }}
+                    >
+                      <Link href={`/service/${slug}`}>{title}</Link>
+                    </AccordionSummary>
+                    <AccordionDetails>
+                      <SubmenuList>
+                        {items.map(({ title, slug }) => (
+                          <SubmenuItem key={title}>
+                            <Link href={slug} onClick={closeMenu}>
+                              {title}
+                            </Link>
+                          </SubmenuItem>
+                        ))}
+                      </SubmenuList>
+                    </AccordionDetails>
+                  </Accordion>
+                ) : (
+                  <Link href={slug} onClick={closeMenu}>
+                    {title}
+                  </Link>
+                )}
               </MobileListItem>
             );
           })}
@@ -85,6 +113,10 @@ export const HamburgerMenu = ({ setIsOpen, menu }) => {
           </MobileListItem>
         </MobileMenuList>
         <NavigationMini mobile setOpen={toggleMenu} />
+        <ScrollContainer>
+          <ScrollIndicator />
+          <ScrollText>SCROLL</ScrollText>
+        </ScrollContainer>
       </MobileMenuContainer>
     </HamburgerContainer>
   );

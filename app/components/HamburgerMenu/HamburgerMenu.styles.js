@@ -1,6 +1,18 @@
 import { device } from '@/global/breakpoints';
 import { colors } from '@/global/colors';
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
+
+const ScrollGradientAnimation = keyframes`
+  0% {
+    transform: translateX(101%);
+  }
+  50% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-101%);
+  }
+`;
 
 export const HamburgerContainer = styled.div`
   display: flex;
@@ -127,7 +139,7 @@ export const MobileListItem = styled.li`
     filter: invert(44%) sepia(25%) saturate(635%) hue-rotate(102deg) brightness(89%) contrast(87%);
   }
 
-  > a {
+  a {
     color: ${colors.blue};
     white-space: nowrap;
     font-weight: 700;
@@ -137,9 +149,15 @@ export const MobileListItem = styled.li`
     font-size: 28px;
     padding: 50px 0;
 
+    &:focus-visible {
+      outline-offset: unset;
+    }
+
     &:hover {
-      background-color: ${colors.hoverWhite};
-      color: ${colors.green};
+      @media ${device.laptop} {
+        background-color: ${colors.hoverWhite};
+        color: ${colors.green};
+      }
 
       ~ img {
         filter: invert(44%) sepia(25%) saturate(635%) hue-rotate(102deg) brightness(89%) contrast(87%);
@@ -185,10 +203,6 @@ export const SubmenuItem = styled.li`
   /* background-color: ${colors.green}; */
   border-bottom: 1px solid ${colors.blue};
 
-  &:first-of-type {
-    box-shadow: inset 0 7px 9px -4px rgba(0, 0, 0, 0.15);
-  }
-
   &:hover {
     /* background-color: ${colors.darkGreen}; */
   }
@@ -203,3 +217,31 @@ export const SubmenuItem = styled.li`
     font-weight: 900;
   }
 `;
+
+export const ScrollContainer = styled.div`
+  margin-left: 1.4vw;
+  font-size: 1.25vw;
+  z-index: 100;
+  grid-row-gap: 5px;
+  color: var(--white);
+  letter-spacing: -0.011em;
+  text-transform: uppercase;
+  flex-direction: column;
+  font-size: 18px;
+  line-height: 100%;
+  display: flex;
+  position: absolute;
+  top: 50vh;
+  right: 0px;
+  overflow: hidden;
+  transform: rotate(-90deg);
+`;
+
+export const ScrollIndicator = styled.div`
+  height: 2px;
+  background-color: var(--white);
+  background-image: linear-gradient(to right, ${colors.blue}, ${colors.purple});
+  animation: ${ScrollGradientAnimation} 2s ease 0s infinite normal forwards;
+`;
+
+export const ScrollText = styled.div``;
