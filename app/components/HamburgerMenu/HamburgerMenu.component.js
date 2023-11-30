@@ -19,9 +19,6 @@ import {
   SubmenuList,
   SubmenuItem,
   MobileMenuContainer,
-  ScrollContainer,
-  ScrollIndicator,
-  ScrollText,
 } from './HamburgerMenu.styles';
 import { MENU } from '../Navigation/constants';
 
@@ -113,10 +110,6 @@ export const HamburgerMenu = ({ setIsOpen, menu }) => {
           </MobileListItem>
         </MobileMenuList>
         <NavigationMini mobile setOpen={toggleMenu} />
-        <ScrollContainer>
-          <ScrollIndicator />
-          <ScrollText>SCROLL</ScrollText>
-        </ScrollContainer>
       </MobileMenuContainer>
     </HamburgerContainer>
   );

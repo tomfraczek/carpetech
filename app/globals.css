@@ -126,7 +126,3 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
-
-.MuiAccordionSummary-content {
-  flex-grow: 0;
-}
