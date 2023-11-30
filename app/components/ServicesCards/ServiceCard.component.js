@@ -18,6 +18,7 @@ import Image from 'next/image';
 
 export const ServicesCard = ({ title, slug, thumbnail, length }) => {
   const [hover, setHover] = useState(false);
+  console.log(slug);
   return (
     <ServiceCardContainer
       href={`service/${slug}`}
