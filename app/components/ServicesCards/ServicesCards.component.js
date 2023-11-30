@@ -1,4 +1,5 @@
 'use client';
+import Link from 'next/link';
 import { Container } from '@/global/styles';
 import { CardsContainer, Cards, Header, Card, Title } from './ServicesCards.styles';
 import { ServicesCard } from './ServiceCard.component';
@@ -14,49 +15,58 @@ import furcoat from '@/public/images/services/icons/fur-coat.png';
 import Image from 'next/image';
 
 export const ServicesCards = ({ items }) => {
+  console.log(items);
   return (
     <CardsContainer>
       <Container>
         <Header>Our Professional Cleaning Services:</Header>
-        {/* <Cards>
+        <Cards>
           {items.map((item, i) => (
             <ServicesCard key={`${item.title}-${i}`} {...item} length={items.length} />
           ))}
-        </Cards> */}
-        <Cards>
+        </Cards>
+        {/* <Cards>
           <Card href='google.com'>
             <Image src={vacuum} alt='icon' />
             <Title>Carpet Cleaning</Title>
+            <Link href='google.com'>Read More</Link>
           </Card>
           <Card href='google.com'>
             <Image src={sofa} alt='icon' />
             <Title>Upholstery Cleaning</Title>
+            <Link href='google.com'>Read More</Link>
           </Card>
           <Card href='google.com'>
             <Image src={carpet} alt='icon' />
             <Title>Rugs Cleaning</Title>
+            <Link href='google.com'>Read More</Link>
           </Card>
           <Card href='google.com'>
             <Image src={rug} alt='icon' />
             <Title>Upholstery Cleaning</Title>
+            <Link href='google.com'>Read More</Link>
           </Card>
           <Card href='google.com'>
             <Image src={furcoat} alt='icon' />
             <Title>Feather Cleaning</Title>
+            <Link href='google.com'>Read More</Link>
           </Card>
           <Card href='google.com'>
             <Image src={sofa} alt='icon' />
             <Title>Upholstery Cleaning</Title>
+            <Link href='google.com'>Read More</Link>
           </Card>
           <Card href='google.com'>
             <Image src={soundproof} alt='icon' />
             <Title>Carpet Cleaning</Title>
+            <Link href='google.com'>Read More</Link>
           </Card>
           <Card href='google.com'>
             <Image src={company} alt='icon' />
             <Title>Upholstery Cleaning</Title>
+            <Link href='google.com'>Read More</Link>
           </Card>
-        </Cards>
+        </Cards> */}
       </Container>
     </CardsContainer>
   );

@@ -2,7 +2,17 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
-import { Card, ImageContainer, Title, ContentContainer, ServiceCardContainer } from './ServicesCards.styles';
+import {
+  Card,
+  Circle,
+  Vertical,
+  Horizontal,
+  ImageContainer,
+  Title,
+  Cta,
+  ContentContainer,
+  ServiceCardContainer,
+} from './ServicesCards.styles';
 import Image from 'next/image';
 
 export const ServicesCard = ({ title, slug, thumbnail, length }) => {
@@ -19,9 +29,14 @@ export const ServicesCard = ({ title, slug, thumbnail, length }) => {
         <ImageContainer>
           <Image src={thumbnail.url} alt={thumbnail.title} width={thumbnail.width} height={thumbnail.height} />
         </ImageContainer>
+
         <ContentContainer $hover={hover}>
           <Title>{title}</Title>
         </ContentContainer>
+        <Circle>
+          <Vertical />
+          <Horizontal />
+        </Circle>
       </Card>
     </ServiceCardContainer>
   );
