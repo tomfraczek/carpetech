@@ -35,14 +35,15 @@ export const Subheader = styled.h2`
 `;
 
 export const Cards = styled.div`
-  display: flex;
+  display: none;
   /* justify-content: space-between; */
   flex-direction: column;
   flex-wrap: wrap;
   margin: auto;
   width: 70%;
 
-  @media ${device.tablet} {
+  @media ${device.laptop} {
+    display: flex;
     flex-direction: row;
   }
 
@@ -121,10 +122,12 @@ export const ServiceCardContainer = styled(Link)`
   width: 100%;
   display: flex;
   justify-content: center;
+  height: 450px;
 
-  @media ${device.tablet} {
+  @media ${device.laptop} {
     /* width: ${(props) => `calc(100% / (${props.$length} / 1.7))`}; */
     width: 33.3%;
+    height: auto;
   }
 `;
 
@@ -147,8 +150,12 @@ export const Card = styled.div`
   align-items: center;
   justify-content: space-between;
   padding: 25px;
-  width: 92%;
-  margin-top: 20px;
+  width: unset;
+
+  @media ${device.laptop} {
+    margin-top: 20px;
+    width: 92%;
+  }
 
   img {
     height: 150px;
@@ -160,6 +167,12 @@ export const Card = styled.div`
   }
 `;
 
+export const CardBottom = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
+
 export const Cta = styled.p`
   color: ${colors.white};
   text-align: center;
@@ -167,6 +180,7 @@ export const Cta = styled.p`
   letter-spacing: 3px;
   line-height: 1.1;
   padding: 0.4em;
+  margin-bottom: 10px;
 `;
 
 export const Circle = styled.div`
@@ -187,9 +201,6 @@ export const Vertical = styled.div`
   background-color: white;
   border-radius: 0;
   top: 14px;
-  -webkit-transition: 150ms ease-out;
-  -moz-transition: 150ms ease-out;
-  -o-transition: 150ms ease-out;
   transition: 150ms ease-out;
   z-index: 0;
   left: 9px;
@@ -207,4 +218,12 @@ export const Horizontal = styled.div`
   transition: 150ms ease-out;
   z-index: 0;
   left: 9px;
+`;
+
+export const CardsMobile = styled.div`
+  display: block;
+
+  @media ${device.laptop} {
+    display: none;
+  }
 `;

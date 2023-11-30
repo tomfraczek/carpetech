@@ -12,6 +12,7 @@ import {
   Cta,
   ContentContainer,
   ServiceCardContainer,
+  CardBottom,
 } from './ServicesCards.styles';
 import Image from 'next/image';
 
@@ -30,13 +31,16 @@ export const ServicesCard = ({ title, slug, thumbnail, length }) => {
           <Image src={thumbnail.url} alt={thumbnail.title} width={thumbnail.width} height={thumbnail.height} />
         </ImageContainer>
 
-        <ContentContainer $hover={hover}>
-          <Title>{title}</Title>
-        </ContentContainer>
-        <Circle>
-          <Vertical />
-          <Horizontal />
-        </Circle>
+        <CardBottom>
+          <ContentContainer $hover={hover}>
+            <Title>{title}</Title>
+          </ContentContainer>
+          <Cta href={`services/${slug}`}>Read more</Cta>
+          <Circle>
+            <Vertical />
+            <Horizontal />
+          </Circle>
+        </CardBottom>
       </Card>
     </ServiceCardContainer>
   );
