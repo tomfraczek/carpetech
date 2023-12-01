@@ -87,7 +87,7 @@ video {
   border: 0;
   font-size: 100%;
   font: inherit;
-  vertical-align: baseline;
+  vertical-align: middle;
   text-decoration: none;
 }
 /* HTML5 display-role reset for older browsers */
@@ -125,4 +125,10 @@ q:after {
 table {
   border-collapse: collapse;
   border-spacing: 0;
+}
+
+.swiper-slide {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
 }

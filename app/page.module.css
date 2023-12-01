@@ -219,10 +219,3 @@
     transform: rotate(0deg);
   }
 }
-
-.servicesSwiper .swiper-pagination {
-  bottom: 50px;
-}
-.swiper {
-  overflow: visible;
-}

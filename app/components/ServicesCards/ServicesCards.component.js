@@ -18,16 +18,15 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 
 export const ServicesCards = ({ items }) => {
-  console.log(items);
   return (
     <CardsContainer>
       <Container>
         <Header>Our Professional Cleaning Services:</Header>
         <CardsMobile>
           <Swiper
-            slidesPerView={2}
+            slidesPerView={1.4}
             centeredSlides={true}
-            spaceBetween={30}
+            spaceBetween={50}
             grabCursor={true}
             className='servicesSwiper'
           >
