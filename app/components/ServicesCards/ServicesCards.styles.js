@@ -86,7 +86,7 @@ export const Title = styled.h5`
 `;
 
 export const Card = styled.div`
-  width: 400px;
+  width: 100%;
   background: rgb(125, 167, 215);
   background: linear-gradient(315deg, rgba(125, 167, 215, 1) 0%, rgba(13, 88, 172, 1) 100%);
   border-radius: 15px;
@@ -100,6 +100,7 @@ export const Card = styled.div`
 
   @media ${device.laptop} {
     margin-top: 20px;
+    width: 400px;
   }
 
   &:hover {
