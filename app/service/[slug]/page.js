@@ -12,11 +12,11 @@ export default async function Page({ params }) {
   const content = await getPage(params.slug, isEnabled);
   const {
     topSection,
-    emergencyTopSection,
+    topEmergencySection,
     middleSection,
-    emergencyMiddleSection,
+    middleEmergencySection,
     bottomSection,
-    emergencyBottomSection,
+    bottomEmergencySection,
     fullWidthBar,
     heroSection,
   } = content[0];
@@ -24,12 +24,12 @@ export default async function Page({ params }) {
     <>
       {heroSection && <Carousel {...heroSection} />}
       {topSection && <ContentWithImage {...topSection} />}
-      {emergencyTopSection && <ContentWithImage {...emergencyTopSection} />}
+      {topEmergencySection && <ContentWithImage {...topEmergencySection} />}
       {fullWidthBar && <ChemDryBar {...fullWidthBar} />}
       {middleSection && <ContentWithImage {...middleSection} />}
-      {emergencyMiddleSection && <ContentWithImage {...emergencyMiddleSection} />}
+      {middleEmergencySection && <ContentWithImage {...middleEmergencySection} />}
       {bottomSection && <ContentWithImage {...bottomSection} />}
-      {emergencyBottomSection && <ContentWithImage {...emergencyBottomSection} />}
+      {bottomEmergencySection && <ContentWithImage {...bottomEmergencySection} />}
     </>
   );
 }
