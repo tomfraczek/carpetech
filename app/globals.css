@@ -127,6 +127,10 @@ table {
   border-spacing: 0;
 }
 
+.servicesSwiper {
+  overflow: visible !important;
+}
+
 .servicesSwiper .swiper-slide {
   display: flex !important;
   align-items: center;
