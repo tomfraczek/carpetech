@@ -27,6 +27,7 @@ export const Content = styled.div`
 `;
 
 export const Contact = styled.div`
+  display: none;
   margin: 10px 0;
 
   @media ${device.tablet} {
@@ -44,6 +45,27 @@ export const Contact = styled.div`
   }
 `;
 
+export const MobileContact = styled.div`
+  img {
+    margin-right: 3px;
+  }
+
+  p {
+    color: ${colors.blue};
+    font-size: 18px;
+  }
+`;
+
+export const MobileContactContainer = styled.div`
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  @media ${device.laptop} {
+    display: none;
+  }
+`;
+
 export const Logo = styled.div`
   display: none;
   @media ${device.tablet} {
@@ -52,7 +74,7 @@ export const Logo = styled.div`
 `;
 
 export const PhoneNumber = styled.div`
-  color: ${colors.green};
+  color: ${colors.blue};
   font-size: 30px;
   font-weight: 700;
 `;

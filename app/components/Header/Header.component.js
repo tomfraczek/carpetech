@@ -5,7 +5,16 @@ import Link from 'next/link';
 
 import { Subheader } from '@/app/components/Subheader';
 import { HamburgerMenu } from '../HamburgerMenu';
-import { HeaderContainer, Content, Logo, Contact, Details, PhoneNumber } from './Header.styles';
+import {
+  HeaderContainer,
+  Content,
+  Logo,
+  Contact,
+  Details,
+  PhoneNumber,
+  MobileContact,
+  MobileContactContainer,
+} from './Header.styles';
 import { Container } from '@/global/styles';
 import { Navigation } from '../Navigation';
 import { NavigationMini } from '../NavigationMini';
@@ -23,7 +32,7 @@ export const Header = ({ menu, header }) => {
     }
   }, [isOpen]);
 
-  const titlesToRemove = new Set(); // A Set to store unique titles to be removed
+  const titlesToRemove = new Set();
 
   menu.forEach(({ serviceChildrenCollection }) => {
     const { items } = serviceChildrenCollection;
@@ -42,10 +51,29 @@ export const Header = ({ menu, header }) => {
           <Contact>
             <Details>
               <Image src={phone} width={16} height={16} alt='phone-icon' />
-              <p>Freephone Helpline:</p>
+              <p>Mobile WhatsApp:</p>
             </Details>
-            <PhoneNumber>0800 581594</PhoneNumber>
+            <PhoneNumber>0784 9495757</PhoneNumber>
           </Contact>
+
+          <MobileContactContainer>
+            <MobileContact>
+              <Details>
+                <Image src={phone} width={16} height={16} alt='phone-icon' />
+                <p>London Office:</p>
+              </Details>
+
+              <PhoneNumber>01908 505305</PhoneNumber>
+            </MobileContact>
+
+            <MobileContact>
+              <Details>
+                <Image src={phone} width={16} height={16} alt='phone-icon' />
+                <p>Mobile WhatsApp:</p>
+              </Details>
+              <PhoneNumber>0784 9495757</PhoneNumber>
+            </MobileContact>
+          </MobileContactContainer>
 
           <Logo>
             <Link href='/'>
@@ -56,7 +84,7 @@ export const Header = ({ menu, header }) => {
           <Contact>
             <Details>
               <Image src={phone} width={16} height={16} alt='phone-icon' />
-              <p>Milton Keynes Office:</p>
+              <p>London Office:</p>
             </Details>
 
             <PhoneNumber>01908 505305</PhoneNumber>

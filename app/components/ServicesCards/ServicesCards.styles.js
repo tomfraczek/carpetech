@@ -66,7 +66,6 @@ export const ImageContainer = styled.div`
 `;
 
 export const ContentContainer = styled.div``;
-/////////////////////////
 
 export const ServiceCardContainer = styled(Link)`
   width: 60vw;
