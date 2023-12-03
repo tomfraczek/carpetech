@@ -26,7 +26,7 @@ export const ServicesCards = ({ items }) => {
           <Swiper
             slidesPerView={1.4}
             centeredSlides={true}
-            spaceBetween={50}
+            spaceBetween={10}
             grabCursor={true}
             className='servicesSwiper'
           >

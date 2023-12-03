@@ -127,7 +127,7 @@ table {
   border-spacing: 0;
 }
 
-.swiper-slide {
+.servicesSwiper .swiper-slide {
   display: flex !important;
   align-items: center;
   justify-content: center;

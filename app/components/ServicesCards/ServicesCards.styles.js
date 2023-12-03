@@ -4,7 +4,6 @@ import { colors } from '@/global/colors';
 import styled from 'styled-components';
 
 export const CardsContainer = styled.div`
-  background-color: ${colors.lightGrey};
   padding-bottom: 3em;
 `;
 
@@ -36,7 +35,7 @@ export const Subheader = styled.h2`
 
 export const Cards = styled.div`
   display: none;
-  /* justify-content: space-between; */
+  justify-content: space-between;
   flex-direction: column;
   flex-wrap: wrap;
   margin: auto;
@@ -49,7 +48,6 @@ export const Cards = styled.div`
 
   a {
     position: relative;
-    overflow: hidden;
     text-align: center;
   }
 `;
@@ -70,14 +68,12 @@ export const ContentContainer = styled.div``;
 /////////////////////////
 
 export const ServiceCardContainer = styled(Link)`
-  width: 300px;
+  width: 60vw;
   display: flex;
   justify-content: center;
-  /* height: 450px; */
 
   @media ${device.laptop} {
-    /* width: ${(props) => `calc(100% / (${props.$length} / 1.7))`}; */
-    width: 33.3%;
+    width: 32.3%;
   }
 `;
 
@@ -99,11 +95,15 @@ export const Card = styled.div`
   align-items: center;
   justify-content: space-between;
   padding: 25px;
-  /* width: unset; */
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+  transition: all 0.2s ease;
 
   @media ${device.laptop} {
     margin-top: 20px;
-    width: 92%;
+  }
+
+  &:hover {
+    transform: scale(1.02);
   }
 
   img {
