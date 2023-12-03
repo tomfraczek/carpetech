@@ -5,6 +5,7 @@ import styled from 'styled-components';
 
 export const CardsContainer = styled.div`
   padding-bottom: 3em;
+  background-color: #ebedf0;
 `;
 
 export const Header = styled.h2`
@@ -78,7 +79,7 @@ export const ServiceCardContainer = styled(Link)`
 `;
 
 export const Title = styled.h5`
-  color: ${colors.white};
+  color: ${colors.blue};
   text-align: center;
   font-size: 22px;
   letter-spacing: 3px;
@@ -86,9 +87,8 @@ export const Title = styled.h5`
 `;
 
 export const Card = styled.div`
+  background-color: ${colors.white};
   width: 100%;
-  background: rgb(125, 167, 215);
-  background: linear-gradient(315deg, rgba(125, 167, 215, 1) 0%, rgba(13, 88, 172, 1) 100%);
   border-radius: 15px;
   display: flex;
   flex-direction: column;
@@ -120,7 +120,7 @@ export const CardBottom = styled.div`
 `;
 
 export const Cta = styled.p`
-  color: ${colors.white};
+  color: ${colors.darkGreen};
   text-align: center;
   font-size: 16px;
   letter-spacing: 3px;
