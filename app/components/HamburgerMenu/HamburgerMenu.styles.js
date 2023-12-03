@@ -38,14 +38,13 @@ export const MobileMenuContainer = styled.div`
   left: 0;
   transition: all 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
   padding-top: 200px;
-
+  overflow: scroll;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 `;
 
 export const MobileMenuList = styled.ul`
-  overflow: scroll;
   position: relative;
 `;
 
