@@ -18,6 +18,23 @@ import Image from 'next/image';
 
 export const ServicesCard = ({ title, slug, thumbnail, length }) => {
   const [hover, setHover] = useState(false);
+
+  const getTitle = (str) => {
+    const words = str.split(' ');
+    const lastWord = words[words.length - 1];
+
+    // Check if the last word is 'cleaning'
+    if (lastWord.toLowerCase() !== 'cleaning') {
+      // If not, add 'Cleaning' at the end
+      words.push('\nCleaning');
+    } else {
+      words[words.length - 1] += '\n';
+    }
+
+    const modifiedString = words.join(' ');
+
+    return modifiedString;
+  };
   return (
     <ServiceCardContainer
       href={`service/${slug}`}
@@ -33,9 +50,8 @@ export const ServicesCard = ({ title, slug, thumbnail, length }) => {
 
         <CardBottom>
           <ContentContainer $hover={hover}>
-            <Title>{title}</Title>
+            <Title>{getTitle(title)}</Title>
           </ContentContainer>
-          <Cta href={`services/${slug}`}>Read more</Cta>
           <Circle>
             <Vertical />
             <Horizontal />

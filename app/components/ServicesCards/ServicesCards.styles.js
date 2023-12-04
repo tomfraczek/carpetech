@@ -71,6 +71,7 @@ export const ServiceCardContainer = styled(Link)`
   width: 60vw;
   display: flex;
   justify-content: center;
+  height: 100%;
 
   @media ${device.laptop} {
     width: 32.3%;
@@ -83,6 +84,9 @@ export const Title = styled.h5`
   font-size: 22px;
   letter-spacing: 3px;
   padding: 0.4em;
+  font-weight: bold;
+  white-space: pre;
+  text-wrap: wrap;
 `;
 
 export const Card = styled.div`
@@ -116,6 +120,7 @@ export const CardBottom = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 40px;
 `;
 
 export const Cta = styled.p`
