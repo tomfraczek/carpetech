@@ -17,6 +17,7 @@ export const Content = styled.div`
   justify-content: center;
   flex-direction: column;
   padding: 30px 0;
+  padding-top: 17px;
 
   @media ${device.tablet} {
     justify-content: space-between;
@@ -61,7 +62,7 @@ export const MobileContactContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  @media ${device.laptop} {
+  @media ${device.tablet} {
     display: none;
   }
 `;
@@ -75,8 +76,12 @@ export const Logo = styled.div`
 
 export const PhoneNumber = styled.div`
   color: ${colors.blue};
-  font-size: 30px;
+  font-size: 24px;
   font-weight: 700;
+
+  @media ${device.mobile} {
+    font-size: 30px;
+  }
 `;
 
 export const Details = styled.div`

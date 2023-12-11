@@ -1,7 +1,7 @@
 const getWindowWidth = () => (typeof window !== 'undefined' ? window.innerWidth : 0);
 
 export const breakpoints = {
-  mobile: '780px',
+  mobile: '768px',
   tablet: '992px',
   laptop: '1200px',
   // desktop: '1920px',

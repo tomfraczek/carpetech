@@ -20,6 +20,27 @@ export const ContentLeft = styled.div`
   position: relative;
   overflow: hidden;
 
+  ul {
+    margin-left: 30px;
+
+    li {
+      position: relative;
+      &:before {
+        content: '';
+        position: absolute;
+        left: -30px;
+        top: 50%;
+        transform: translateY(-50%) rotate(-90deg);
+        width: 20px; /* Adjust the width of the image */
+        height: 20px; /* Adjust the height of the image */
+
+        background: ${(props) => `url(${props.$icon}) no-repeat`};
+        background-size: cover; /* or contain, depending on your image */
+        margin-right: 8px; /* Adjust as needed */
+      }
+    }
+  }
+
   @media ${device.tablet} {
     width: ${(props) => (props.$small ? '80%' : '67%')};
   }
@@ -105,9 +126,6 @@ export const LogoContainer = styled.div`
 
   @media ${device.tablet} {
     float: right;
-    position: absolute;
-    top: 50px;
-    right: 50px;
   }
 
   img {

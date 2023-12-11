@@ -7,7 +7,6 @@ import * as React from 'react';
 import Accordion from '@mui/material/Accordion';
 import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
-import Typography from '@mui/material/Typography';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 import {
@@ -20,15 +19,19 @@ import {
   SubmenuItem,
   MobileMenuContainer,
 } from './HamburgerMenu.styles';
-import { MENU } from '../Navigation/constants';
-
-import Home from '@/public/images/icons/home.svg';
-import AnbgleDown from '@/public/images/icons/angleDown.svg';
 import { NavigationMini } from '../NavigationMini';
 
 export const HamburgerMenu = ({ setIsOpen, menu }) => {
   const [open, setOpen] = useState(false);
   const [openMenu, setOpenMenu] = useState(null);
+
+  const sortMenuByTitle = (menu) => {
+    const titleOrder = ['Carpets', 'Upholstery', 'Leather', 'Tiles & Grout', 'Domestic Services', 'Commercial'];
+
+    const sortedMenu = menu.sort((a, b) => titleOrder.indexOf(a.title) - titleOrder.indexOf(b.title));
+
+    return sortedMenu;
+  };
 
   const handleMenuToggle = (index) => {
     setOpenMenu(openMenu === index ? null : index);
@@ -48,6 +51,9 @@ export const HamburgerMenu = ({ setIsOpen, menu }) => {
   const handleChange = (panel) => (event, newExpanded) => {
     setExpanded(newExpanded ? panel : false);
   };
+
+  const orderedMenu = sortMenuByTitle(menu);
+
   return (
     <HamburgerContainer>
       <HamburgerButton>
@@ -56,21 +62,16 @@ export const HamburgerMenu = ({ setIsOpen, menu }) => {
 
       <Logo>
         <Link href='/'>
-          <Image src='/images/carpetLogo.png' width={320} height={70.5} alt='' onClick={closeMenu} />
+          <Image src='/images/carpetLogo.png' width={224} height={49.35} alt='' onClick={closeMenu} />
         </Link>
       </Logo>
 
       <MobileMenuContainer style={{ transform: open ? 'translateX(0)' : 'translateX(100%)' }}>
         <MobileMenuList>
-          {menu.map(({ title, slug, serviceChildrenCollection }, index) => {
+          {orderedMenu.map(({ title, slug, serviceChildrenCollection }, index) => {
             const { items } = serviceChildrenCollection;
             return (
-              <MobileListItem
-                key={index}
-                onMouseEnter={() => handleMenuToggle(index)}
-                // onClick={items.length > 0 ? () => handleMenuToggle(index) : closeMenu}
-                // style={{ maxHeight: openMenu === index ? '500px' : '142px' }}
-              >
+              <MobileListItem key={index} onMouseEnter={() => handleMenuToggle(index)}>
                 {items.length > 0 ? (
                   <Accordion
                     key={index}

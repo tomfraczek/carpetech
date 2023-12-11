@@ -23,6 +23,7 @@ export const Logo = styled.div`
   display: block;
   padding: 40px 0;
   z-index: 9;
+  padding-top: 0;
 
   @media ${device.tablet} {
     display: none;
@@ -37,7 +38,7 @@ export const MobileMenuContainer = styled.div`
   top: 0;
   left: 0;
   transition: all 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
-  padding-top: 200px;
+  padding-top: 100px;
   overflow: scroll;
   display: flex;
   flex-direction: column;
