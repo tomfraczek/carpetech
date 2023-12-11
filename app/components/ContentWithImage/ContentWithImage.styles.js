@@ -20,6 +20,10 @@ export const ContentLeft = styled.div`
   position: relative;
   overflow: hidden;
 
+  a {
+    color: ${colors.blue};
+  }
+
   ul {
     margin-left: 30px;
 
