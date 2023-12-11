@@ -9,7 +9,6 @@ import AngleDown from '@/public/images/icons/angleDown.svg';
 
 export const ContentWithImage = ({ addReviewCards, content, icon, imagePosition, backgroundColour, carousel }) => {
   const carouselItem = carousel?.carouselSlideCollection.items;
-  console.log(content.json);
   return (
     <>
       <ContentWithImageContainer $reverse={imagePosition} $background={backgroundColour?.value}>
