@@ -83,7 +83,7 @@ export const Header = ({ menu, header }) => {
 
           <Contact>
             <Details>
-              <Image src={phone} width={16} height={16} alt='phone-icon' />
+              <Logo src={phone} width={16} height={16} alt='phone-icon' />
               <p>London Office:</p>
             </Details>
 

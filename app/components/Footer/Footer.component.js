@@ -31,6 +31,8 @@ import x from '@/public/images/icons/x.svg';
 import facebook from '@/public/images/icons/facebook.svg';
 
 export const Footer = () => {
+  const googleMpasUrl =
+    'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d321084.460474708!2d-1.672935550296467!3d51.044365524938684!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487378ac5fc88f09%3A0x516f3b828f333a8d!2sHampshire%2C%20UK!5e0!3m2!1sen!2spl!4v1702815923937!5m2!1sen!2spl';
   return (
     <FooterContainer>
       <Container>
@@ -49,22 +51,22 @@ export const Footer = () => {
             <ContactPhoneContainer>
               <Image src={phoneIcon} alt='phone icon' />
               <PhoneNumber>
-                <Link href={`tel:01908505305`}>01908 505305</Link>
+                <Link href={`tel:07849495757`}>078 4949 5757</Link>
               </PhoneNumber>
             </ContactPhoneContainer>
 
             <ContactEmailContainer>
               <Image width={17} src={envelope} alt='phone icon' />
               <EmailAddress>
-                <Link href={`mailto:jonathan@chemdrymiltonkeynes.co.uk`}>jonathan@chemdrymiltonkeynes.co.uk</Link>
+                <Link href={`mailto:info@carpetech.co.uk`}>info@carpetech.co.uk</Link>
               </EmailAddress>
             </ContactEmailContainer>
 
             <RgisteredContainer>
               <WhiteText>Registered company in England</WhiteText>
-              <WhiteText>Registered Number: 4575589</WhiteText>
+              <WhiteText>Registered Number: 14133890</WhiteText>
             </RgisteredContainer>
-            <WhiteText>VAT Number: 706 270 260</WhiteText>
+            {/* <WhiteText>VAT Number: 706 270 260</WhiteText> */}
 
             <SocialMediaContainer>
               <Link href='https://goo.gl/maps/yzgNuBGEQivZaX5s7'>
@@ -90,7 +92,7 @@ export const Footer = () => {
           <FooterSection>
             <Header>Find Us</Header>
             <iframe
-              src='https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d314494.0661761425!2d-0.935!3d51.988929!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4876fe0b00050eab%3A0x93922676256b9ae1!2sChem%20Dry%20Carpet%20Cleaners!5e0!3m2!1sen!2sus!4v1696434946572!5m2!1sen!2sus'
+              src={googleMpasUrl}
               width='100%'
               height='290'
               style={{ border: 0 }}

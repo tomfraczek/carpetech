@@ -7,6 +7,20 @@ import { Carousel } from '@/app/components/Carousel';
 import { ContentWithImage } from '@/app/components/ContentWithImage';
 import { ChemDryBar } from '@/app/components/ChemDryBar';
 
+export async function generateMetadata({ params }) {
+  const { isEnabled } = draftMode();
+  const content = await getPage(params.slug, isEnabled);
+  return {
+    title: content[0].seo?.title ?? '',
+    keywords: content[0].seo?.keywords ?? '',
+    openGraph: {
+      title: content[0].seo?.title ?? '',
+      description: content[0].seo?.description ?? '',
+      image: content[0].seo?.image?.url ?? '',
+    },
+  };
+}
+
 export default async function Page({ params }) {
   const { isEnabled } = draftMode();
   const content = await getPage(params.slug, isEnabled);
