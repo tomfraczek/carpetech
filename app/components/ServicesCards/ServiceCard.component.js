@@ -41,11 +41,13 @@ export const ServicesCard = ({ title, slug, thumbnail, length }) => {
       onMouseEnter={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
       $length={length}
-      $height={thumbnail.height}
+      $height={thumbnail?.height ?? '150'}
     >
       <Card>
         <ImageContainer>
-          <Image src={thumbnail.url} alt={thumbnail.title} width={thumbnail.width} height={thumbnail.height} />
+          {thumbnail && (
+            <Image src={thumbnail.url} alt={thumbnail.title} width={thumbnail.width} height={thumbnail.height} />
+          )}
         </ImageContainer>
 
         <CardBottom>
