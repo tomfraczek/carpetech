@@ -59,7 +59,7 @@ export const ImageContainer = styled.div`
   height: 150px;
   margin-bottom: 30px;
   overflow: hidden;
-  filter: drop-shadow(${colors.inputGrey} 0.5rem 0.5rem 1rem);
+  /* filter: drop-shadow(${colors.inputGrey} 0.5rem 0.5rem 1rem); */
   display: flex;
   align-items: center;
   justify-content: center;
