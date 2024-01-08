@@ -5,12 +5,8 @@ import facebook from '@/public/images/icons/facebook.svg';
 
 export const MINI_MENU = [
   {
-    title: 'About Us',
-    url: '/about',
-  },
-  {
     title: 'Reviews',
-    url: '/testimonials',
+    url: 'https://maps.app.goo.gl/NSRb1EfytivE7bam6',
   },
   {
     title: 'Contact Us',
