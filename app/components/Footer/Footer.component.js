@@ -32,7 +32,7 @@ import facebook from '@/public/images/icons/facebook.svg';
 
 export const Footer = () => {
   const googleMpasUrl =
-    'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d321084.460474708!2d-1.672935550296467!3d51.044365524938684!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487378ac5fc88f09%3A0x516f3b828f333a8d!2sHampshire%2C%20UK!5e0!3m2!1sen!2spl!4v1702815923937!5m2!1sen!2spl';
+    'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d56258559.25724497!2d-78.4511924124846!3d30.61281528915342!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d22c935e46253f%3A0x5d7cac90b7906e16!2sCarpetech%20Ltd.!5e0!3m2!1sen!2spl!4v1704461009270!5m2!1sen!2spl';
   return (
     <FooterContainer>
       <Container>
@@ -69,24 +69,24 @@ export const Footer = () => {
             {/* <WhiteText>VAT Number: 706 270 260</WhiteText> */}
 
             <SocialMediaContainer>
-              <Link href='https://goo.gl/maps/yzgNuBGEQivZaX5s7'>
+              {/* <Link href='https://maps.app.goo.gl/NSRb1EfytivE7bam6'>
                 <Image src={google} width={30} height={30} alt='google-icon' />
-              </Link>
-              <Link href='https://www.facebook.com/people/Chem-Dry-Milton-Keynes/100063698627760/'>
+              </Link> */}
+              <Link href='https://www.facebook.com/CarpetechUK'>
                 <Image src={facebook} width={30} height={30} alt='facebook-icon' />
               </Link>
-              <Link href='https://twitter.com/Chem_DryMK'>
+              {/* <Link href='https://twitter.com/Chem_DryMK'>
                 <Image src={x} width={30} height={30} alt='x-icon' />
-              </Link>
-              <Link href='https://www.youtube.com/user/ukchemdry'>
+              </Link> */}
+              <Link href='https://www.youtube.com/channel/UCc6L52ND_OeCbvOOfJIeraQ'>
                 <Image src={youtube} width={30} height={30} alt='youtube-icon' />
               </Link>
             </SocialMediaContainer>
 
-            <ReviewContainer>
+            {/* <ReviewContainer>
               <StarsWrapper />
               <WhiteText>Chem-Dry Milton Keynes is rated 5 out of 5 based on 2 Google reviews</WhiteText>
-            </ReviewContainer>
+            </ReviewContainer> */}
           </FooterSection>
 
           <FooterSection>
@@ -96,7 +96,6 @@ export const Footer = () => {
               width='100%'
               height='290'
               style={{ border: 0 }}
-              allowFullScreen=''
               loading='lazy'
               referrerPolicy='no-referrer-when-downgrade'
             ></iframe>

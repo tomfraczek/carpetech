@@ -3,7 +3,8 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-import { Navigation, Autoplay } from 'swiper/modules';
+import 'swiper/css/effect-fade';
+import { EffectFade, Autoplay } from 'swiper/modules';
 
 import Image from 'next/image';
 import {
@@ -25,7 +26,8 @@ export const Carousel = ({ borderColour, carouselCollection }) => {
     <CarouselContainer $border={borderColour}>
       <Swiper
         navigation={false}
-        modules={[Autoplay]}
+        effect='fade'
+        modules={[Autoplay, EffectFade]}
         style={{ height: '100%', '--swiper-pagination-color': '#fff', '--swiper-navigation-color': '#fff' }}
         autoplay={{
           delay: 4000,

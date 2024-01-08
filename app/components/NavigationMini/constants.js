@@ -19,20 +19,20 @@ export const MINI_MENU = [
 ];
 
 export const MINI_SOCIAL = [
-  {
-    image: google,
-    url: 'https://goo.gl/maps/yzgNuBGEQivZaX5s7',
-  },
+  // {
+  //   image: google,
+  //   url: 'https://goo.gl/maps/yzgNuBGEQivZaX5s7',
+  // },
   {
     image: facebook,
-    url: 'https://www.facebook.com/people/Chem-Dry-Milton-Keynes/100063698627760/',
+    url: 'https://www.facebook.com/CarpetechUK',
   },
-  {
-    image: x,
-    url: 'https://twitter.com/Chem_DryMK',
-  },
+  // {
+  //   image: x,
+  //   url: 'https://twitter.com/Chem_DryMK',
+  // },
   {
     image: youtube,
-    url: 'https://www.youtube.com/user/ukchemdry',
+    url: 'https://www.youtube.com/channel/UCc6L52ND_OeCbvOOfJIeraQ',
   },
 ];

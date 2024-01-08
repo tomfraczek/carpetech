@@ -1,3 +1,4 @@
+import { device } from '@/global/breakpoints';
 import { colors } from '@/global/colors';
 import styled from 'styled-components';
 
@@ -30,6 +31,7 @@ export const Title = styled.h2`
 `;
 
 export const Email = styled.div`
+  display: flex;
   text-rendering: optimizeLegibility;
   font-feature-settings: 'kern';
   font-kerning: normal;
@@ -92,4 +94,9 @@ export const Address = styled.p`
 
   font-size: 17px;
   line-height: 1.5;
+`;
+
+export const Logo = styled.div`
+  margin-top: 10px;
+  width: 270px;
 `;

@@ -25,7 +25,8 @@ export async function generateMetadata() {
 export default async function Page() {
   const { isEnabled } = draftMode();
   const homepage = await getHomepage(isEnabled);
-  const { topSection, middleSection, bottomSection, fullWidthBar, heroSection, servicesCollection } = homepage;
+  const { topSection, middleSection, bottomSection, fullWidthBar, heroSection, servicesCollection, freeQuote } =
+    homepage;
   return (
     <>
       {heroSection && <Carousel {...heroSection} />}
@@ -34,7 +35,7 @@ export default async function Page() {
       {middleSection && <ContentWithImage {...middleSection} />}
       {fullWidthBar && <ChemDryBar {...fullWidthBar} />}
       {bottomSection && <ContentWithImage {...bottomSection} />}
-      <QuickQuote />
+      {freeQuote && <QuickQuote {...freeQuote} />}
     </>
   );
 }

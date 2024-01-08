@@ -8,21 +8,6 @@ export const QuickQuoteContainer = styled.section`
   padding-bottom: 60px;
   border-top: 10px solid ${colors.purple};
   border-bottom: 10px solid ${colors.purple};
-
-  & > div {
-    z-index: 3;
-    position: relative;
-  }
-
-  img {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1;
-  }
 `;
 
 export const Heading = styled.h2`
@@ -56,4 +41,14 @@ export const BackgroundOverlay = styled.div`
   width: 100%;
   z-index: 2 !important;
   opacity: 0.7;
+`;
+
+export const BackgroundContainer = styled.div`
+  width: 100%;
+  position: absolute;
+  top: 0;
+  img {
+    width: 100%;
+    height: auto;
+  }
 `;

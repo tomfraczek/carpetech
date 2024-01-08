@@ -6,6 +6,7 @@ import { getPage } from '@/lib/api';
 import { Carousel } from '@/app/components/Carousel';
 import { ContentWithImage } from '@/app/components/ContentWithImage';
 import { ChemDryBar } from '@/app/components/ChemDryBar';
+import { QuickQuote } from '@/app/components/QuickQoute';
 
 export async function generateMetadata({ params }) {
   const { isEnabled } = draftMode();
@@ -33,7 +34,9 @@ export default async function Page({ params }) {
     bottomEmergencySection,
     fullWidthBar,
     heroSection,
+    freeQuote,
   } = content[0];
+  console.log(content[0]);
   return (
     <>
       {heroSection && <Carousel {...heroSection} />}
@@ -44,6 +47,7 @@ export default async function Page({ params }) {
       {middleEmergencySection && <ContentWithImage {...middleEmergencySection} />}
       {bottomSection && <ContentWithImage {...bottomSection} />}
       {bottomEmergencySection && <ContentWithImage {...bottomEmergencySection} />}
+      {freeQuote && <QuickQuote {...freeQuote} />}
     </>
   );
 }

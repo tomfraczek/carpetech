@@ -9,6 +9,7 @@ export const Form = styled.form`
   width: 100%;
   display: flex;
   flex-direction: column;
+  z-index: 3;
 
   @media ${device.tablet} {
     display: grid;
