@@ -121,7 +121,6 @@ export const PhoneNumber = styled.div`
 `;
 
 export const EmailAddress = styled.div`
-  margin: 0 0 10.5px;
   a {
     margin-left: 7px;
     color: ${colors.lightPurple};

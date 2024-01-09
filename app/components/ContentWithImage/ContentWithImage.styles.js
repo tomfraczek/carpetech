@@ -138,47 +138,6 @@ export const LogoContainer = styled.div`
   }
 `;
 
-// export const SectionHeader = styled.h1`
-//   margin-top: 0;
-//   font-size: 36px;
-//   font-weight: bold;
-//   color: ${colors.blue};
-//   margin: 0.67em 0;
-//   margin-bottom: 10.5px;
-//   letter-spacing: -0.5px;
-//   line-height: 1.1;
-// `;
-
-// export const Header = styled.h2`
-//   font-weight: bold;
-//   color: ${colors.blue};
-//   font-size: clamp(28px, 2vw, 36px);
-//   margin: 0.67em 0;
-//   margin-bottom: 10.5px;
-//   letter-spacing: -0.5px;
-//   line-height: 1.1;
-// `;
-
-// export const Subheader = styled.h2`
-//   font-weight: 100;
-//   font-size: 26px;
-//   margin: 0 0 1em;
-//   color: ${colors.green};
-//   letter-spacing: -0.5px;
-//   line-height: 1.1;
-//   font-weight: 100;
-// `;
-
-// export const Paragraph = styled.p`
-//   text-rendering: optimizeLegibility;
-//   font-feature-settings: 'kern';
-//   font-kerning: normal;
-//   margin: 0 0 10.5px;
-//   color: ${colors.grey};
-//   line-height: 1.5;
-//   font-size: 17px;
-// `;
-
 export const FactHeader = styled.h3`
   color: ${colors.green};
   font-weight: bold;
