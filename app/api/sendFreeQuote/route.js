@@ -17,7 +17,7 @@ export async function POST(request) {
 
     const mailOption = {
       from: process.env.NODEMAILER_EMAIL,
-      to: 'tomaszfr90@gmail.com',
+      to: 'info@carpetech.co.uk',
       subject: 'EMAIL SENT FROM YOUR WEBSITE',
       html: `
         <h3>Hello Michael</h3>

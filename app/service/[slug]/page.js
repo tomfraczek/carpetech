@@ -36,7 +36,6 @@ export default async function Page({ params }) {
     heroSection,
     freeQuote,
   } = content[0];
-  console.log(content[0]);
   return (
     <>
       {heroSection && <Carousel {...heroSection} />}
