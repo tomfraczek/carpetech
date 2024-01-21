@@ -6,10 +6,7 @@ import { Heading, QuickQuoteContainer, Description, BackgroundOverlay, Backgroun
 
 import { ContactForm } from '../ContactForm';
 
-// import background from '@/public/images/carpetcleaning.jpeg';
-
 export const QuickQuote = ({ header, description, fontColour, backgroundColour, backgroundImage }) => {
-  console.log(backgroundImage);
   return (
     <QuickQuoteContainer style={{ backgroundColor: !backgroundImage && `${backgroundColour}` }}>
       <Container style={{ zIndex: '3' }}>

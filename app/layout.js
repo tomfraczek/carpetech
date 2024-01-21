@@ -21,6 +21,7 @@ export default async function RootLayout({ children }) {
     slug,
     serviceChildrenCollection,
   }));
+
   return (
     <html lang='en'>
       <body style={{ margin: 0 }} className={robotoCondensed.className}>

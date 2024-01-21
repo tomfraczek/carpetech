@@ -99,7 +99,7 @@ export const HamburgerMenu = ({ setIsOpen, menu }) => {
                     </AccordionDetails>
                   </Accordion>
                 ) : (
-                  <Link href={slug} onClick={closeMenu}>
+                  <Link href={`/service/${slug}`} onClick={closeMenu}>
                     {title}
                   </Link>
                 )}
