@@ -22,6 +22,29 @@ export default async function RootLayout({ children }) {
     serviceChildrenCollection,
   }));
 
+  // Specify the URL of the API you want to fetch data from
+  const apiUrl = `https://maps.googleapis.com/maps/api/place/details/json?placeid=${process.env.GOOGLE_MAPS_PLACE_ID}&fields=reviews&key=${process.env.GOOGLE_MAPS_API_KEY}`;
+
+  // Use the fetch function to make a GET request
+  fetch(apiUrl)
+    .then((response) => {
+      // Check if the request was successful (status code 200-299)
+      if (!response.ok) {
+        throw new Error(`HTTP error! Status: ${response.status}`);
+      }
+
+      // Parse the JSON response
+      return response.json();
+    })
+    .then((data) => {
+      // Handle the data from the API
+      console.log('Data from API:', data);
+    })
+    .catch((error) => {
+      // Handle errors during the fetch operation
+      console.error('Fetch error:', error);
+    });
+
   return (
     <html lang='en'>
       <body style={{ margin: 0 }} className={robotoCondensed.className}>
