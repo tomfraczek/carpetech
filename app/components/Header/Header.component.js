@@ -21,9 +21,9 @@ import { NavigationMini } from '../NavigationMini';
 
 import phone from '@/public/images/icons/phone.png';
 
-export const Header = ({ menu, header }) => {
+export const Header = ({ menu, header, map }) => {
   const [isOpen, setIsOpen] = useState(false);
-
+  console.log(map);
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = 'hidden';
