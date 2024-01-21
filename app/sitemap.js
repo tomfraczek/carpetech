@@ -1,11 +1,10 @@
 import { getServices } from '@/lib/api';
-import { getSortedPostsData } from '../lib/posts';
 
 const URL = 'https://carpetech.co.uk';
 
 export default async function sitemap() {
-  const getServices = await getServices(false);
-  const services = getServices.map(({ slug, sys }) => ({
+  const services = await getServices(false);
+  const servicesObject = services.map(({ slug, sys }) => ({
     url: `/service/${slug}`,
     lastModified: sys.publishedAt,
   }));
@@ -15,7 +14,7 @@ export default async function sitemap() {
     lastModified: new Date().toISOString(),
   }));
 
-  return [...routes, ...posts];
+  return [...routes, ...servicesObject];
 }
 
 // import { getSortedPostsData } from '../lib/posts';
