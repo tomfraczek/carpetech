@@ -87,4 +87,5 @@ export const PhoneNumber = styled.div`
 export const Details = styled.div`
   display: flex;
   align-items: center;
+  justify-content: center;
 `;

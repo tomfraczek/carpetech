@@ -62,7 +62,7 @@ export const HamburgerMenu = ({ setIsOpen, menu }) => {
 
       <Logo>
         <Link href='/'>
-          <Image src='/images/carpetLogo.png' width={224} height={49.35} alt='' onClick={closeMenu} />
+          <Image src='/images/carpetLogo.png' width={268.8} height={59.22} alt='' onClick={closeMenu} />
         </Link>
       </Logo>
 

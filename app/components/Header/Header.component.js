@@ -53,17 +53,17 @@ export const Header = ({ menu, header }) => {
               <Image src={phone} width={16} height={16} alt='phone-icon' />
               <p>Mobile WhatsApp:</p>
             </Details>
-            <PhoneNumber>0784 9495757</PhoneNumber>
+            <PhoneNumber>078 49495757</PhoneNumber>
           </Contact>
 
           <MobileContactContainer>
             <MobileContact>
               <Details>
                 <Image src={phone} width={16} height={16} alt='phone-icon' />
-                <p>London Office:</p>
+                <p>Head Office:</p>
               </Details>
 
-              <PhoneNumber>01908 505305</PhoneNumber>
+              <PhoneNumber>01184 115960</PhoneNumber>
             </MobileContact>
 
             <MobileContact>
@@ -83,11 +83,11 @@ export const Header = ({ menu, header }) => {
 
           <Contact>
             <Details>
-              <Logo src={phone} width={16} height={16} alt='phone-icon' />
-              <p>London Office:</p>
+              <Image src={phone} width={16} height={16} alt='phone-icon' />
+              <p>Head Office:</p>
             </Details>
 
-            <PhoneNumber>01908 505305</PhoneNumber>
+            <PhoneNumber>01184 115960</PhoneNumber>
           </Contact>
         </Content>
         <Navigation menu={updatedMenu} />

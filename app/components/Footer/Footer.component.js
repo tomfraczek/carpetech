@@ -32,7 +32,7 @@ import facebook from '@/public/images/icons/facebook.svg';
 
 export const Footer = () => {
   const googleMpasUrl =
-    'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d56258559.25724497!2d-78.4511924124846!3d30.61281528915342!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d22c935e46253f%3A0x5d7cac90b7906e16!2sCarpetech%20Ltd.!5e0!3m2!1sen!2spl!4v1704461009270!5m2!1sen!2spl';
+    'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d638309.649566098!2d-1.813004230372196!3d51.322216113364256!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d22c935e46253f%3A0x5d7cac90b7906e16!2sCarpetech%20Ltd.!5e0!3m2!1spl!2spl!4v1705836902782!5m2!1spl!2spl';
   return (
     <FooterContainer>
       <Container>
