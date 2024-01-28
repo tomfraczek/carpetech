@@ -1,25 +1,36 @@
 'use client';
-import { useState, Fragment } from 'react';
+import { useState } from 'react';
+import { usePathname } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
 
-import { MENU } from '@/app/components/Navigation/constants';
 import AnbgleDown from '@/public/images/icons/angleDown.svg';
-import Home from '@/public/images/icons/home.svg';
 
-import { MenuList, ListItem, SubmenuList, SubmenuItem, NavContainer, ContactButton } from './Navigation.styles';
-import { Container } from '@/global/styles';
+import {
+  MenuList,
+  ListItem,
+  SubmenuList,
+  SubmenuItem,
+  NavContainer,
+  NavLink,
+  FreeQuoteButton,
+} from './Navigation.styles';
 
 export const Navigation = ({ menu }) => {
+  const pathname = usePathname();
   const [openMenu, setOpenMenu] = useState(null);
+
+  const isLinkActive = (href) => {
+    return pathname === href;
+  };
 
   const handleMenuHover = (index) => {
     setOpenMenu(index);
   };
-
   const handleMenuLeave = () => {
     setOpenMenu(null);
   };
+
   return (
     <NavContainer>
       <MenuList>
@@ -28,7 +39,9 @@ export const Navigation = ({ menu }) => {
           const { items } = serviceChildrenCollection;
           return (
             <ListItem key={index} onMouseEnter={() => handleMenuHover(index)} onMouseLeave={handleMenuLeave}>
-              <Link href={`/service/${slug}`}>{title}</Link>
+              <NavLink className={isLinkActive(`/service/${slug}`) ? 'active' : ''} href={`/service/${slug}`}>
+                {title}
+              </NavLink>
               {items.length > 0 && <Image src={AnbgleDown} width={20} alt='angle down icon' />}
               <SubmenuList>
                 {items.length > 0 &&
@@ -43,7 +56,7 @@ export const Navigation = ({ menu }) => {
           );
         })}
         <ListItem>
-          <Link href='/contact-us'>Free Quote</Link>
+          <FreeQuoteButton href='/contact-us'>Free Quote</FreeQuoteButton>
         </ListItem>
       </MenuList>
     </NavContainer>

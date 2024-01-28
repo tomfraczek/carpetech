@@ -1,6 +1,7 @@
 import { device } from '@/global/breakpoints';
 import { colors } from '@/global/colors';
 import styled from 'styled-components';
+import Link from 'next/link';
 
 export const NavContainer = styled.div`
   display: none;
@@ -29,49 +30,55 @@ export const ListItem = styled.li`
     filter: invert(44%) sepia(25%) saturate(635%) hue-rotate(102deg) brightness(89%) contrast(87%);
   }
 
-  > a {
-    padding: 15px;
-    color: ${colors.blue};
-    white-space: nowrap;
-    font-weight: 700;
-    font-size: 18px;
-    display: block;
-    transition: all 0.2s ease;
-    letter-spacing: 1.1px;
-
-    &:hover {
-      background-color: ${colors.hoverWhite};
-      color: ${colors.green};
-
-      ~ img {
-        filter: invert(44%) sepia(25%) saturate(635%) hue-rotate(102deg) brightness(89%) contrast(87%);
-      }
-    }
-  }
-
-  &:last-of-type {
-    border: 2px solid ${colors.blue};
-    border-radius: 5em;
-    overflow: hidden;
-
-    a {
-      padding: 10px 20px;
-    }
-
-    &:hover {
-      background-color: ${colors.blue};
-
-      a {
-        background-color: ${colors.blue};
-        color: ${colors.white};
-      }
-    }
-  }
-
   > img {
     position: absolute;
     bottom: 0;
     left: calc(50% - 10px);
+  }
+`;
+
+export const FreeQuoteButton = styled(Link)`
+  padding: 15px;
+  color: ${colors.blue};
+  white-space: nowrap;
+  font-weight: 700;
+  font-size: 18px;
+  display: block;
+  transition: all 0.2s ease;
+  letter-spacing: 1.1px;
+  border: 2px solid ${colors.blue};
+  border-radius: 5em;
+  overflow: hidden;
+  padding: 10px 20px;
+
+  &:hover {
+    background-color: ${colors.blue};
+    color: ${colors.white};
+  }
+`;
+
+export const NavLink = styled(Link)`
+  padding: 15px;
+  color: ${colors.blue};
+  white-space: nowrap;
+  font-weight: 700;
+  font-size: 18px;
+  display: block;
+  transition: all 0.2s ease;
+  letter-spacing: 1.1px;
+
+  &:hover {
+    background-color: ${colors.hoverWhite};
+    color: ${colors.green};
+
+    ~ img {
+      filter: invert(44%) sepia(25%) saturate(635%) hue-rotate(102deg) brightness(89%) contrast(87%);
+    }
+  }
+
+  &.active {
+    background-color: ${colors.hoverWhite};
+    color: ${colors.green};
   }
 `;
 
