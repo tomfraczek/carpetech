@@ -36,11 +36,12 @@ export const Subheader = styled.h2`
 
 export const Cards = styled.div`
   display: none;
-  justify-content: space-between;
+  justify-content: flex-start;
   flex-direction: column;
   flex-wrap: wrap;
   margin: auto;
   width: 70%;
+  gap: 1.55%;
 
   @media ${device.laptop} {
     display: flex;
@@ -55,9 +56,8 @@ export const Cards = styled.div`
 
 export const ImageContainer = styled.div`
   border-radius: 50%;
-  width: 150px;
-  height: 150px;
-  margin-bottom: 30px;
+  width: 200px;
+  height: 200px;
   overflow: hidden;
   /* filter: drop-shadow(${colors.inputGrey} 0.5rem 0.5rem 1rem); */
   display: flex;
@@ -111,7 +111,7 @@ export const Card = styled.div`
   }
 
   img {
-    height: 150px;
+    height: 200px;
     width: auto;
   }
 `;
