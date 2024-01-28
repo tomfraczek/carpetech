@@ -6,6 +6,7 @@ import { ContentWithImage } from '@/app/components/ContentWithImage';
 import { ServicesCards } from '@/app/components/ServicesCards';
 import { ChemDryBar } from '@/app/components/ChemDryBar';
 import { QuickQuote } from '@/app/components/QuickQoute';
+import { GoogleMap } from './components/GoogleMap';
 
 export async function generateMetadata() {
   const { isEnabled } = draftMode();
@@ -36,6 +37,7 @@ export default async function Page() {
       {fullWidthBar && <ChemDryBar {...fullWidthBar} />}
       {bottomSection && <ContentWithImage {...bottomSection} />}
       {freeQuote && <QuickQuote {...freeQuote} />}
+      <GoogleMap />
     </>
   );
 }
