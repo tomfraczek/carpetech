@@ -1,19 +1,16 @@
 import { device } from '@/global/breakpoints';
 import { colors } from '@/global/colors';
+import Link from 'next/link';
 import styled from 'styled-components';
 
 export const AddressContainer = styled.div`
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
   padding: 3em 0;
   width: 50%;
   position: relative;
-
-  img {
-    width: 100%;
-    z-index: 0;
-    height: auto;
-  }
 `;
 
 export const AddressDetailsContainer = styled.div`
@@ -21,53 +18,42 @@ export const AddressDetailsContainer = styled.div`
   flex-direction: column;
 `;
 
-export const Title = styled.h2`
-  font-size: clamp(28px, 2vw, 36px);
-  margin-top: 0;
-  margin-bottom: 15px;
-  color: ${colors.blue};
-  letter-spacing: -0.5px;
-  font-weight: bold;
-`;
-
-export const Email = styled.div`
+export const Email = styled(Link)`
   display: flex;
+  align-items: center;
   text-rendering: optimizeLegibility;
   font-feature-settings: 'kern';
   font-kerning: normal;
   color: ${colors.purple};
   line-height: 1.5;
-  font-size: 1.1em;
+  font-size: 2em;
   margin: 0 0 10.5px;
 
   img {
     filter: invert(50%) sepia(26%) saturate(1120%) hue-rotate(248deg) brightness(72%) contrast(87%);
     width: 18.7px;
     height: 18.7px;
-    top: 5px;
-    position: relative;
     margin-right: 6px;
   }
 `;
 
-export const Phone = styled.p`
+export const Phone = styled(Link)`
   display: flex;
+  align-items: center;
   text-rendering: optimizeLegibility;
   font-feature-settings: 'kern';
   font-kerning: normal;
-  font-size: 2em;
   color: ${colors.purple};
   line-height: 1.5;
   font-size: 17px;
   margin: 0 0 10.5px;
-  font-size: 2em;
+  font-size: 2.7em;
+  font-weight: bold;
 
   img {
     width: 34px;
     height: 34px;
     margin-right: 8px;
-    position: relative;
-    top: 4px;
   }
 `;
 
@@ -99,5 +85,11 @@ export const Address = styled.p`
 
 export const Logo = styled.div`
   margin-top: 10px;
-  width: 270px;
+  margin-bottom: 20px;
+  width: 310px;
+  img {
+    width: 100%;
+    z-index: 0;
+    height: auto;
+  }
 `;

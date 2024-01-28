@@ -81,6 +81,7 @@ export const FooterContent = styled.div`
 
 export const ContactPhoneContainer = styled.div`
   display: flex;
+  align-items: center;
   margin: auto;
 
   margin-top: 21px;
@@ -94,8 +95,6 @@ export const ContactPhoneContainer = styled.div`
     width: 34px;
     height: 34px;
     margin-right: 8px;
-    position: relative;
-    top: 4px;
   }
 `;
 
@@ -120,11 +119,11 @@ export const PhoneNumber = styled.div`
     text-rendering: optimizeLegibility;
     font-feature-settings: 'kern';
     font-kerning: normal;
-    font-size: 2em;
     color: ${colors.purple};
     line-height: 1.5;
     font-size: 17px;
-    font-size: 2em;
+    font-size: 2.7em;
+    font-weight: bold;
 
     &:hover {
       color: ${colors.hoverPurple};
@@ -140,7 +139,7 @@ export const EmailAddress = styled.div`
     font-kerning: normal;
     color: ${colors.purple};
     line-height: 1.5;
-    font-size: 1.1em;
+    font-size: 2em;
 
     &:hover {
       color: ${colors.hoverPurple};
