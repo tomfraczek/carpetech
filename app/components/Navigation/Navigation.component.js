@@ -56,7 +56,9 @@ export const Navigation = ({ menu }) => {
           );
         })}
         <ListItem>
-          <FreeQuoteButton href='/contact-us'>Free Quote</FreeQuoteButton>
+          <FreeQuoteButton className={isLinkActive('/contact-us') ? 'active' : ''} href='/contact-us'>
+            Free Quote
+          </FreeQuoteButton>
         </ListItem>
       </MenuList>
     </NavContainer>

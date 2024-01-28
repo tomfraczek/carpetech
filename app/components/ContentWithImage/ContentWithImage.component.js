@@ -30,7 +30,6 @@ export const ContentWithImage = ({ addReviewCards, content, icon, imagePosition,
               <Image src={icon.url} alt={icon.title} width={icon.width} height={icon.height} />
             </LogoContainerMobile>
           )}
-          {addReviewCards && <ReviewCards />}
         </ContentLeft>
         <ContentRight>
           {carousel && (
@@ -53,6 +52,7 @@ export const ContentWithImage = ({ addReviewCards, content, icon, imagePosition,
           )}
         </ContentRight>
       </ContentWithImageContainer>
+      {addReviewCards && <ReviewCards />}
     </>
   );
 };

@@ -81,7 +81,6 @@ export const FooterContent = styled.div`
 
 export const ContactPhoneContainer = styled.div`
   display: flex;
-  align-items: center;
   margin: auto;
 
   margin-top: 21px;
@@ -89,6 +88,14 @@ export const ContactPhoneContainer = styled.div`
 
   @media ${device.tablet} {
     margin: 21px 0 10.5px 0;
+  }
+
+  img {
+    width: 34px;
+    height: 34px;
+    margin-right: 8px;
+    position: relative;
+    top: 4px;
   }
 `;
 
@@ -101,18 +108,23 @@ export const ContactEmailContainer = styled.div`
   @media ${device.tablet} {
     margin: 0 0 10.5px;
   }
+
+  img {
+    margin-right: 8px;
+  }
 `;
 
 export const PhoneNumber = styled.div`
   a {
-    font-size: 30px;
-    font-weight: bold;
-    margin-top: 21px;
-    margin-bottom: 10.5px;
-    margin-left: 7px;
-    line-height: 1.1;
-    color: ${colors.lightPurple};
-    transition: all 0.2s ease;
+    display: flex;
+    text-rendering: optimizeLegibility;
+    font-feature-settings: 'kern';
+    font-kerning: normal;
+    font-size: 2em;
+    color: ${colors.purple};
+    line-height: 1.5;
+    font-size: 17px;
+    font-size: 2em;
 
     &:hover {
       color: ${colors.hoverPurple};
@@ -122,9 +134,13 @@ export const PhoneNumber = styled.div`
 
 export const EmailAddress = styled.div`
   a {
-    margin-left: 7px;
-    color: ${colors.lightPurple};
-    transition: all 0.2s ease;
+    display: flex;
+    text-rendering: optimizeLegibility;
+    font-feature-settings: 'kern';
+    font-kerning: normal;
+    color: ${colors.purple};
+    line-height: 1.5;
+    font-size: 1.1em;
 
     &:hover {
       color: ${colors.hoverPurple};

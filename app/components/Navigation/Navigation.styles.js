@@ -51,6 +51,11 @@ export const FreeQuoteButton = styled(Link)`
   overflow: hidden;
   padding: 10px 20px;
 
+  &.active {
+    background-color: ${colors.blue};
+    color: ${colors.white};
+  }
+
   &:hover {
     background-color: ${colors.blue};
     color: ${colors.white};

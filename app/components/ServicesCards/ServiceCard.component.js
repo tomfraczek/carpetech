@@ -1,7 +1,5 @@
 'use client';
 import { useState } from 'react';
-import Link from 'next/link';
-import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 import {
   Card,
   Circle,

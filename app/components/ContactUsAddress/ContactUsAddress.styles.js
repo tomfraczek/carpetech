@@ -51,6 +51,7 @@ export const Email = styled.div`
 `;
 
 export const Phone = styled.p`
+  display: flex;
   text-rendering: optimizeLegibility;
   font-feature-settings: 'kern';
   font-kerning: normal;

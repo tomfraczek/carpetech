@@ -11,11 +11,12 @@ import { Header } from './ReviewCards.styles';
 import { Autoplay } from 'swiper/modules';
 
 import { isMobile } from '@/global/breakpoints';
+import { Container } from '@/global/styles';
 
 export const ReviewCards = () => {
   const mobile = isMobile();
   return (
-    <>
+    <Container>
       <Header>Read Some Reviews from our Satisfied Customers:</Header>
       <Swiper
         modules={[Autoplay]}
@@ -31,6 +32,6 @@ export const ReviewCards = () => {
           <ReviewCard key={review.author} {...review} />
         ))}
       </Swiper>
-    </>
+    </Container>
   );
 };
