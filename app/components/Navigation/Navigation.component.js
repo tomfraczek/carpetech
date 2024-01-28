@@ -23,7 +23,8 @@ export const Navigation = ({ menu }) => {
   return (
     <NavContainer>
       <MenuList>
-        {menu.map(({ title, slug, serviceChildrenCollection }, index) => {
+        {menu.map(({ content }, index) => {
+          const { title, slug, serviceChildrenCollection } = content;
           const { items } = serviceChildrenCollection;
           return (
             <ListItem key={index} onMouseEnter={() => handleMenuHover(index)} onMouseLeave={handleMenuLeave}>

@@ -8,8 +8,9 @@ export const CarouselContainer = styled.div`
   border-bottom: ${(props) => `10px solid ${props.$border}`};
   position: relative;
   aspect-ratio: 16 / 9;
+  /* height: 400px; */
 
-  @media ${device.tablet} {
+  @media ${device.laptop} {
     height: 700px;
   }
 `;
@@ -28,7 +29,7 @@ export const Description = styled.h2`
   z-index: 2;
   position: relative;
   text-shadow: 0 1px 12px rgba(0, 0, 0, 0.2);
-  font-size: clamp(30px, 5vw, 70px);
+  font-size: clamp(24px, 5vw, 70px);
   color: ${colors.white};
   font-weight: bold;
   letter-spacing: -0.5px;
@@ -94,6 +95,7 @@ export const Content = styled.div`
 `;
 
 export const ImageContainer = styled.div`
+  aspect-ratio: 16 / 9;
   width: 100%;
   img {
     width: 100%;

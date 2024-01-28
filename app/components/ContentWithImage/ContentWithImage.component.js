@@ -1,7 +1,13 @@
 'use client';
 import Image from 'next/image';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
-import { ContentWithImageContainer, ContentLeft, ContentRight, LogoContainer } from './ContentWithImage.styles';
+import {
+  ContentWithImageContainer,
+  ContentLeft,
+  ContentRight,
+  LogoContainer,
+  LogoContainerMobile,
+} from './ContentWithImage.styles';
 import { ReviewCards } from '@/app/components/ReviewCards';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper/modules';
@@ -19,6 +25,11 @@ export const ContentWithImage = ({ addReviewCards, content, icon, imagePosition,
             </LogoContainer>
           )}
           <>{content && documentToReactComponents(content.json)}</>
+          {icon && (
+            <LogoContainerMobile>
+              <Image src={icon.url} alt={icon.title} width={icon.width} height={icon.height} />
+            </LogoContainerMobile>
+          )}
           {addReviewCards && <ReviewCards />}
         </ContentLeft>
         <ContentRight>

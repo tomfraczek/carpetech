@@ -25,14 +25,6 @@ export const HamburgerMenu = ({ setIsOpen, menu }) => {
   const [open, setOpen] = useState(false);
   const [openMenu, setOpenMenu] = useState(null);
 
-  const sortMenuByTitle = (menu) => {
-    const titleOrder = ['Carpets', 'Upholstery', 'Leather', 'Tiles & Grout', 'Domestic Services', 'Commercial'];
-
-    const sortedMenu = menu.sort((a, b) => titleOrder.indexOf(a.title) - titleOrder.indexOf(b.title));
-
-    return sortedMenu;
-  };
-
   const handleMenuToggle = (index) => {
     setOpenMenu(openMenu === index ? null : index);
   };
@@ -52,12 +44,10 @@ export const HamburgerMenu = ({ setIsOpen, menu }) => {
     setExpanded(newExpanded ? panel : false);
   };
 
-  const orderedMenu = sortMenuByTitle(menu);
-
   return (
     <HamburgerContainer>
       <HamburgerButton>
-        <Hamburger toggled={open} toggle={toggleMenu} />
+        <Hamburger toggled={open} toggle={toggleMenu} size={20} />
       </HamburgerButton>
 
       <Logo>
@@ -68,7 +58,8 @@ export const HamburgerMenu = ({ setIsOpen, menu }) => {
 
       <MobileMenuContainer style={{ transform: open ? 'translateX(0)' : 'translateX(100%)' }}>
         <MobileMenuList>
-          {orderedMenu.map(({ title, slug, serviceChildrenCollection }, index) => {
+          {menu.map(({ content }, index) => {
+            const { title, slug, serviceChildrenCollection } = content;
             const { items } = serviceChildrenCollection;
             return (
               <MobileListItem key={index} onMouseEnter={() => handleMenuToggle(index)}>

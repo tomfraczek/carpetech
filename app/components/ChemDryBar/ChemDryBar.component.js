@@ -37,15 +37,7 @@ export const ChemDryBar = ({ category, image, title, url }) => {
             </Content>
             {image && (
               <Logo>
-                <Image
-                  style={{
-                    transform: isHovered ? 'rotate(-15deg)' : 'rotate(0deg)',
-                  }}
-                  src={image.url}
-                  width={image.width}
-                  height={image.height}
-                  alt={image.title}
-                />
+                <Image src={image.url} width={image.width} height={image.height} alt={image.title} />
               </Logo>
             )}
           </ContentWrapper>

@@ -30,12 +30,11 @@ export const Content = styled.div`
 export const Logo = styled.div`
   position: absolute;
   right: 5px;
-  width: 100px;
-  height: 100px;
+  max-width: 210px;
+  display: none;
 
-  @media ${device.mobile} {
-    width: 210px;
-    height: 210px;
+  @media ${device.tablet} {
+    display: block;
   }
   img {
     width: 100%;
@@ -53,10 +52,9 @@ export const Header = styled.p`
   font-kerning: normal;
   color: ${colors.white};
   line-height: 1;
-  margin-right: 100px;
 
   @media ${device.laptop} {
-    font-size: 36px;
+    font-size: 31px;
   }
 `;
 

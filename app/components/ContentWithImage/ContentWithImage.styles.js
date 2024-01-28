@@ -50,7 +50,7 @@ export const ContentLeft = styled.div`
   }
 
   h1 {
-    font-size: 36px;
+    font-size: 28px;
     font-weight: bold;
     color: ${colors.blue};
     margin: 0.67em 0;
@@ -65,14 +65,11 @@ export const ContentLeft = styled.div`
   h2 {
     font-weight: bold;
     color: ${colors.blue};
-    font-size: clamp(28px, 2vw, 36px);
+    font-size: 26px;
     margin: 0.67em 0;
     margin-bottom: 10.5px;
     letter-spacing: -0.5px;
     line-height: 1.1;
-    @media ${device.tablet} {
-      margin-right: 220px;
-    }
   }
 
   h3 {
@@ -126,10 +123,24 @@ export const ContentRight = styled.div`
 `;
 
 export const LogoContainer = styled.div`
+  display: none;
+  @media ${device.tablet} {
+    display: block;
+    float: right;
+    text-align: center;
+  }
+
+  img {
+    max-height: 150px;
+    width: auto;
+  }
+`;
+
+export const LogoContainerMobile = styled.div`
   text-align: center;
 
   @media ${device.tablet} {
-    float: right;
+    display: none;
   }
 
   img {

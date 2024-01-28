@@ -14,13 +14,12 @@ export const HamburgerContainer = styled.div`
 
 export const HamburgerButton = styled.div`
   position: absolute;
-  right: 20px;
-  top: 20px;
+  right: 15px;
+  top: 22px;
   z-index: 10;
 `;
 
 export const Logo = styled.div`
-  display: block;
   padding: 40px 0;
   z-index: 9;
   padding-top: 0;
@@ -190,8 +189,6 @@ export const MobileListItem = styled.li`
 `;
 
 export const SubmenuList = styled.ul`
-  /* background-color: ${colors.green}; */
-  /* position: absolute; */
   min-width: 180px;
   z-index: 10;
 `;

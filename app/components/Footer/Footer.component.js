@@ -30,18 +30,42 @@ import youtube from '@/public/images/icons/youtube.svg';
 import x from '@/public/images/icons/x.svg';
 import facebook from '@/public/images/icons/facebook.svg';
 
-export const Footer = () => {
+export const Footer = ({ navigation }) => {
   const googleMpasUrl =
     'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d638309.649566098!2d-1.813004230372196!3d51.322216113364256!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d22c935e46253f%3A0x5d7cac90b7906e16!2sCarpetech%20Ltd.!5e0!3m2!1spl!2spl!4v1705836902782!5m2!1spl!2spl';
+
+  const flattenedArray = navigation.reduce((accumulator, item) => {
+    const { name, content } = item;
+    const { title, slug, serviceChildrenCollection } = content;
+
+    accumulator.push({
+      name,
+      title,
+      slug,
+    });
+
+    if (serviceChildrenCollection.items.length > 0) {
+      accumulator.push(
+        ...serviceChildrenCollection.items.map((child) => ({
+          name: child.title,
+          title: child.title,
+          slug: child.slug,
+        }))
+      );
+    }
+
+    return accumulator;
+  }, []);
+
   return (
     <FooterContainer>
       <Container>
         <FooterContent>
           <FooterSection>
             <Header>Cleaning Services</Header>
-            {MENU_ITEMS.map(({ title, url }) => (
-              <Link key={title} href={url}>
-                <Image src={AnbgleDown} width={20} alt='angle right icon' /> {title}
+            {flattenedArray.map(({ name, slug }) => (
+              <Link key={name} href={`/service/${slug}`}>
+                <Image src={AnbgleDown} width={20} alt='angle right icon' /> {name}
               </Link>
             ))}
           </FooterSection>

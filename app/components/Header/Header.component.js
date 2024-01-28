@@ -21,9 +21,8 @@ import { NavigationMini } from '../NavigationMini';
 
 import phone from '@/public/images/icons/phone.png';
 
-export const Header = ({ menu, header, map }) => {
+export const Header = ({ header, navigation }) => {
   const [isOpen, setIsOpen] = useState(false);
-  console.log(map);
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = 'hidden';
@@ -32,22 +31,13 @@ export const Header = ({ menu, header, map }) => {
     }
   }, [isOpen]);
 
-  const titlesToRemove = new Set();
-
-  menu.forEach(({ serviceChildrenCollection }) => {
-    const { items } = serviceChildrenCollection;
-    items.forEach(({ title }) => titlesToRemove.add(title));
-  });
-
-  const updatedMenu = menu.filter(({ title }) => !titlesToRemove.has(title));
-
   return (
     <HeaderContainer $sticky={isOpen.toString()}>
       <Subheader {...header} />
       <Container>
         <NavigationMini setIsOpen={setIsOpen} />
         <Content>
-          <HamburgerMenu menu={updatedMenu} setIsOpen={setIsOpen} />
+          <HamburgerMenu menu={navigation} setIsOpen={setIsOpen} />
           <Contact>
             <Details>
               <Image src={phone} width={16} height={16} alt='phone-icon' />
@@ -90,7 +80,7 @@ export const Header = ({ menu, header, map }) => {
             <PhoneNumber>01184 115960</PhoneNumber>
           </Contact>
         </Content>
-        <Navigation menu={updatedMenu} />
+        <Navigation menu={navigation} />
       </Container>
     </HeaderContainer>
   );
