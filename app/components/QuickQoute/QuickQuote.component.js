@@ -5,6 +5,7 @@ import { Container } from '@/global/styles';
 import { Heading, QuickQuoteContainer, Description, BackgroundOverlay, BackgroundContainer } from './QuickQuote.styles';
 
 import { ContactForm } from '../ContactForm';
+import { ContactUsForm } from '../ContactUsForm';
 
 export const QuickQuote = ({ header, description, fontColour, backgroundColour, backgroundImage }) => {
   return (
@@ -12,7 +13,7 @@ export const QuickQuote = ({ header, description, fontColour, backgroundColour, 
       <Container style={{ zIndex: '3' }}>
         <Heading style={{ color: `${fontColour}` }}>{header}</Heading>
         <Description style={{ color: `${fontColour}` }}>{description}</Description>
-        <ContactForm />
+        <ContactUsForm />
       </Container>
       <BackgroundOverlay />
       {backgroundImage && (
