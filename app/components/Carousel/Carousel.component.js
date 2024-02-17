@@ -26,27 +26,27 @@ import phoneIcon from '@/public/images/icons/phonewhite.png';
 
 export const Carousel = ({ borderColour, carouselCollection }) => {
   const { items } = carouselCollection;
-  const [reviews, setReviews] = useState([]);
+  // const [reviews, setReviews] = useState([]);
   // const apiKey = 'AIzaSyCemcFUJTtSY4pL6RaAL48N8uU3PT0pof8';
   // const placeId = 'ChIJAfUrG0VEBEcRtEycalTUIso';
   // const fields = 'rating, reviews';
   // const url = `https://maps.googleapis.com/maps/api/place/details/json?fields=${fields}&placeId=${placeId}&key=${apiKey}`;
 
-  useEffect(() => {
-    const fetchReviews = async () => {
-      try {
-        const response = await axios.get(
-          `https://maps.googleapis.com/maps/api/place/details/json?place_id=ChIJAfUrG0VEBEcRtEycalTUIso&fields=reviews&key=AIzaSyCemcFUJTtSY4pL6RaAL48N8uU3PT0pof8`
-        );
-        console.log(response.data);
-        setReviews(response.data.result.reviews);
-      } catch (error) {
-        console.error('Error fetching reviews:', error);
-      }
-    };
+  // useEffect(() => {
+  //   const fetchReviews = async () => {
+  //     try {
+  //       const response = await axios.get(
+  //         `https://maps.googleapis.com/maps/api/place/details/json?place_id=ChIJAfUrG0VEBEcRtEycalTUIso&fields=reviews&key=AIzaSyCemcFUJTtSY4pL6RaAL48N8uU3PT0pof8`
+  //       );
+  //       console.log(response.data);
+  //       setReviews(response.data.result.reviews);
+  //     } catch (error) {
+  //       console.error('Error fetching reviews:', error);
+  //     }
+  //   };
 
-    fetchReviews();
-  }, []);
+  //   fetchReviews();
+  // }, []);
 
   // const { isLoaded } = useJsApiLoader({
   //   id: 'google-map-script',
@@ -67,12 +67,12 @@ export const Carousel = ({ borderColour, carouselCollection }) => {
 
   // const onUnmount = useCallback(function callback(map) {
   //   setMap(null);
-  // }, []);
+  // // }, []);
 
-  const apiKey = 'AIzaSyCemcFUJTtSY4pL6RaAL48N8uU3PT0pof8';
-  const placeId = 'ChIJAfUrG0VEBEcRtEycalTUIso';
-  const fields = 'rating, reviews';
-  const url = `https://maps.googleapis.com/maps/api/place/details/json?fields=${fields}&placeId=${placeId}&key=${apiKey}`;
+  // const apiKey = 'AIzaSyCemcFUJTtSY4pL6RaAL48N8uU3PT0pof8';
+  // const placeId = 'ChIJAfUrG0VEBEcRtEycalTUIso';
+  // const fields = 'rating, reviews';
+  // const url = `https://maps.googleapis.com/maps/api/place/details/json?fields=${fields}&placeId=${placeId}&key=${apiKey}`;
   // let request = {
   //   placeId: 'ChIJAfUrG0VEBEcRtEycalTUIso',
   //   fields: ['rating', 'reviews'],
