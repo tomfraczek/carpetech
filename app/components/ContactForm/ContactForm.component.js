@@ -23,7 +23,6 @@ export const ContactForm = () => {
     setValue,
     formState: { errors },
   } = useForm();
-  const hiddenFileInput = useRef(null);
   const [phoneNumber, setPhoneNumber] = useState(''); // State to track phone number input
   const [sent, setSent] = useState(false);
   const [sending, setSending] = useState(false);
