@@ -6,7 +6,7 @@ import { ContentWithImage } from '@/app/components/ContentWithImage';
 import { ServicesCards } from '@/app/components/ServicesCards';
 import { ChemDryBar } from '@/app/components/ChemDryBar';
 import { QuickQuote } from '@/app/components/QuickQoute';
-import { GoogleReviews } from '@/app/components/GoogleReviews';
+import { GoogleMap } from '@/app/components/GoogleMap';
 // import axios from 'axios';
 
 export async function generateMetadata() {
@@ -29,24 +29,6 @@ export default async function Page() {
   const homepage = await getHomepage(isEnabled);
   const { topSection, middleSection, bottomSection, fullWidthBar, heroSection, servicesCollection, freeQuote } =
     homepage;
-  // const apiKey = 'AIzaSyCemcFUJTtSY4pL6RaAL48N8uU3PT0pof8';
-  // const placeId = 'ChIJAfUrG0VEBEcRtEycalTUIso';
-  // const fields = 'rating, reviews';
-  // const url = `https://maps.googleapis.com/maps/api/place/details/json?fields=${fields}&${placeId}&key=${apiKey}`;
-
-  // const config = {
-  //   method: 'get',
-  //   url,
-  //   headers: {},
-  // };
-
-  // axios(config)
-  //   .then((response) => {
-  //     console.log(JSON.stringify(response.data));
-  //   })
-  //   .catch((error) => {
-  //     console.log(error);
-  //   });
 
   return (
     <>
@@ -57,7 +39,7 @@ export default async function Page() {
       {fullWidthBar && <ChemDryBar {...fullWidthBar} />}
       {bottomSection && <ContentWithImage {...bottomSection} />}
       {freeQuote && <QuickQuote {...freeQuote} />}
-      <GoogleReviews />
+      <GoogleMap />
     </>
   );
 }

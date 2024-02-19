@@ -5,6 +5,7 @@ export const ReviewCardContainer = styled.div`
   position: relative;
   width: 100%;
   margin-right: 20px;
+  margin-bottom: 40px;
   display: block;
   height: auto;
   border-radius: 15px;
