@@ -65,7 +65,7 @@ export const ContentLeft = styled.div`
   h2 {
     font-weight: bold;
     color: ${colors.blue};
-    font-size: 26px;
+    font-size: 30px;
     margin: 0.67em 0;
     margin-bottom: 10.5px;
     letter-spacing: -0.5px;
@@ -198,4 +198,11 @@ export const ListItem = styled.div`
 `;
 export const List = styled.div`
   margin-bottom: 35px;
+`;
+
+export const ReviewsContainer = styled.div`
+  padding: 0 20px;
+  @media ${device.mobile} {
+    padding: 0;
+  }
 `;

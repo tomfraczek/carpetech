@@ -1,5 +1,6 @@
 'use client';
 import Image from 'next/image';
+import Script from 'next/script';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 import {
   ContentWithImageContainer,
@@ -7,6 +8,7 @@ import {
   ContentRight,
   LogoContainer,
   LogoContainerMobile,
+  ReviewsContainer,
 } from './ContentWithImage.styles';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper/modules';
@@ -17,6 +19,7 @@ export const ContentWithImage = ({ addReviewCards, content, icon, imagePosition,
   const carouselItem = carousel?.carouselSlideCollection.items;
   return (
     <>
+      <Script src='https://reviewsonmywebsite.com/js/v2/embed.js?id=7bf8acda5d5930b1a9db343a4ec1b31c' />
       <ContentWithImageContainer $reverse={imagePosition} $background={backgroundColour?.value}>
         <ContentLeft $icon={AngleDown.src}>
           {icon && (
@@ -52,7 +55,7 @@ export const ContentWithImage = ({ addReviewCards, content, icon, imagePosition,
           )}
         </ContentRight>
       </ContentWithImageContainer>
-      {/* {addReviewCards && <GoogleReviews />} */}
+      {addReviewCards && <ReviewsContainer data-romw-token='H2D7ArN2ny17e7RaGMsfyFYXI80Be3E2Wt5ZJDTu3PICCSfhMc' />}
     </>
   );
 };
