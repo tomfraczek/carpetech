@@ -21,6 +21,9 @@ export async function generateMetadata() {
       description,
       image: image.url,
     },
+    verification: {
+      google: 'z5C3Tq0BEN9vFOUd8_9XUM5AmEZZKjB5CBiWIHTaQFo',
+    },
   };
 }
 

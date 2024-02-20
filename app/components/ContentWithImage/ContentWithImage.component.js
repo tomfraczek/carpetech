@@ -8,10 +8,10 @@ import {
   LogoContainer,
   LogoContainerMobile,
 } from './ContentWithImage.styles';
-import { ReviewCards } from '@/app/components/ReviewCards';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper/modules';
 import AngleDown from '@/public/images/icons/angleDown.svg';
+import { GoogleReviews } from '@/app/components/GoogleReviews';
 
 export const ContentWithImage = ({ addReviewCards, content, icon, imagePosition, backgroundColour, carousel }) => {
   const carouselItem = carousel?.carouselSlideCollection.items;
@@ -52,7 +52,7 @@ export const ContentWithImage = ({ addReviewCards, content, icon, imagePosition,
           )}
         </ContentRight>
       </ContentWithImageContainer>
-      {addReviewCards && <ReviewCards />}
+      {/* {addReviewCards && <GoogleReviews />} */}
     </>
   );
 };
