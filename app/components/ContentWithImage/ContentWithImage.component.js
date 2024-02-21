@@ -1,4 +1,5 @@
 'use client';
+import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import Script from 'next/script';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
@@ -17,6 +18,24 @@ import { GoogleReviews } from '@/app/components/GoogleReviews';
 
 export const ContentWithImage = ({ addReviewCards, content, icon, imagePosition, backgroundColour, carousel }) => {
   const carouselItem = carousel?.carouselSlideCollection.items;
+  const [scriptLoaded, setScriptLoaded] = useState(false); // State to track whether the script is loaded
+
+  useEffect(() => {
+    if (!scriptLoaded) {
+      const script = document.createElement('script');
+      script.src = 'https://reviewsonmywebsite.com/js/v2/embed.js?id=7bf8acda5d5930b1a9db343a4ec1b31c';
+      script.async = true;
+      document.body.appendChild(script);
+
+      script.onload = () => {
+        setScriptLoaded(true);
+      };
+
+      return () => {
+        document.body.removeChild(script);
+      };
+    }
+  }, [scriptLoaded]);
   return (
     <>
       <Script src='https://reviewsonmywebsite.com/js/v2/embed.js?id=7bf8acda5d5930b1a9db343a4ec1b31c' />
