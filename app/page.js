@@ -7,6 +7,9 @@ import { ServicesCards } from '@/app/components/ServicesCards';
 import { ChemDryBar } from '@/app/components/ChemDryBar';
 import { QuickQuote } from '@/app/components/QuickQoute';
 import { GoogleMap } from '@/app/components/GoogleMap';
+
+// import { ReviewsContainer } from './page.styles';
+import Script from 'next/script';
 // import axios from 'axios';
 
 export async function generateMetadata() {
@@ -30,11 +33,20 @@ export async function generateMetadata() {
 export default async function Page() {
   const { isEnabled } = draftMode();
   const homepage = await getHomepage(isEnabled);
-  const { topSection, middleSection, bottomSection, fullWidthBar, heroSection, servicesCollection, freeQuote } =
-    homepage;
+  const {
+    topSection,
+    middleSection,
+    bottomSection,
+    fullWidthBar,
+    heroSection,
+    servicesCollection,
+    freeQuote,
+    showReviews,
+  } = homepage;
 
   return (
     <>
+      <Script src='https://reviewsonmywebsite.com/js/v2/embed.js?id=7bf8acda5d5930b1a9db343a4ec1b31c' />
       {heroSection && <Carousel {...heroSection} />}
       {topSection && <ContentWithImage {...topSection} />}
       {servicesCollection && <ServicesCards items={servicesCollection.items} />}
@@ -42,6 +54,7 @@ export default async function Page() {
       {fullWidthBar && <ChemDryBar {...fullWidthBar} />}
       {bottomSection && <ContentWithImage {...bottomSection} />}
       {freeQuote && <QuickQuote {...freeQuote} />}
+      {showReviews && <div data-romw-token='H2D7ArN2ny17e7RaGMsfyFYXI80Be3E2Wt5ZJDTu3PICCSfhMc' />}
       <GoogleMap />
     </>
   );

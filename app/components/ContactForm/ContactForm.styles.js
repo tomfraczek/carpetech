@@ -7,8 +7,9 @@ export const Form = styled.form`
   grid-row-gap: 16px;
   grid-template-columns: repeat(12, 1fr);
   width: 100%;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  /* display: flex;
+  flex-direction: column; */
   z-index: 3;
 
   @media ${device.tablet} {
@@ -40,11 +41,11 @@ export const FormPhone = styled.div`
 `;
 
 export const FormEmail = styled.div`
-  grid-column: span 8;
+  grid-column: span 6;
 `;
 
 export const FormPostcode = styled.div`
-  grid-column: span 4;
+  grid-column: span 6;
 `;
 
 export const FormArea = styled.div`

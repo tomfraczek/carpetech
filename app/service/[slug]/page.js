@@ -7,6 +7,7 @@ import { Carousel } from '@/app/components/Carousel';
 import { ContentWithImage } from '@/app/components/ContentWithImage';
 import { ChemDryBar } from '@/app/components/ChemDryBar';
 import { QuickQuote } from '@/app/components/QuickQoute';
+import Script from 'next/script';
 
 export async function generateMetadata({ params }) {
   const { isEnabled } = draftMode();
@@ -35,9 +36,11 @@ export default async function Page({ params }) {
     fullWidthBar,
     heroSection,
     freeQuote,
+    showReviews,
   } = content[0];
   return (
     <>
+      <Script src='https://reviewsonmywebsite.com/js/v2/embed.js?id=7bf8acda5d5930b1a9db343a4ec1b31c' />
       {heroSection && <Carousel {...heroSection} />}
       {topSection && <ContentWithImage {...topSection} />}
       {topEmergencySection && <ContentWithImage {...topEmergencySection} />}
@@ -47,6 +50,7 @@ export default async function Page({ params }) {
       {bottomSection && <ContentWithImage {...bottomSection} />}
       {bottomEmergencySection && <ContentWithImage {...bottomEmergencySection} />}
       {freeQuote && <QuickQuote {...freeQuote} />}
+      {showReviews && <div data-romw-token='H2D7ArN2ny17e7RaGMsfyFYXI80Be3E2Wt5ZJDTu3PICCSfhMc' />}
     </>
   );
 }

@@ -78,6 +78,15 @@ export const ContactForm = () => {
             {errors.name && <p>{errors.name.message}</p>}
           </FormName>
 
+          <FormPostcode>
+            <Controller
+              name='postcode'
+              control={control}
+              defaultValue=''
+              render={({ field }) => <input placeholder='Postcode' {...field} />}
+            />
+          </FormPostcode>
+
           <FormPhone>
             <Controller
               name='phone'
@@ -101,16 +110,7 @@ export const ContactForm = () => {
             {errors.email && <p>{errors.email.message}</p>}
           </FormEmail>
 
-          <FormPostcode>
-            <Controller
-              name='postcode'
-              control={control}
-              defaultValue=''
-              render={({ field }) => <input placeholder='Postcode' {...field} />}
-            />
-          </FormPostcode>
-
-          <FormArea>
+          {/* <FormArea>
             <Controller
               name='interests'
               control={control}
@@ -132,7 +132,7 @@ export const ContactForm = () => {
                 </select>
               )}
             />
-          </FormArea>
+          </FormArea> */}
 
           <FormMessage>
             <Controller
