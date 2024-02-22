@@ -1,5 +1,8 @@
+import { device } from '@/global/breakpoints';
 import styled from 'styled-components';
 
 export const ContactContainer = styled.div`
-  padding: 3rem;
+  @media ${device.tablet} {
+    padding: 3rem;
+  }
 `;

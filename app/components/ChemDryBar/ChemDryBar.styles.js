@@ -9,14 +9,10 @@ export const BarLink = styled.a`
 `;
 
 export const ChemDryBarContainer = styled.div`
+  width: 100%;
   background-color: ${colors.blue};
-  height: 160px;
   display: flex;
   align-items: center;
-
-  @media ${device.tablet} {
-    height: 180px;
-  }
 `;
 
 export const Content = styled.div`
@@ -24,12 +20,12 @@ export const Content = styled.div`
   flex-direction: column;
   margin: 0 auto 0 0;
   text-align: left;
+  padding-top: 3rem;
   text-transform: none;
+  margin: auto;
 `;
 
 export const Logo = styled.div`
-  position: absolute;
-  right: 5px;
   max-width: 210px;
   display: none;
 
@@ -46,36 +42,43 @@ export const Logo = styled.div`
 
 export const Header = styled.p`
   text-shadow: 0 0.07em 0.1em rgb(0, 0, 0, 0.3);
-  font-size: 29px;
+  font-size: 41px;
   text-rendering: optimizeLegibility;
   font-feature-settings: 'kern';
   font-kerning: normal;
   color: ${colors.white};
   line-height: 1;
+  padding-bottom: 15px;
 
-  @media ${device.laptop} {
-    font-size: 31px;
+  @media ${device.tablet} {
+    padding-left: 3rem;
   }
 `;
 
-export const Number = styled.div`
+export const Number = styled.p`
   text-rendering: optimizeLegibility;
   font-feature-settings: 'kern';
   font-kerning: normal;
-  font-size: 40px;
-  font-weight: bold;
+  font-size: 29px;
   color: ${colors.white};
   line-height: 1;
-  margin-top: 20px;
+  padding-bottom: 25px;
 
   @media ${device.tablet} {
-    font-size: 72px;
     margin-top: 0;
+    padding-left: 3rem;
+    margin-top: 20px;
   }
 `;
 
 export const ContentWrapper = styled.div`
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 1rem;
+
+  @media ${device.tablet} {
+    padding: 0 3rem 0 0;
+  }
 `;

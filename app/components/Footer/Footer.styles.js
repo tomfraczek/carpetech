@@ -18,7 +18,7 @@ export const FooterSection = styled.div`
   padding-left: 15px;
 
   @media ${device.tablet} {
-    width: 33.3333%;
+    /* width: 33.3333%; */
   }
 
   > a {
