@@ -1,15 +1,7 @@
 'use client';
 import { Container } from '@/global/styles';
-import { CardsContainer, Cards, Header, CardsMobile } from './ServicesCards.styles';
+import { CardsContainer, Header, CardsMobile, SliderContainer } from './ServicesCards.styles';
 import { ServicesCard } from './ServiceCard.component';
-// import vacuum from '@/public/images/services/icons/vacuum.png';
-// import upholstery from '@/public/images/services/icons/5.png';
-// import rug from '@/public/images/services/icons/carpet.png';
-// import carpet from '@/public/images/services/icons/carpet.png';
-// import sofa from '@/public/images/services/icons/sofa.png';
-// import soundproof from '@/public/images/services/icons/soundproof.png';
-// import company from '@/public/images/services/icons/company.png';
-// import furcoat from '@/public/images/services/icons/fur-coat.png';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 
@@ -20,15 +12,29 @@ import 'swiper/css/pagination';
 export const ServicesCards = ({ items }) => {
   return (
     <CardsContainer>
-      <Container>
+      <SliderContainer>
         <Header>Our Professional Cleaning Services:</Header>
         <CardsMobile>
           <Swiper
-            slidesPerView={1.4}
-            centeredSlides={true}
-            spaceBetween={10}
+            slidesPerView={1} // Initially show 1 slide
+            centeredSlides={false}
+            spaceBetween={30}
             grabCursor={true}
-            className='servicesSwiper'
+            breakpoints={{
+              // When window width is >= 640px
+              640: {
+                slidesPerView: 2,
+              },
+              // When window width is >= 768px
+              768: {
+                slidesPerView: 3,
+              },
+              // When window width is >= 1024px
+              1024: {
+                slidesPerView: 4,
+              },
+            }}
+            className='oneLineSwiper'
           >
             {items.map((item, i) => (
               <SwiperSlide key={`${item.title}-${i}`}>
@@ -37,12 +43,7 @@ export const ServicesCards = ({ items }) => {
             ))}
           </Swiper>
         </CardsMobile>
-        <Cards>
-          {items.map((item, i) => (
-            <ServicesCard key={`${item.title}-${i}`} {...item} length={items.length} />
-          ))}
-        </Cards>
-      </Container>
+      </SliderContainer>
     </CardsContainer>
   );
 };

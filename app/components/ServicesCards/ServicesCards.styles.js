@@ -63,19 +63,25 @@ export const ImageContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+
+  @media ${device.mobile} {
+    width: 150px;
+    height: 150px;
+  }
+
+  @media ${device.tablet} {
+    width: 200px;
+    height: 200px;
+  }
 `;
 
 export const ContentContainer = styled.div``;
 
 export const ServiceCardContainer = styled(Link)`
-  width: 60vw;
+  /* width: 60vw; */
   display: flex;
   justify-content: center;
   height: 100%;
-
-  @media ${device.laptop} {
-    width: 32.3%;
-  }
 `;
 
 export const Title = styled.h5`
@@ -172,8 +178,12 @@ export const Horizontal = styled.div`
 
 export const CardsMobile = styled.div`
   display: block;
+  overflow: visible;
+  width: 100%;
+`;
 
-  @media ${device.laptop} {
-    display: none;
-  }
+export const SliderContainer = styled.div`
+  width: 100%;
+  padding: 50px;
+  overflow: hidden;
 `;
