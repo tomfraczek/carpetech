@@ -42,7 +42,7 @@ export const Logo = styled.div`
 
 export const Header = styled.p`
   text-shadow: 0 0.07em 0.1em rgb(0, 0, 0, 0.3);
-  font-size: 41px;
+  font-size: 31px;
   text-rendering: optimizeLegibility;
   font-feature-settings: 'kern';
   font-kerning: normal;
