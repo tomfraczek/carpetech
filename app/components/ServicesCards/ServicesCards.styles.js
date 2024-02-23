@@ -180,6 +180,10 @@ export const CardsMobile = styled.div`
   display: block;
   overflow: visible;
   width: 100%;
+
+  .swiper {
+    overflow: visible !important;
+  }
 `;
 
 export const SliderContainer = styled.div`

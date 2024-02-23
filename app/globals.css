@@ -135,10 +135,6 @@ table {
   height: auto;
 }
 
-.swiper {
-  overflow: visible !important;
-}
-
 .oneLineSwiper .swiper-slide {
   height: auto;
 }
