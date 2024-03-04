@@ -19,6 +19,7 @@ export async function generateMetadata({ params }) {
   return {
     title: content[0]?.seo?.title ?? '',
     keywords: content[0]?.seo?.keywords ?? '',
+    description: content[0]?.seo?.description ?? '',
     openGraph: {
       title: content[0]?.seo?.title ?? '',
       description: content[0]?.seo?.description ?? '',

@@ -19,6 +19,7 @@ export async function generateMetadata() {
   return {
     title,
     keywords,
+    description,
     openGraph: {
       title,
       description,
