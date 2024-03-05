@@ -38,11 +38,6 @@ export const ChemDryBar = ({ category, image, title, url, displayContactForm }) 
             <Number>{title}</Number>
             {displayContactForm && <ContactUsForm />}
           </Content>
-          {image && (
-            <Logo>
-              <Image src={image.url} width={image.width} height={image.height} alt={image.title} />
-            </Logo>
-          )}
         </ContentWrapper>
         {/* </Container> */}
       </ChemDryBarContainer>

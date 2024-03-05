@@ -110,30 +110,6 @@ export const ContactForm = () => {
             {errors.email && <p>{errors.email.message}</p>}
           </FormEmail>
 
-          {/* <FormArea>
-            <Controller
-              name='interests'
-              control={control}
-              defaultValue={''}
-              render={({ field }) => (
-                <select {...field}>
-                  <option value='' defaultValue>
-                    Area of Interest (Please Select)
-                  </option>
-                  <option value='Carpet cleaning'>Carpet cleaning</option>
-                  <option value='Rug cleaning'>Rug cleaning</option>
-                  <option value='Upholstery cleaning'>Upholstery cleaning</option>
-                  <option value='Leather restoration'>Leather restoration</option>
-                  <option value='Tile &amp; grout cleaning'>Tile &amp; grout cleaning</option>
-                  <option value='Stain removal'>Stain removal</option>
-                  <option value='End of tenancy cleaning'>End of tenancy cleaning</option>
-                  <option value='Commercial cleaning'>Commercial cleaning</option>
-                  <option value='Other / general enquiry'>Other / general enquiry</option>
-                </select>
-              )}
-            />
-          </FormArea> */}
-
           <FormMessage>
             <Controller
               name='message'

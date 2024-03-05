@@ -38,11 +38,12 @@ export default async function Page() {
     topSection,
     middleSection,
     bottomSection,
-    fullWidthBar,
+    contactBar,
     heroSection,
     servicesCollection,
     freeQuote,
     showReviews,
+    bottomEmergencySection,
   } = homepage;
 
   return (
@@ -51,11 +52,12 @@ export default async function Page() {
       {heroSection && <Carousel {...heroSection} />}
       {topSection && <ContentWithImage {...topSection} />}
       {servicesCollection && <ServicesCards items={servicesCollection.items} />}
-      {fullWidthBar && <ChemDryBar {...fullWidthBar} />}
+      {contactBar && <QuickQuote {...contactBar} />}
+      {showReviews && <div data-romw-token='H2D7ArN2ny17e7RaGMsfyFYXI80Be3E2Wt5ZJDTu3PICCSfhMc' />}
       {middleSection && <ContentWithImage {...middleSection} />}
       {bottomSection && <ContentWithImage {...bottomSection} />}
+      {bottomEmergencySection && <ContentWithImage {...bottomEmergencySection} />}
       {freeQuote && <QuickQuote {...freeQuote} />}
-      {showReviews && <div data-romw-token='H2D7ArN2ny17e7RaGMsfyFYXI80Be3E2Wt5ZJDTu3PICCSfhMc' />}
       <GoogleMap />
     </>
   );

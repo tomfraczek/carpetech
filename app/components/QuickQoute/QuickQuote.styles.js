@@ -32,7 +32,7 @@ export const Description = styled.p`
 `;
 
 export const BackgroundOverlay = styled.div`
-  background-color: #00171a;
+  /* background-color: #00171a; */
   position: absolute !important;
   top: 0;
   right: 0;
