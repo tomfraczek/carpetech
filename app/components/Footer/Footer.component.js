@@ -66,7 +66,7 @@ export const Footer = ({ navigation }) => {
             <ContactPhoneContainer>
               <Image src={phoneIcon} alt='phone icon' />
               <PhoneNumber>
-                <Link href={`tel:07849495757`}>078 4949 5757</Link>
+                <a href={`tel:07849495757`}>078 4949 5757</a>
               </PhoneNumber>
             </ContactPhoneContainer>
 
