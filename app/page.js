@@ -4,13 +4,10 @@ import { Carousel } from '@/app/components/Carousel';
 
 import { ContentWithImage } from '@/app/components/ContentWithImage';
 import { ServicesCards } from '@/app/components/ServicesCards';
-import { ChemDryBar } from '@/app/components/ChemDryBar';
 import { QuickQuote } from '@/app/components/QuickQoute';
 import { GoogleMap } from '@/app/components/GoogleMap';
-
-// import { ReviewsContainer } from './page.styles';
 import Script from 'next/script';
-// import axios from 'axios';
+import styled from 'styled-components';
 
 export async function generateMetadata() {
   const { isEnabled } = draftMode();
@@ -53,7 +50,9 @@ export default async function Page() {
       {topSection && <ContentWithImage {...topSection} />}
       {servicesCollection && <ServicesCards items={servicesCollection.items} />}
       {contactBar && <QuickQuote {...contactBar} />}
-      {showReviews && <div data-romw-token='H2D7ArN2ny17e7RaGMsfyFYXI80Be3E2Wt5ZJDTu3PICCSfhMc' />}
+      {showReviews && (
+        <div className='reviewsContainer' data-romw-token='H2D7ArN2ny17e7RaGMsfyFYXI80Be3E2Wt5ZJDTu3PICCSfhMc' />
+      )}
       {middleSection && <ContentWithImage {...middleSection} />}
       {bottomSection && <ContentWithImage {...bottomSection} />}
       {bottomEmergencySection && <ContentWithImage {...bottomEmergencySection} />}
