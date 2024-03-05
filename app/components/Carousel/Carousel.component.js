@@ -47,10 +47,10 @@ export const Carousel = ({ borderColour, carouselCollection }) => {
               {title && <Description>{title}</Description>}
               {ctaCopy && ctaUrl && (
                 <CtaContainer>
-                  <Link href={ctaUrl}>
+                  <a href={ctaUrl}>
                     <Image src={phoneIcon} width={24} height={24} alt='phone-icon' />
                     {ctaCopy}
-                  </Link>
+                  </a>
                 </CtaContainer>
               )}
             </Content>
