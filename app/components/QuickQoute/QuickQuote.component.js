@@ -4,7 +4,6 @@ import Image from 'next/image';
 import { Container } from '@/global/styles';
 import { Heading, QuickQuoteContainer, Description, BackgroundOverlay, BackgroundContainer } from './QuickQuote.styles';
 
-import { ContactForm } from '../ContactForm';
 import { ContactUsForm } from '../ContactUsForm';
 
 export const QuickQuote = ({ header, description, fontColour, backgroundColour, backgroundImage }) => {

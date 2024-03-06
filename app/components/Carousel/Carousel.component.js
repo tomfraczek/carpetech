@@ -1,27 +1,14 @@
 'use client';
-import { useState, useCallback, useEffect } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/effect-fade';
 import { EffectFade, Autoplay } from 'swiper/modules';
-import { GoogleMap, useJsApiLoader } from '@react-google-maps/api';
 
 import Image from 'next/image';
-import axios from 'axios';
 
-import {
-  CarouselContainer,
-  Header,
-  Description,
-  Mask,
-  PhoneNumber,
-  CtaContainer,
-  Content,
-  ImageContainer,
-} from './Carousel.styles';
-import Link from 'next/link';
+import { CarouselContainer, Header, Description, Mask, CtaContainer, Content, ImageContainer } from './Carousel.styles';
 import phoneIcon from '@/public/images/icons/phonewhite.png';
 
 export const Carousel = ({ borderColour, carouselCollection }) => {
