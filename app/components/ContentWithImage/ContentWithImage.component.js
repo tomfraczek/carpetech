@@ -16,7 +16,7 @@ import { Autoplay } from 'swiper/modules';
 import AngleDown from '@/public/images/icons/angleDown.svg';
 import { GoogleReviews } from '@/app/components/GoogleReviews';
 
-export const ContentWithImage = ({ addReviewCards, content, icon, imagePosition, backgroundColour, carousel }) => {
+export const ContentWithImage = ({ content, icon, imagePosition, backgroundColour, carousel }) => {
   const carouselItem = carousel?.carouselSlideCollection.items;
   const [scriptLoaded, setScriptLoaded] = useState(false); // State to track whether the script is loaded
 
@@ -74,7 +74,6 @@ export const ContentWithImage = ({ addReviewCards, content, icon, imagePosition,
           )}
         </ContentRight>
       </ContentWithImageContainer>
-      {addReviewCards && <ReviewsContainer data-romw-token='H2D7ArN2ny17e7RaGMsfyFYXI80Be3E2Wt5ZJDTu3PICCSfhMc' />}
     </>
   );
 };
