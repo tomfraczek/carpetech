@@ -12,6 +12,7 @@ export async function generateMetadata() {
   const { isEnabled } = draftMode();
   const homepage = await getHomepage(isEnabled);
   const { title, description, image, keywords } = homepage.seo;
+  const siteURL = "https://www.carpetech.co.uk";
   return {
     title,
     keywords,
@@ -23,6 +24,9 @@ export async function generateMetadata() {
     },
     verification: {
       google: "z5C3Tq0BEN9vFOUd8_9XUM5AmEZZKjB5CBiWIHTaQFo",
+    },
+    alternates: {
+      canonical: siteURL,
     },
   };
 }
