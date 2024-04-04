@@ -5,7 +5,8 @@
       "@/app/*": ["app/*"],
       "@/public/*": ["public/*"],
       "@/components/*": ["components/*"],
-      "@/global/*": ["global/*"] //any other root-level paths
+      "@/global/*": ["global/*"],
+      "@lib/*": ["lib/*"]
     },
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
