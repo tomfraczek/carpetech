@@ -11,7 +11,7 @@ import Script from "next/script";
 export async function generateMetadata({ params }) {
   const { isEnabled } = draftMode();
   const content = await getPage(params.slug, isEnabled);
-  const siteURL = "https://www.carpetech.co.uk";
+  const siteURL = "https://www.carpetech.co.uk/service";
   if (!content[0]) {
     notFound();
   }
