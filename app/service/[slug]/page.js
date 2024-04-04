@@ -52,10 +52,13 @@ export default async function Page({ params }) {
       {heroSection && <Carousel {...heroSection} />}
       {topSection && <ContentWithImage {...topSection} />}
       {topEmergencySection && <ContentWithImage {...topEmergencySection} />}
-      {contactBar && <QuickQuote {...contactBar} />}
       {showReviews && (
-        <div data-romw-token="H2D7ArN2ny17e7RaGMsfyFYXI80Be3E2Wt5ZJDTu3PICCSfhMc" />
+        <div
+          className="reviewsContainer"
+          data-romw-token="H2D7ArN2ny17e7RaGMsfyFYXI80Be3E2Wt5ZJDTu3PICCSfhMc"
+        />
       )}
+      {contactBar && <QuickQuote {...contactBar} />}
       {middleSection && <ContentWithImage {...middleSection} />}
       {middleEmergencySection && (
         <ContentWithImage {...middleEmergencySection} />

@@ -1,17 +1,33 @@
-'use client';
-import Image from 'next/image';
+"use client";
+import Image from "next/image";
 
-import { Container } from '@/global/styles';
-import { Heading, QuickQuoteContainer, Description, BackgroundOverlay, BackgroundContainer } from './QuickQuote.styles';
+import { Container } from "@/global/styles";
+import {
+  Heading,
+  QuickQuoteContainer,
+  Description,
+  BackgroundOverlay,
+  BackgroundContainer,
+} from "./QuickQuote.styles";
 
-import { ContactUsForm } from '../ContactUsForm';
+import { ContactUsForm } from "../ContactUsForm";
 
-export const QuickQuote = ({ header, description, fontColour, backgroundColour, backgroundImage }) => {
+export const QuickQuote = ({
+  header,
+  description,
+  fontColour,
+  backgroundColour,
+  backgroundImage,
+}) => {
   return (
-    <QuickQuoteContainer style={{ backgroundColor: !backgroundImage && `${backgroundColour}` }}>
-      <Container style={{ zIndex: '3' }}>
+    <QuickQuoteContainer
+      style={{ backgroundColor: !backgroundImage && `${backgroundColour}` }}
+    >
+      <Container style={{ zIndex: "3" }}>
         <Heading style={{ color: `${fontColour}` }}>{header}</Heading>
-        <Description style={{ color: `${fontColour}` }}>{description}</Description>
+        <Description style={{ color: `${fontColour}` }}>
+          {description}
+        </Description>
         <ContactUsForm />
       </Container>
       <BackgroundOverlay />
@@ -19,7 +35,7 @@ export const QuickQuote = ({ header, description, fontColour, backgroundColour, 
         <BackgroundContainer>
           <Image
             src={backgroundImage.url}
-            alt='background quote'
+            alt="background quote"
             width={backgroundImage.width}
             height={backgroundImage.height}
           />

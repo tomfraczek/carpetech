@@ -1,13 +1,10 @@
-import { colors } from '@/global/colors';
-import styled from 'styled-components';
+import { colors } from "@/global/colors";
+import styled from "styled-components";
 
 export const QuickQuoteContainer = styled.section`
   position: relative;
   overflow: hidden;
-  padding-top: 60px;
-  padding-bottom: 60px;
-  border-top: 10px solid ${colors.purple};
-  border-bottom: 10px solid ${colors.purple};
+  padding: 20px 0;
 `;
 
 export const Heading = styled.h2`
@@ -23,7 +20,7 @@ export const Heading = styled.h2`
 
 export const Description = styled.p`
   text-rendering: optimizeLegibility;
-  font-feature-settings: 'kern';
+  font-feature-settings: "kern";
   font-kerning: normal;
   margin: 0 0 10.5px;
   text-align: center;

@@ -1,6 +1,6 @@
-import { device } from '@/global/breakpoints';
-import { colors } from '@/global/colors';
-import styled from 'styled-components';
+import { device } from "@/global/breakpoints";
+import { colors } from "@/global/colors";
+import styled from "styled-components";
 
 export const Form = styled.form`
   grid-column-gap: 2%;

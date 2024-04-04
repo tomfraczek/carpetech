@@ -1,6 +1,6 @@
-import { device } from '@/global/breakpoints';
-import { colors } from '@/global/colors';
-import styled from 'styled-components';
+import { device } from "@/global/breakpoints";
+import { colors } from "@/global/colors";
+import styled from "styled-components";
 
 export const Form = styled.form`
   grid-column-gap: 2%;
@@ -101,15 +101,15 @@ export const ThumbsContainer = styled.div`
 `;
 
 export const Thumb = styled.div`
-  display: 'inline-flex';
+  display: "inline-flex";
   border-radius: 2px;
-  border: '1px solid #eaeaea';
+  border: "1px solid #eaeaea";
   margin-bottom: 8px;
   margin-right: 8px;
   width: 100%;
   height: 100%;
   padding: 4px;
-  box-sizing: 'border-box';
+  box-sizing: "border-box";
 `;
 
 export const ThumbInner = styled.div`
@@ -133,6 +133,7 @@ export const SubmitButton = styled.button`
   transition: all 0.2s ease;
   position: relative;
   cursor: pointer;
+  border: 2px solid white;
 
   &:hover {
     background-color: ${colors.green};

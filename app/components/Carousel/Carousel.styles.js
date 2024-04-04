@@ -16,6 +16,8 @@ export const CarouselContainer = styled.div`
 `;
 
 export const Header = styled.h6`
+  position: relative;
+  top: 15px;
   z-index: 2;
   position: relative;
   text-shadow: 0 1px 6px rgba(0, 0, 0, 0.2);
