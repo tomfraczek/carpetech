@@ -1,10 +1,10 @@
-'use client';
-import { useEffect, useState } from 'react';
-import Image from 'next/image';
-import Link from 'next/link';
+"use client";
+import { useEffect, useState } from "react";
+import Image from "next/image";
+import Link from "next/link";
 
-import { Subheader } from '@/app/components/Subheader';
-import { HamburgerMenu } from '../HamburgerMenu';
+import { Subheader } from "@/app/components/Subheader";
+import { HamburgerMenu } from "../HamburgerMenu";
 import {
   HeaderContainer,
   Content,
@@ -14,20 +14,20 @@ import {
   PhoneNumber,
   MobileContact,
   MobileContactContainer,
-} from './Header.styles';
-import { Container } from '@/global/styles';
-import { Navigation } from '../Navigation';
-import { NavigationMini } from '../NavigationMini';
+} from "./Header.styles";
+import { Container } from "@/global/styles";
+import { Navigation } from "../Navigation";
+import { NavigationMini } from "../NavigationMini";
 
-import phone from '@/public/images/icons/phone.png';
+import phone from "@/public/images/icons/phone.png";
 
 export const Header = ({ header, navigation }) => {
   const [isOpen, setIsOpen] = useState(false);
   useEffect(() => {
     if (isOpen) {
-      document.body.style.overflow = 'hidden';
+      document.body.style.overflow = "hidden";
     } else {
-      document.body.style.overflow = 'visible';
+      document.body.style.overflow = "visible";
     }
   }, [isOpen]);
 
@@ -40,7 +40,7 @@ export const Header = ({ header, navigation }) => {
           <HamburgerMenu menu={navigation} setIsOpen={setIsOpen} />
           <Contact>
             <Details>
-              <Image src={phone} width={16} height={16} alt='phone-icon' />
+              <Image src={phone} width={16} height={16} alt="phone-icon" />
               <p>Mobile WhatsApp:</p>
             </Details>
             <PhoneNumber>078 49495757</PhoneNumber>
@@ -49,7 +49,7 @@ export const Header = ({ header, navigation }) => {
           <MobileContactContainer>
             <MobileContact>
               <Details>
-                <Image src={phone} width={16} height={16} alt='phone-icon' />
+                <Image src={phone} width={16} height={16} alt="phone-icon" />
                 <p>Head Office:</p>
               </Details>
 
@@ -58,22 +58,27 @@ export const Header = ({ header, navigation }) => {
 
             <MobileContact>
               <Details>
-                <Image src={phone} width={16} height={16} alt='phone-icon' />
+                <Image src={phone} width={16} height={16} alt="phone-icon" />
                 <p>Mobile WhatsApp:</p>
               </Details>
-              <PhoneNumber>0784 9495757</PhoneNumber>
+              <PhoneNumber>078 4949 5757</PhoneNumber>
             </MobileContact>
           </MobileContactContainer>
 
           <Logo>
-            <Link href='/'>
-              <Image src='/images/carpetLogo.png' width={320} height={70.5} alt='' />
+            <Link href="/">
+              <Image
+                src="/images/carpetLogo.png"
+                width={320}
+                height={70.5}
+                alt=""
+              />
             </Link>
           </Logo>
 
           <Contact>
             <Details>
-              <Image src={phone} width={16} height={16} alt='phone-icon' />
+              <Image src={phone} width={16} height={16} alt="phone-icon" />
               <p>Head Office:</p>
             </Details>
 

@@ -1,6 +1,6 @@
-import { device } from '@/global/breakpoints';
-import { colors } from '@/global/colors';
-import styled, { keyframes } from 'styled-components';
+import { device } from "@/global/breakpoints";
+import { colors } from "@/global/colors";
+import styled, { keyframes } from "styled-components";
 
 export const HamburgerContainer = styled.div`
   display: flex;
@@ -20,9 +20,10 @@ export const HamburgerButton = styled.div`
 `;
 
 export const Logo = styled.div`
-  padding: 40px 0;
+  padding: 25px 0;
   z-index: 9;
   padding-top: 0;
+  margin-top: 13px;
 
   @media ${device.tablet} {
     display: none;
@@ -54,7 +55,8 @@ export const ListItem = styled.li`
   position: relative;
 
   &:hover img {
-    filter: invert(44%) sepia(25%) saturate(635%) hue-rotate(102deg) brightness(89%) contrast(87%);
+    filter: invert(44%) sepia(25%) saturate(635%) hue-rotate(102deg)
+      brightness(89%) contrast(87%);
   }
 
   > a {
@@ -72,7 +74,8 @@ export const ListItem = styled.li`
       color: ${colors.green};
 
       ~ img {
-        filter: invert(44%) sepia(25%) saturate(635%) hue-rotate(102deg) brightness(89%) contrast(87%);
+        filter: invert(44%) sepia(25%) saturate(635%) hue-rotate(102deg)
+          brightness(89%) contrast(87%);
       }
     }
   }
@@ -132,7 +135,8 @@ export const MobileListItem = styled.li`
   }
 
   &:hover img {
-    filter: invert(44%) sepia(25%) saturate(635%) hue-rotate(102deg) brightness(89%) contrast(87%);
+    filter: invert(44%) sepia(25%) saturate(635%) hue-rotate(102deg)
+      brightness(89%) contrast(87%);
   }
 
   a {
@@ -156,7 +160,8 @@ export const MobileListItem = styled.li`
       }
 
       ~ img {
-        filter: invert(44%) sepia(25%) saturate(635%) hue-rotate(102deg) brightness(89%) contrast(87%);
+        filter: invert(44%) sepia(25%) saturate(635%) hue-rotate(102deg)
+          brightness(89%) contrast(87%);
       }
     }
   }

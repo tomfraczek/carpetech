@@ -1,10 +1,10 @@
-import { device } from '@/global/breakpoints';
-import { colors } from '@/global/colors';
-import styled from 'styled-components';
+import { device } from "@/global/breakpoints";
+import { colors } from "@/global/colors";
+import styled from "styled-components";
 
 export const HeaderContainer = styled.div`
   z-index: 20;
-  position: ${({ sticky }) => (sticky ? 'sticky' : 'relative')};
+  position: ${({ sticky }) => (sticky ? "sticky" : "relative")};
   top: 0;
   right: 0;
   left: 0;
@@ -18,6 +18,7 @@ export const Content = styled.div`
   flex-direction: column;
   padding: 30px 0;
   padding-top: 17px;
+  padding-bottom: 0;
 
   @media ${device.tablet} {
     justify-content: space-between;
@@ -76,8 +77,9 @@ export const Logo = styled.div`
 
 export const PhoneNumber = styled.div`
   color: ${colors.blue};
-  font-size: 24px;
+  font-size: 29px;
   font-weight: 700;
+  letter-spacing: -0.5px;
 
   @media ${device.mobile} {
     font-size: 30px;

@@ -1,6 +1,6 @@
-import { device } from '@/global/breakpoints';
-import { colors } from '@/global/colors';
-import styled from 'styled-components';
+import { device } from "@/global/breakpoints";
+import { colors } from "@/global/colors";
+import styled from "styled-components";
 
 export const CarouselContainer = styled.div`
   width: 100%;
@@ -29,12 +29,12 @@ export const Description = styled.h2`
   z-index: 2;
   position: relative;
   text-shadow: 0 1px 12px rgba(0, 0, 0, 0.2);
-  font-size: clamp(24px, 5vw, 70px);
+  font-size: clamp(34px, 5vw, 70px);
   color: ${colors.white};
   font-weight: bold;
   letter-spacing: -0.5px;
   line-height: 1.1;
-  margin-top: 0;
+  margin-top: 14px;
   margin-bottom: 10px;
   width: 80%;
 `;
@@ -58,12 +58,13 @@ export const CtaContainer = styled.div`
   z-index: 2;
   position: relative;
   display: flex;
+  margin-top: 50px;
 
   a {
     border-radius: 5em;
     background: rgba(0, 0, 0, 0.2);
     color: #fff;
-    font-size: clamp(17px, 1.8vw, 26px);
+    font-size: clamp(20px, 1.8vw, 26px);
     display: flex;
     align-items: center;
     padding: 0.4em 1em;

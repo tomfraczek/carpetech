@@ -1,13 +1,13 @@
-import { useState } from 'react';
-import Link from 'next/link';
-import { Turn as Hamburger } from 'hamburger-react';
-import Image from 'next/image';
+import { useState } from "react";
+import Link from "next/link";
+import { Turn as Hamburger } from "hamburger-react";
+import Image from "next/image";
 
-import * as React from 'react';
-import Accordion from '@mui/material/Accordion';
-import AccordionSummary from '@mui/material/AccordionSummary';
-import AccordionDetails from '@mui/material/AccordionDetails';
-import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import * as React from "react";
+import Accordion from "@mui/material/Accordion";
+import AccordionSummary from "@mui/material/AccordionSummary";
+import AccordionDetails from "@mui/material/AccordionDetails";
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 
 import {
   HamburgerContainer,
@@ -18,8 +18,8 @@ import {
   SubmenuList,
   SubmenuItem,
   MobileMenuContainer,
-} from './HamburgerMenu.styles';
-import { NavigationMini } from '../NavigationMini';
+} from "./HamburgerMenu.styles";
+import { NavigationMini } from "../NavigationMini";
 
 export const HamburgerMenu = ({ setIsOpen, menu }) => {
   const [open, setOpen] = useState(false);
@@ -38,7 +38,7 @@ export const HamburgerMenu = ({ setIsOpen, menu }) => {
     setOpen(!open);
     setIsOpen(!open);
   };
-  const [expanded, setExpanded] = useState('');
+  const [expanded, setExpanded] = useState("");
 
   const handleChange = (panel) => (event, newExpanded) => {
     setExpanded(newExpanded ? panel : false);
@@ -51,18 +51,29 @@ export const HamburgerMenu = ({ setIsOpen, menu }) => {
       </HamburgerButton>
 
       <Logo>
-        <Link href='/'>
-          <Image src='/images/carpetLogo.png' width={268.8} height={59.22} alt='' onClick={closeMenu} />
+        <Link href="/">
+          <Image
+            src="/images/carpetLogo.png"
+            width={250}
+            height={49.21}
+            alt=""
+            onClick={closeMenu}
+          />
         </Link>
       </Logo>
 
-      <MobileMenuContainer style={{ transform: open ? 'translateX(0)' : 'translateX(100%)' }}>
+      <MobileMenuContainer
+        style={{ transform: open ? "translateX(0)" : "translateX(100%)" }}
+      >
         <MobileMenuList>
           {menu.map(({ content }, index) => {
             const { title, slug, serviceChildrenCollection } = content;
             const { items } = serviceChildrenCollection;
             return (
-              <MobileListItem key={index} onMouseEnter={() => handleMenuToggle(index)}>
+              <MobileListItem
+                key={index}
+                onMouseEnter={() => handleMenuToggle(index)}
+              >
                 {items.length > 0 ? (
                   <Accordion
                     key={index}
@@ -73,7 +84,7 @@ export const HamburgerMenu = ({ setIsOpen, menu }) => {
                       expandIcon={<ExpandMoreIcon />}
                       aria-controls={`panel${index}a-content`}
                       id={`panel${index}a-header`}
-                      style={{ flexGrow: '0' }}
+                      style={{ flexGrow: "0" }}
                     >
                       <Link href={`/service/${slug}`}>{title}</Link>
                     </AccordionSummary>
@@ -98,7 +109,7 @@ export const HamburgerMenu = ({ setIsOpen, menu }) => {
             );
           })}
           <MobileListItem>
-            <Link href='/contact-us'>Free Quote</Link>
+            <Link href="/contact-us">Free Quote</Link>
           </MobileListItem>
         </MobileMenuList>
         <NavigationMini mobile setOpen={toggleMenu} />

@@ -28,14 +28,14 @@ export const Carousel = ({ borderColour, carouselCollection }) => {
         effect="fade"
         modules={[Autoplay, EffectFade]}
         style={{
-          height: "350px",
+          height: "330px",
           "--swiper-pagination-color": "#fff",
           "--swiper-navigation-color": "#fff",
         }}
-        autoplay={{
-          delay: 4000,
-          disableOnInteraction: true,
-        }}
+        // autoplay={{
+        //   delay: 4000,
+        //   disableOnInteraction: true,
+        // }}
         loop={true}
         className="mySwiper"
       >
