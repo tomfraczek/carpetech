@@ -1,13 +1,12 @@
-import styled from 'styled-components';
-import { colors } from '@/global/colors';
-import { device } from '@/global/breakpoints';
+import styled from "styled-components";
+import { colors } from "@/global/colors";
+import { device } from "@/global/breakpoints";
 
 export const SubheaderContainer = styled.div`
   height: 40px;
   background-color: ${(props) => props.$background};
   display: flex;
   align-items: center;
-  display: none;
 
   @media ${device.tablet} {
     display: flex;

@@ -1,6 +1,6 @@
-'use client';
-import { Container } from '@/global/styles';
-import { SubheaderContainer, Content, Title } from './Subheader.styles';
+"use client";
+import { Container } from "@/global/styles";
+import { SubheaderContainer, Content, Title } from "./Subheader.styles";
 
 export const Subheader = ({ text, backgroundColour }) => {
   return (
