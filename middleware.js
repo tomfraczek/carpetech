@@ -1,8 +1,8 @@
 // middleware.ts
 
-import { NextRequest, NextResponse } from "next/server";
+import { NextResponse } from "next/server";
 
-export async function middleware(request: NextRequest) {
+export async function middleware(request) {
   const { host, protocol, pathname, search } = new URL(request.url);
 
   // Check if the request is not HTTPS or not starting with "www."
