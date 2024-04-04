@@ -6,7 +6,7 @@
       "@/public/*": ["public/*"],
       "@/components/*": ["components/*"],
       "@/global/*": ["global/*"],
-      "@lib/*": ["lib/*"]
+      "@/lib/*": ["lib/*"]
     },
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
