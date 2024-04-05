@@ -76,6 +76,7 @@ export const ContentWithImage = ({
             <Swiper
               navigation={false}
               modules={[Autoplay, EffectFade]}
+              effect="fade"
               autoplay={{
                 delay: 3000,
                 disableOnInteraction: false,

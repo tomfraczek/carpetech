@@ -21,6 +21,7 @@ import phoneIcon from "@/public/images/icons/phonewhite.png";
 
 export const Carousel = ({ borderColour, carouselCollection }) => {
   const { items } = carouselCollection;
+  console.log(items);
   return (
     <CarouselContainer $border={borderColour}>
       <Swiper
@@ -31,10 +32,10 @@ export const Carousel = ({ borderColour, carouselCollection }) => {
           "--swiper-pagination-color": "#fff",
           "--swiper-navigation-color": "#fff",
         }}
-        // autoplay={{
-        //   delay: 4000,
-        //   disableOnInteraction: true,
-        // }}
+        autoplay={{
+          delay: 4000,
+          disableOnInteraction: true,
+        }}
         loop={true}
         className="mySwiper"
       >

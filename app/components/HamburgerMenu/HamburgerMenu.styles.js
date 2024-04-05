@@ -16,17 +16,27 @@ export const HamburgerButton = styled.div`
   position: absolute;
   right: 15px;
   top: 22px;
-  z-index: 10;
+  // z-index: 10;
 `;
 
 export const Logo = styled.div`
   padding: 25px 0;
-  z-index: 9;
+  // z-index: 9;
   padding-top: 0;
   margin-top: 13px;
 
   @media ${device.tablet} {
     display: none;
+  }
+`;
+
+export const HamburgerLogo = styled(Logo)`
+  position: absolute;
+  top: 15px;
+  left: calc(50% - 200px / 2);
+  img {
+    width: 200px;
+    height: auto;
   }
 `;
 

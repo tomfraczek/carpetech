@@ -18,6 +18,7 @@ import {
   SubmenuList,
   SubmenuItem,
   MobileMenuContainer,
+  HamburgerLogo,
 } from "./HamburgerMenu.styles";
 import { NavigationMini } from "../NavigationMini";
 
@@ -65,6 +66,22 @@ export const HamburgerMenu = ({ setIsOpen, menu }) => {
       <MobileMenuContainer
         style={{ transform: open ? "translateX(0)" : "translateX(100%)" }}
       >
+        <HamburgerButton>
+          <Hamburger toggled={open} toggle={toggleMenu} size={20} />
+        </HamburgerButton>
+
+        <HamburgerLogo>
+          <Link href="/">
+            <Image
+              src="/images/carpetLogo.png"
+              width={250}
+              height={49.21}
+              alt=""
+              onClick={closeMenu}
+            />
+          </Link>
+        </HamburgerLogo>
+
         <MobileMenuList>
           {menu.map(({ content }, index) => {
             const { title, slug, serviceChildrenCollection } = content;
