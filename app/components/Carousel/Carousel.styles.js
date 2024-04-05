@@ -9,10 +9,6 @@ export const CarouselContainer = styled.div`
   position: relative;
   aspect-ratio: 16 / 9;
   /* height: 400px; */
-
-  @media ${device.laptop} {
-    height: 700px;
-  }
 `;
 
 export const Header = styled.h6`
@@ -98,10 +94,20 @@ export const Content = styled.div`
 `;
 
 export const ImageContainer = styled.div`
-  aspect-ratio: 16 / 9;
-  width: 100%;
-  img {
+  height: 100%;
+  overflow: hidden;
+
+  @media ${device.mobile} {
+    aspect-ratio: 16 / 9;
+    height: unset;
     width: 100%;
-    height: auto;
+  }
+  img {
+    height: 100%;
+    width: auto;
+    @media ${device.mobile} {
+      width: 100%;
+      height: auto;
+    }
   }
 `;

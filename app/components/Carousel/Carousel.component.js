@@ -28,7 +28,6 @@ export const Carousel = ({ borderColour, carouselCollection }) => {
         effect="fade"
         modules={[Autoplay, EffectFade]}
         style={{
-          height: "330px",
           "--swiper-pagination-color": "#fff",
           "--swiper-navigation-color": "#fff",
         }}
