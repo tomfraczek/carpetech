@@ -21,7 +21,6 @@ import phoneIcon from "@/public/images/icons/phonewhite.png";
 
 export const Carousel = ({ borderColour, carouselCollection }) => {
   const { items } = carouselCollection;
-  console.log(items);
   return (
     <CarouselContainer $border={borderColour}>
       <Swiper
