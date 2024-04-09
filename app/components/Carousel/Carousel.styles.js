@@ -12,20 +12,23 @@ export const CarouselContainer = styled.div`
 `;
 
 export const Header = styled.h6`
-  position: relative;
-  top: 15px;
   z-index: 2;
-  position: relative;
   text-shadow: 0 1px 6px rgba(0, 0, 0, 0.2);
   font-size: clamp(20px, 2vw, 2em);
   color: ${colors.white};
-  margin-top: 10.5px;
-  margin-bottom: 10.5px;
+  position: absolute;
+  top: 60px;
+
+  @media ${device.mobile} {
+    position: relative;
+    top: 15px;
+    margin-top: 10.5px;
+    margin-bottom: 10.5px;
+  }
 `;
 
 export const Description = styled.h2`
   z-index: 2;
-  position: relative;
   text-shadow: 0 1px 12px rgba(0, 0, 0, 0.2);
   font-size: clamp(34px, 5vw, 70px);
   color: ${colors.white};
@@ -35,6 +38,13 @@ export const Description = styled.h2`
   margin-top: 14px;
   margin-bottom: 10px;
   width: 80%;
+  position: absolute;
+  top: 80px;
+
+  @media ${device.mobile} {
+    position: relative;
+    top: 0;
+  }
 `;
 
 export const Mask = styled.div`
@@ -54,9 +64,15 @@ export const PhoneNumber = styled.p`
 
 export const CtaContainer = styled.div`
   z-index: 2;
-  position: relative;
   display: flex;
-  margin-top: 50px;
+  position: absolute;
+  bottom: 40px;
+
+  @media ${device.mobile} {
+    position: relative;
+    bottom: 0;
+    margin-top: 50px;
+  }
 
   a {
     border-radius: 5em;
@@ -81,11 +97,17 @@ export const CtaContainer = styled.div`
 `;
 
 export const Content = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+  height: 100%;
+  width: 100%;
   padding: 0 5%;
   position: absolute;
+
+  @media ${device.mobile} {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+  }
 
   img {
     margin-right: 10px;
