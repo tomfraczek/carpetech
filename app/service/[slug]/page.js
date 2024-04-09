@@ -1,12 +1,13 @@
 import { draftMode } from "next/headers";
 import { notFound } from "next/navigation";
+import Script from "next/script";
 
 import { getPage } from "@/lib/api";
 
 import { Carousel } from "@/app/components/Carousel";
 import { ContentWithImage } from "@/app/components/ContentWithImage";
 import { QuickQuote } from "@/app/components/QuickQoute";
-import Script from "next/script";
+import { FloatingCtaMobile } from "@/app/components/FloatingCtaMobile";
 
 export async function generateMetadata({ params }) {
   const { isEnabled } = draftMode();
@@ -68,6 +69,7 @@ export default async function Page({ params }) {
         <ContentWithImage {...bottomEmergencySection} />
       )}
       {freeQuote && <QuickQuote {...freeQuote} />}
+      <FloatingCtaMobile />
     </>
   );
 }

@@ -1,10 +1,9 @@
-'use client'; // Error components must be Client Components
+"use client"; // Error components must be Client Components
 
-import { useEffect } from 'react';
-import Link from 'next/link';
-import { device } from '@/global/breakpoints';
-import { colors } from '@/global/colors';
-import styled from 'styled-components';
+import { useEffect } from "react";
+import Link from "next/link";
+import { colors } from "@/global/colors";
+import styled from "styled-components";
 
 const ErrorContainer = styled.div`
   display: flex;
@@ -41,7 +40,7 @@ export default function Error({ error, reset }) {
     <ErrorContainer>
       <Title>500</Title>
       <Paragraph>Something went wrong!</Paragraph>
-      <GoHomeButton href='/'>Return Home</GoHomeButton>
+      <GoHomeButton href="/">Return Home</GoHomeButton>
     </ErrorContainer>
   );
 }
