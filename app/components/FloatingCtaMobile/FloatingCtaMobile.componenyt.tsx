@@ -15,7 +15,7 @@ export const FloatingCtaMobile = () => {
   useEffect(() => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
-      const triggerPoint = 500; // Adjust this value to your desired trigger point
+      const triggerPoint = 1000; // Adjust this value to your desired trigger point
       setShowIcon(scrollPosition >= triggerPoint);
     };
 
