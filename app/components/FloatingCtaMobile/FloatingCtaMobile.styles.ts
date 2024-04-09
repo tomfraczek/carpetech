@@ -8,7 +8,7 @@ export const CtaContainer = styled.div<{ $show?: boolean }>`
   flex-direction: column;
   gap: 10px;
   bottom: 30px;
-  right: ${(props) => (props.$show ? "0px" : "-100px")};
+  right: ${(props) => (props.$show ? "-20px" : "-100px")};
   transform: translateX(-50%);
   transition: right 0.5s ease-out; /* Smooth transition effect */
 

@@ -15,7 +15,7 @@ export const FloatingCtaMobile = () => {
   useEffect(() => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
-      const triggerPoint = 1000; // Adjust this value to your desired trigger point
+      const triggerPoint = 2500; // Adjust this value to your desired trigger point
       setShowIcon(scrollPosition >= triggerPoint);
     };
 
@@ -27,13 +27,13 @@ export const FloatingCtaMobile = () => {
   return (
     <CtaContainer $show={showIcon}>
       <Link href={"tel:01184115960"}>
-        <Image src={telephone} alt="email-icon" width={64} />
+        <Image src={telephone} alt="email-icon" width={50} />
       </Link>
       <Link href={"tel:07849495757"}>
-        <Image src={whatsapp} alt="email-icon" width={64} />
+        <Image src={whatsapp} alt="email-icon" width={50} />
       </Link>
       <Link href={"mailto:info@carpetech.com"}>
-        <Image src={email} alt="email-icon" width={64} />
+        <Image src={email} alt="email-icon" width={50} />
       </Link>
     </CtaContainer>
   );
