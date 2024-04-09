@@ -1,6 +1,7 @@
 import { device } from "@/global/breakpoints";
 import { colors } from "@/global/colors";
 import styled from "styled-components";
+import Link from "next/link";
 
 export const HeaderContainer = styled.div`
   z-index: 20;
@@ -90,4 +91,15 @@ export const Details = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+`;
+
+export const MobilePhoneNumber = styled(Link)`
+  color: ${colors.blue};
+  font-size: 29px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+
+  @media ${device.mobile} {
+    font-size: 30px;
+  }
 `;

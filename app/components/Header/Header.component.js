@@ -14,6 +14,7 @@ import {
   PhoneNumber,
   MobileContact,
   MobileContactContainer,
+  MobilePhoneNumber,
 } from "./Header.styles";
 import { Container } from "@/global/styles";
 import { Navigation } from "../Navigation";
@@ -52,10 +53,10 @@ export const Header = ({ header, navigation }) => {
                 <Image src={phone} width={16} height={16} alt="phone-icon" />
                 <p>Head Office:</p>
               </Details>
-              {/* <a href="tel:01184115960">01184 115960</a> */}
-              {/* <PhoneNumber as={Link} href="tel:01184115960">
+
+              <MobilePhoneNumber href="tel:01184115960">
                 01184 115960
-              </PhoneNumber> */}
+              </MobilePhoneNumber>
             </MobileContact>
 
             <MobileContact>
@@ -63,11 +64,9 @@ export const Header = ({ header, navigation }) => {
                 <Image src={phone} width={16} height={16} alt="phone-icon" />
                 <p>Mobile WhatsApp:</p>
               </Details>
-              {/* <a href="tel:07849495757">078 4949 5757</a> */}
-              <Link href="tel:07849495757">07849495757</Link>
-              {/* <PhoneNumber as={Link} href="tel:07849495757">
+              <MobilePhoneNumber href="tel:07849495757">
                 078 4949 5757
-              </PhoneNumber> */}
+              </MobilePhoneNumber>
             </MobileContact>
           </MobileContactContainer>
 
