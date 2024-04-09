@@ -7,6 +7,7 @@ import { ServicesCards } from "@/app/components/ServicesCards";
 import { QuickQuote } from "@/app/components/QuickQoute";
 import { GoogleMap } from "@/app/components/GoogleMap";
 import Script from "next/script";
+import { FloatingCtaMobile } from "@/app/components/FloatingCtaMobile";
 
 export async function generateMetadata() {
   const { isEnabled } = draftMode();
@@ -66,6 +67,7 @@ export default async function Page() {
       )}
       {freeQuote && <QuickQuote {...freeQuote} />}
       <GoogleMap />
+      <FloatingCtaMobile />
     </>
   );
 }
