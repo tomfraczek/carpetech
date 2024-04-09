@@ -52,10 +52,10 @@ export const Header = ({ header, navigation }) => {
                 <Image src={phone} width={16} height={16} alt="phone-icon" />
                 <p>Head Office:</p>
               </Details>
-
-              <PhoneNumber as={Link} href="tel:01184115960">
+              <a href="tel:01184115960">01184 115960</a>
+              {/* <PhoneNumber as={Link} href="tel:01184115960">
                 01184 115960
-              </PhoneNumber>
+              </PhoneNumber> */}
             </MobileContact>
 
             <MobileContact>
@@ -63,9 +63,10 @@ export const Header = ({ header, navigation }) => {
                 <Image src={phone} width={16} height={16} alt="phone-icon" />
                 <p>Mobile WhatsApp:</p>
               </Details>
-              <PhoneNumber as={Link} href="tel:07849495757">
+              <a href="tel:07849495757">078 4949 5757</a>
+              {/* <PhoneNumber as={Link} href="tel:07849495757">
                 078 4949 5757
-              </PhoneNumber>
+              </PhoneNumber> */}
             </MobileContact>
           </MobileContactContainer>
 
