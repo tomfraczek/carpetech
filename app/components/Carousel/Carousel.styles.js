@@ -9,6 +9,9 @@ export const CarouselContainer = styled.div`
   position: relative;
   aspect-ratio: 16 / 9;
   /* height: 400px; */
+  @media ${device.laptop} {
+    height: 700px;
+  }
 `;
 
 export const Header = styled.h6`
