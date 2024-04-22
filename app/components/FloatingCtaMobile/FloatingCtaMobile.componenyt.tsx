@@ -29,7 +29,7 @@ export const FloatingCtaMobile = () => {
       <a href={"tel:01184115960"}>
         <Image src={telephone} alt="email-icon" width={50} />
       </a>
-      <a href={"tel:07849495757"}>
+      <a href={"https://wa.me/7849495757"}>
         <Image src={whatsapp} alt="email-icon" width={50} />
       </a>
       <a href={"mailto:info@carpetech.com"}>
