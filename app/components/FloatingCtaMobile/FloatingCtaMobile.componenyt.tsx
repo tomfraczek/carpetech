@@ -26,15 +26,15 @@ export const FloatingCtaMobile = () => {
   }, []);
   return (
     <CtaContainer $show={showIcon}>
-      <Link href={"tel:01184115960"}>
+      <a href={"tel:01184115960"}>
         <Image src={telephone} alt="email-icon" width={50} />
-      </Link>
-      <Link href={"tel:07849495757"}>
+      </a>
+      <a href={"tel:07849495757"}>
         <Image src={whatsapp} alt="email-icon" width={50} />
-      </Link>
-      <Link href={"mailto:info@carpetech.com"}>
+      </a>
+      <a href={"mailto:info@carpetech.com"}>
         <Image src={email} alt="email-icon" width={50} />
-      </Link>
+      </a>
     </CtaContainer>
   );
 };
