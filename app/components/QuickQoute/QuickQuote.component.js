@@ -21,6 +21,7 @@ export const QuickQuote = ({
 }) => {
   return (
     <QuickQuoteContainer
+      id="quickQuote"
       style={{ backgroundColor: !backgroundImage && `${backgroundColour}` }}
     >
       <Container style={{ zIndex: "3" }}>

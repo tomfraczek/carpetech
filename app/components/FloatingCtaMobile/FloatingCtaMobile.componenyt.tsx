@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 
-import { CtaContainer } from "./FloatingCtaMobile.styles";
+import { CtaContainer, InstantQuote } from "./FloatingCtaMobile.styles";
 
 import email from "@/public/images/mobileCta/email.png";
 import telephone from "@/public/images/mobileCta/telephone.png";
@@ -15,7 +15,7 @@ export const FloatingCtaMobile = () => {
   useEffect(() => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
-      const triggerPoint = 2500; // Adjust this value to your desired trigger point
+      const triggerPoint = 400; // Adjust this value to your desired trigger point
       setShowIcon(scrollPosition >= triggerPoint);
     };
 
@@ -26,9 +26,10 @@ export const FloatingCtaMobile = () => {
   }, []);
   return (
     <CtaContainer $show={showIcon}>
-      <a href={"tel:01184115960"}>
+      <InstantQuote href="#quickQuote">Instant Quote</InstantQuote>
+      {/* <a href={"tel:01184115960"}>
         <Image src={telephone} alt="telephone-icon" width={50} />
-      </a>
+      </a> */}
       <a href={"https://wa.me/7849495757"}>
         <Image src={whatsapp} alt="whatsapp-icon" width={50} />
       </a>
