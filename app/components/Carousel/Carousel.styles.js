@@ -79,13 +79,12 @@ export const CtaContainer = styled.div`
 
   a {
     border-radius: 5em;
-    background: rgba(0, 0, 0, 0.2);
+    background-color: ${colors.gold};
     color: #fff;
     font-size: clamp(20px, 1.8vw, 26px);
     display: flex;
     align-items: center;
     padding: 0.4em 1em;
-    border: 2px solid ${colors.white};
     transition: all 0.2s ease;
 
     &:hover {
