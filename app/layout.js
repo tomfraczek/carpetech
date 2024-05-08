@@ -15,10 +15,8 @@ const robotoCondensed = Roboto_Condensed({
 });
 
 export default async function RootLayout({ children }) {
-  const GTM_ID = "GTM-PBP7Q6DZ";
   const services = await getServices(false);
   const topBar = await getTopBar(false);
-  // const map = await getMap();
   const navigation = await getNavigation(false);
   const menuItems = services.map(
     ({ title, slug, serviceChildrenCollection }) => ({
@@ -31,17 +29,19 @@ export default async function RootLayout({ children }) {
     <html lang="en">
       <Script id="google-tag-manager" strategy="afterInteractive">
         {`
-        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-PBP7Q6DZ');
+        function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({&#39;gtm.start&#39;:
+new Date().getTime(),event:&#39;gtm.js&#39;});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!=&#39;dataLayer&#39;?&#39;&amp;l=&#39;+l:&#39;&#39;;j.async=true;j.src=
+&#39;https://www.googletagmanager.com/gtm.js?id=&#39;+i+dl;f.parentNode.insertBefore(j,f)
+;
+})(window,document,&#39;script&#39;,&#39;dataLayer&#39;,&#39;GTM-NSNGFDRL&#39;);
         `}
       </Script>
       <body style={{ margin: 0 }} className={robotoCondensed.className}>
         <noscript
           dangerouslySetInnerHTML={{
-            __html: `<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PBP7Q6DZ"
+            __html: `<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-
+NSNGFDRL"
 height="0" width="0" style="display:none;visibility:hidden"></iframe>`,
           }}
         />

@@ -27,10 +27,10 @@ export const FloatingCtaMobile = () => {
   return (
     <CtaContainer $show={showIcon}>
       <a href={"tel:01184115960"}>
-        <Image src={telephone} alt="email-icon" width={50} />
+        <Image src={telephone} alt="telephone-icon" width={50} />
       </a>
       <a href={"https://wa.me/7849495757"}>
-        <Image src={whatsapp} alt="email-icon" width={50} />
+        <Image src={whatsapp} alt="whatsapp-icon" width={50} />
       </a>
       <a href={"mailto:info@carpetech.com"}>
         <Image src={email} alt="email-icon" width={50} />
