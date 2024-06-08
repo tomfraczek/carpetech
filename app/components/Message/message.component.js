@@ -39,7 +39,7 @@ export const Message = () => (
       <img src="/images/scum.jpg" alt="scumbag" />
     </ImageContainer>
 
-    <h1>I'm a FRAUD !!!</h1>
+    <h1>I&apos;m a FRAUD !!!</h1>
     <p>My name is Michał Kosmowski</p>
     <p>I hire people and do not pay them</p>
     <p>I am a scum, a dishonorable and cowardly little man</p>
