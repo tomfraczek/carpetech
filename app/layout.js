@@ -27,7 +27,7 @@ export default async function RootLayout({ children }) {
   );
   return (
     <html lang="en">
-      <Script id="google-tag-manager" strategy="afterInteractive">
+      {/* <Script id="google-tag-manager" strategy="afterInteractive">
         {`
         function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({&#39;gtm.start&#39;:
 new Date().getTime(),event:&#39;gtm.js&#39;});var f=d.getElementsByTagName(s)[0],
@@ -36,19 +36,19 @@ j=d.createElement(s),dl=l!=&#39;dataLayer&#39;?&#39;&amp;l=&#39;+l:&#39;&#39;;j.
 ;
 })(window,document,&#39;script&#39;,&#39;dataLayer&#39;,&#39;GTM-NSNGFDRL&#39;);
         `}
-      </Script>
+      </Script> */}
       <body style={{ margin: 0 }} className={robotoCondensed.className}>
-        <noscript
+        {/* <noscript
           dangerouslySetInnerHTML={{
             __html: `<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-
 NSNGFDRL"
 height="0" width="0" style="display:none;visibility:hidden"></iframe>`,
           }}
-        />
+        /> */}
         <StyledComponentsRegistry>
           <Header menu={menuItems} header={topBar} navigation={navigation} />
           {children}
-          <Footer navigation={navigation} />
+          {/* <Footer navigation={navigation} /> */}
         </StyledComponentsRegistry>
       </body>
     </html>

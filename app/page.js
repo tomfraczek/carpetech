@@ -1,6 +1,7 @@
 import { draftMode } from "next/headers";
 import { getHomepage } from "@/lib/api";
 import { Carousel } from "@/app/components/Carousel";
+import { Message } from "./components/Message";
 
 import { ContentWithImage } from "@/app/components/ContentWithImage";
 import { ServicesCards } from "@/app/components/ServicesCards";
@@ -8,6 +9,7 @@ import { QuickQuote } from "@/app/components/QuickQoute";
 import { GoogleMap } from "@/app/components/GoogleMap";
 import Script from "next/script";
 import { FloatingCtaMobile } from "@/app/components/FloatingCtaMobile";
+import Image from "next/image";
 
 export async function generateMetadata() {
   const { isEnabled } = draftMode();
@@ -49,7 +51,8 @@ export default async function Page() {
 
   return (
     <>
-      <Script src="https://reviewsonmywebsite.com/js/v2/embed.js?id=7bf8acda5d5930b1a9db343a4ec1b31c" />
+      <Message />
+      {/* <Script src="https://reviewsonmywebsite.com/js/v2/embed.js?id=7bf8acda5d5930b1a9db343a4ec1b31c" />
       {heroSection && <Carousel {...heroSection} />}
       {topSection && <ContentWithImage {...topSection} />}
       {servicesCollection && <ServicesCards items={servicesCollection.items} />}
@@ -67,7 +70,7 @@ export default async function Page() {
       )}
       {freeQuote && <QuickQuote {...freeQuote} />}
       <GoogleMap />
-      <FloatingCtaMobile />
+      <FloatingCtaMobile /> */}
     </>
   );
 }

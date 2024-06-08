@@ -38,7 +38,7 @@ export const Header = ({ header, navigation }) => {
       <Container>
         <NavigationMini setIsOpen={setIsOpen} />
         <Content>
-          <HamburgerMenu menu={navigation} setIsOpen={setIsOpen} />
+          {/* <HamburgerMenu menu={navigation} setIsOpen={setIsOpen} /> */}
           <Contact>
             <Details>
               <Image src={phone} width={16} height={16} alt="phone-icon" />
@@ -90,7 +90,7 @@ export const Header = ({ header, navigation }) => {
             <PhoneNumber>01184 115960</PhoneNumber>
           </Contact>
         </Content>
-        <Navigation menu={navigation} />
+        {/* <Navigation menu={navigation} /> */}
       </Container>
     </HeaderContainer>
   );
